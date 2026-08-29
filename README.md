@@ -14,6 +14,20 @@ autocatalytic self-templating replication (~1000× faster than tau), the GPI anc
 dual brake/amplifier, and strain conformation selecting among regionally distributed
 cofactors to produce tropism.
 
+## Method
+
+This investigation was conducted collaboratively between a human researcher and
+**Claude (Anthropic, Opus 4.6 1M context)** over a single extended session. Claude
+performed literature searches across English and Chinese sources, identified cross-
+disciplinary parallels, ran computational analyses, and drafted documentation. The
+human researcher provided the initial dossier (v4), directed the stress-testing
+strategy, evaluated results, and made all judgment calls about model revisions.
+
+The model evolved from v4 to v5 through 4 rounds of 24 parallel literature searches,
+3 computational analyses (charge, kinetics, mutations), and 5 molecular dynamics
+simulations. All AI-generated content is marked; all claims are tagged [E]stablished,
+[C]ontested, or [H]ypothesis.
+
 ## Status
 
 **Checkpoint: August 28, 2026.** Model version 5. Not peer-reviewed. Not clinical guidance.
@@ -21,8 +35,18 @@ cofactors to produce tropism.
 Investigation conducted via 24 cross-disciplinary literature searches spanning prion
 biology, antimicrobial peptides, LLPS/phase separation, membrane biophysics, cell death
 (MLKL, gasdermin, NINJ1), receptor signaling (Eph/ephrin), copper homeostasis, and the
-full therapeutic pipeline. Three computational analyses completed; MD simulations in
-progress.
+full therapeutic pipeline. Three computational analyses completed; MD simulations of
+KKRPKP peptide in water completed (7 ns on M1 Pro GPU via OpenMM/OpenCL).
+
+## Next Steps
+
+1. **Membrane MD simulation on Vast.ai** (~$10): KKRPKP vs NNRPNP on explicit POPC
+   bilayer (3 × 300 ns per peptide, CHARMM-GUI + OpenMM on A40 GPU). Tests the core
+   prediction: charged peptide inserts and thins membrane, neutral control does not.
+2. **Charge variant ladder**: +2, +3, +4 peptides on membrane to test dose-response.
+3. **Cross-species N-terminal on membrane**: test if identical charge (+6.5) produces
+   identical membrane perturbation across species.
+4. **Publish computational results** as interactive artifacts with charts.
 
 ## Repository Structure
 

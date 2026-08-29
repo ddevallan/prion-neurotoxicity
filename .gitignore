@@ -18,6 +18,8 @@ md_membrane_output/
 # uv lock (reproducible but large)
 uv.lock
 
-# Analysis output (regenerable)
-*.json
-!package.json
+# Analysis output in root (regenerable from scripts)
+/*.json
+
+# Keep analysis results in docs
+!docs/analysis/*.json

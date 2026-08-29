@@ -1,0 +1,22 @@
+{
+  "name": "KKRPKP_wt_extended",
+  "frames": 36,
+  "sasa_mean": 3.587,
+  "sasa_std": 1.87,
+  "rg_mean": 3.783,
+  "rg_std": 0.002,
+  "e2e_mean": 0.716,
+  "ss": {
+    "helix": 0.0,
+    "sheet": 0.0,
+    "coil": 100.0
+  },
+  "per_residue_sasa": {
+    "LYS1": 0.637,
+    "LYS2": 0.623,
+    "ARG3": 0.932,
+    "PRO4": 0.381,
+    "LYS5": 0.513,
+    "PRO6": 0.502
+  }
+}
