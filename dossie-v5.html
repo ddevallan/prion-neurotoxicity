@@ -1,0 +1,769 @@
+<title>Dossiê v5 — Neurotoxicidade Priônica</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #F7F5F0;
+    --bg-alt: #EFEDE6;
+    --bg-card: #FFFFFF;
+    --text: #1A1A18;
+    --text-secondary: #5A5850;
+    --text-tertiary: #8A877D;
+    --accent: #8B2500;
+    --accent-light: rgba(139,37,0,0.08);
+    --accent-mid: rgba(139,37,0,0.15);
+    --border: #D8D4CB;
+    --border-light: #E8E5DC;
+    --tag-confirmed: #1B6B3A;
+    --tag-confirmed-bg: rgba(27,107,58,0.08);
+    --tag-hypothesis: #7B5B00;
+    --tag-hypothesis-bg: rgba(123,91,0,0.08);
+    --tag-refuted: #9B2C2C;
+    --tag-refuted-bg: rgba(155,44,44,0.08);
+    --tag-open: #3B5998;
+    --tag-open-bg: rgba(59,89,152,0.08);
+    --shadow: 0 1px 3px rgba(26,26,24,0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141310;
+      --bg-alt: #1C1B17;
+      --bg-card: #222119;
+      --text: #E8E5DC;
+      --text-secondary: #A8A59B;
+      --text-tertiary: #706D64;
+      --accent: #D4683C;
+      --accent-light: rgba(212,104,60,0.1);
+      --accent-mid: rgba(212,104,60,0.18);
+      --border: #333127;
+      --border-light: #2A2820;
+      --tag-confirmed: #4ADE80;
+      --tag-confirmed-bg: rgba(74,222,128,0.1);
+      --tag-hypothesis: #FACC15;
+      --tag-hypothesis-bg: rgba(250,204,21,0.1);
+      --tag-refuted: #F87171;
+      --tag-refuted-bg: rgba(248,113,113,0.1);
+      --tag-open: #93C5FD;
+      --tag-open-bg: rgba(147,197,253,0.1);
+      --shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141310;
+    --bg-alt: #1C1B17;
+    --bg-card: #222119;
+    --text: #E8E5DC;
+    --text-secondary: #A8A59B;
+    --text-tertiary: #706D64;
+    --accent: #D4683C;
+    --accent-light: rgba(212,104,60,0.1);
+    --accent-mid: rgba(212,104,60,0.18);
+    --border: #333127;
+    --border-light: #2A2820;
+    --tag-confirmed: #4ADE80;
+    --tag-confirmed-bg: rgba(74,222,128,0.1);
+    --tag-hypothesis: #FACC15;
+    --tag-hypothesis-bg: rgba(250,204,21,0.1);
+    --tag-refuted: #F87171;
+    --tag-refuted-bg: rgba(248,113,113,0.1);
+    --tag-open: #93C5FD;
+    --tag-open-bg: rgba(147,197,253,0.1);
+    --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    text-wrap: balance;
+    line-height: 1.25;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.25rem;
+  }
+
+  .header-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .version-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+
+  .disclaimer {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    margin: 2rem 0 3rem;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin: 3.5rem 0 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 2rem 0 0.75rem;
+    color: var(--text);
+  }
+
+  h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  p { margin: 0 0 1rem; }
+
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 0.1rem 0.45rem;
+    border-radius: 2px;
+    vertical-align: 0.15em;
+    text-transform: uppercase;
+  }
+  .tag-e { background: var(--tag-confirmed-bg); color: var(--tag-confirmed); }
+  .tag-h { background: var(--tag-hypothesis-bg); color: var(--tag-hypothesis); }
+  .tag-c { background: var(--tag-open-bg); color: var(--tag-open); }
+  .tag-r { background: var(--tag-refuted-bg); color: var(--tag-refuted); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin: 1rem 0 1.5rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .table-wrap { overflow-x: auto; }
+
+  th {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-tertiary);
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  .cascade {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    line-height: 1.9;
+    overflow-x: auto;
+    white-space: pre;
+    color: var(--text);
+  }
+
+  .cascade .step {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .cascade .block {
+    color: var(--tag-confirmed);
+    font-weight: 500;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    box-shadow: var(--shadow);
+  }
+
+  .card-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--text);
+  }
+
+  .card p {
+    font-size: 0.92rem;
+    margin: 0 0 0.5rem;
+    color: var(--text-secondary);
+  }
+
+  .card p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  li { margin-bottom: 0.35rem; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  @media (max-width: 640px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    body { font-size: 17px; padding: 2rem 1rem 4rem; }
+    h1 { font-size: 1.7rem; }
+  }
+
+  .tier {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .tier.tier-1 { border-color: var(--accent); }
+  .tier.tier-2 { border-color: var(--tag-hypothesis); }
+  .tier.tier-3 { border-color: var(--tag-open); }
+  .tier.tier-4 { border-color: var(--text-tertiary); }
+
+  .tier-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+  }
+  .tier-1 .tier-label { color: var(--accent); }
+  .tier-2 .tier-label { color: var(--tag-hypothesis); }
+  .tier-3 .tier-label { color: var(--tag-open); }
+  .tier-4 .tier-label { color: var(--text-tertiary); }
+
+  .confidence {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+  }
+
+  .footnote {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+  }
+
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-mid);
+  }
+  a:hover { border-bottom-color: var(--accent); }
+
+  .toc {
+    background: var(--bg-alt);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0 3rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.8;
+  }
+  .toc-title {
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+  }
+  .toc a { border-bottom: none; color: var(--text); }
+  .toc a:hover { color: var(--accent); }
+  .toc ol { padding-left: 1.25rem; margin: 0; }
+  .toc li { margin-bottom: 0.15rem; }
+</style>
+
+<h1>Dossiê: Neurotoxicidade na Doença Priônica</h1>
+<div class="header-meta">
+  <span class="version-badge">v5</span>
+  <span>28 de agosto de 2026</span>
+  <span>Checkpoint de investigação exploratória</span>
+</div>
+
+<div class="disclaimer">
+  <strong>Aviso de leitura.</strong> Este documento compila uma investigação exploratória conduzida em diálogo, não uma revisão sistemática. Mistura três camadas marcadas ao longo do texto: <span class="tag tag-e">Estabelecido</span> resultado publicado e replicado; <span class="tag tag-c">Contestado</span> resultado com contradição na literatura; <span class="tag tag-h">Hipótese</span> inferência nossa, não publicada. Referências foram levantadas por busca e conferidas contra resumos e trechos de texto. Nenhuma conclusão substitui leitura primária. Não revisado por pares. Não constitui orientação clínica.
+</div>
+
+<nav class="toc">
+  <div class="toc-title">Sumário</div>
+  <ol>
+    <li><a href="#pergunta">A pergunta</a></li>
+    <li><a href="#modelo">O modelo v5</a></li>
+    <li><a href="#cascata">A cascata causal</a></li>
+    <li><a href="#dominios">Arquitetura funcional por domínios</a></li>
+    <li><a href="#especificacoes">Folha de especificações</a></li>
+    <li><a href="#evidencia">O que está sólido</a></li>
+    <li><a href="#crossfield">Achados cross-disciplinares</a></li>
+    <li><a href="#lacunas">Lacunas resolvidas e abertas</a></li>
+    <li><a href="#terapeutica">Mapa terapêutico</a></li>
+    <li><a href="#experimentos">Experimentos prioritários</a></li>
+    <li><a href="#historico">Histórico de revisões v1–v5</a></li>
+    <li><a href="#limitacoes">Limitações honestas</a></li>
+    <li><a href="#referencias">Referências</a></li>
+  </ol>
+</nav>
+
+<!-- ============================================================ -->
+<h2 id="pergunta">1. A pergunta</h2>
+
+<p>Formulada como equação:</p>
+<p style="text-align:center; font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; margin: 1.5rem 0;">
+  PROTEÍNA PRIÔNICA ALTERADA &nbsp;+&nbsp; X &nbsp;=&nbsp; NEURÔNIO DANIFICADO
+</p>
+<p>O objetivo é identificar X por engenharia reversa: partir do dano observado e reconstruir a cadeia causal até a propriedade molecular que a inicia. É um problema inverso mal-posto — muitas causas desembocam nas mesmas vias de morte (proteostase, UPR, estresse oxidativo, disfunção sináptica), compartilhadas com Alzheimer e Parkinson.</p>
+
+<!-- ============================================================ -->
+<h2 id="modelo">2. O modelo v5</h2>
+
+<p>A doença priônica é uma instância específica de um mecanismo geral de toxicidade amiloide — o <em>fuzzy coat</em> desordenado liberado pela fibrilação perturba membranas como um peptídeo antimicrobiano (AMP). A especificidade priônica reside exclusivamente em três propriedades:</p>
+
+<ol>
+  <li><strong>Replicação auto-templante verdadeiramente autocatalítica</strong> — ~1000× mais rápida que tau ou α-sinucleína, explicando meses vs décadas.</li>
+  <li><strong>A âncora GPI como regulador de dupla face</strong> — suprime LLPS (freio contra conversão espontânea) e concentra os produtos tóxicos na membrana (amplificador de proximidade).</li>
+  <li><strong>Conformação de cepa → tropismo</strong> — a arquitetura da fibrila seleciona entre cofatores regionalmente distribuídos (composição lipídica, sialilação, rotas endocíticas).</li>
+</ol>
+
+<p>O mecanismo de toxicidade em si <strong>não é priônico</strong> — é biofísica de peptídeo catiônico em membrana. A cauda N-terminal da PrP (resíduos 23–93, carga líquida +7 a +9) é literalmente um AMP: fragmentos de proteínas priônicas foram confirmados como peptídeos antimicrobianos funcionais por triagem computacional e síntese (Nature Microbiology 2026, "prionins").</p>
+
+<!-- ============================================================ -->
+<h2 id="cascata">3. A cascata causal</h2>
+
+<div class="cascade"><span class="step">PrP^C estável na membrana</span> (GPI suprime LLPS)
+    │
+    ▼
+<span class="step">Iniciação</span>: semente externa (infecção/iatrogênica)
+    OU LLPS espontânea no endossomo tardio/MVB
+    (pH 4.5–5.5 + concentração geométrica + Cu²⁺/H₂O₂)
+    │
+    ▼
+<span class="step">N-terminal dirige LLPS</span> (motivos polibásicos, incluindo KKRPKP)
+    │
+    ▼
+<span class="step">Domínio hidrofóbico (112–133) porta a transição</span>
+    líquido → sólido ←── <span class="block">G127V BLOQUEIA AQUI</span>
+    │
+    ▼
+<span class="step">Fibrilação incorpora domínio globular + hidrofóbico</span>
+    (núcleo ordenado ~94–225; PIRIBS)
+    │
+    ▼
+<span class="step">Cauda N-terminal é liberada</span> (fuzzy coat) — IN SITU na membrana
+    │
+    ▼
+<span class="step">Perturbação sub-lítica tipo AMP</span>
+    Carpet model: inserção na camada externa → afinamento/tensão local
+    │
+    ├── NMDA mecanossensível → alivia bloqueio Mg²⁺ → Ca²⁺
+    ├── PLA2 → ácido araquidônico → potenciação NMDA
+    └── Fronteiras de raft: inserção preferencial ←── <span class="block">α-clivagem BLOQUEIA</span>
+    │                                                (destrói substrato)
+    ▼
+<span class="step">Ca²⁺ → p38 MAPK / MK2-3</span> → colapso de actina → retração de espinhas
+    PERK → eIF2α-P → queda de tradução
+    zDHHC9/21 → PIKfyve → vacúolos (espongiose)
+    │
+    ▼
+<span class="step">Morte neuronal</span>
+    Seletividade sináptica: espinhas (curvatura 50–200 nm)
+    têm mais defeitos de empacotamento → inserção preferencial do AMP</div>
+
+<!-- ============================================================ -->
+<h2 id="dominios">4. Arquitetura funcional por domínios</h2>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Domínio</th><th>Resíduos</th><th>Papel no modelo v5</th><th>Base</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cauda N-terminal</strong></td>
+      <td>23–93</td>
+      <td>Duplo: motor de LLPS (montante) + efetor tóxico tipo AMP (jusante). Carga +7 a +9. Inclui KKRPKP (23–28) e octarrepetições (51–91, ligam Cu²⁺).</td>
+      <td><span class="tag tag-e">E</span></td>
+    </tr>
+    <tr>
+      <td><strong>Domínio hidrofóbico</strong></td>
+      <td>112–133</td>
+      <td>Porteiro da transição líquido → sólido. Contém o palíndromo AGAAAAGA. G127V trava o portão aberto (mantém condensados líquidos). Sítio de α-clivagem (~111).</td>
+      <td><span class="tag tag-e">E</span></td>
+    </tr>
+    <tr>
+      <td><strong>Domínio globular</strong></td>
+      <td>~134–225</td>
+      <td>Núcleo estrutural da fibrila (3 α-hélices + 2 folhas-β em PrP^C; folha-β PIRIBS em PrP^Sc). Superfície de contato com a cauda N-terminal (auto-inibição).</td>
+      <td><span class="tag tag-e">E</span></td>
+    </tr>
+    <tr>
+      <td><strong>Âncora GPI</strong></td>
+      <td>C-terminal</td>
+      <td>Regulador de dupla face: freio topológico contra LLPS + concentrador de produtos na membrana. Localiza PrP em lipid rafts (plataforma de conversão E alvo de inserção AMP).</td>
+      <td><span class="tag tag-e">E</span> + <span class="tag tag-h">H</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="especificacoes">5. Folha de especificações</h2>
+
+<p>Qualquer modelo válido tem de satisfazer simultaneamente:</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>#</th><th>Restrição</th><th>Evidência</th><th>v5</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>R1</td><td>Depende da PrP^C; knockout é resistente</td><td>Büeler 1992; Brandner 1996</td><td>✓ Sem substrato, sem cascata</td></tr>
+    <tr><td>R2</td><td>Depleção de PrP^C reverte espongiose inicial</td><td>Mallucci 2003</td><td>✓ Para a geração de AMP</td></tr>
+    <tr><td>R3</td><td>PrP sem GPI replica sem causar doença</td><td>Chesebro 2005</td><td>✓ Sem GPI = sem concentração local na membrana = abaixo do limiar</td></tr>
+    <tr><td>R4</td><td>Conversão no plano da membrana é necessária</td><td>Gatdula 2026</td><td>✓ Conversão endossomal, toxicidade na membrana</td></tr>
+    <tr><td>R5</td><td>Reproduzível sem PrP^Sc (anticorpos, FTgpi)</td><td>Sonati 2013; Aguzzi 2015</td><td>✓ Anticorpos destravavam a cauda; FTgpi = cauda constitutivamente ativa</td></tr>
+    <tr><td>R6</td><td>Correlaciona mal com carga de PrP^Sc</td><td>Sandberg 2011</td><td>✓ Toxicidade vem do flanco liberado, não da fibrila</td></tr>
+    <tr><td>R7</td><td>Infectividade e toxicidade desacopladas</td><td>Sandberg 2011; Benilova 2020</td><td>✓ Replicação ≠ perturbação de membrana; parâmetros diferentes</td></tr>
+    <tr><td>R8</td><td>Depende da região polibásica 23–31 / KKRPKP</td><td>Solomon/Harris; Sci Adv 2026</td><td>✓ KKRPKP = carga do AMP (dependente de carga, não de sequência)</td></tr>
+    <tr><td>R9</td><td>Existe limiar de dose</td><td>Sci Adv 2026</td><td>✓ Limiar AMP sub-lítico, documentado para LL-37, melitina, CARPs</td></tr>
+    <tr><td>R10</td><td>Compartilhável com Aβ, tau, α-sinucleína</td><td>Corbett 2020 — contestado</td><td>✓ Biologia amiloide geral (fuzzy coat); Aβ liga qualquer peptídeo catiônico de membrana</td></tr>
+    <tr><td>R11</td><td>Cepas diferentes → padrões regionais diferentes</td><td>Tuzi 2008; Barria 2018</td><td>✓ Conformação × cofatores regionais × sialilação × composição lipídica de raft</td></tr>
+    <tr><td>R12</td><td>Glicosilação varia por cepa, correlaciona com fenótipo</td><td>Tuzi 2008</td><td>✓ Leitura, não driver; glicosilação não determina tropismo</td></tr>
+    <tr><td>R13</td><td>Astrócitos propagam sem degenerar</td><td>Bhérer 2024</td><td>✓ Propagação ≠ toxicidade; composição de membrana astrocítica pode ser menos suscetível ao AMP</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="evidencia">6. O que está sólido</h2>
+
+<h3>6.1 Estrutura</h3>
+<p>PrP^C e PrP^Sc diferem apenas em conformação (α-hélice → folha-β). Fibrilas infecciosas ex vivo têm arquitetura PIRIBS; cada degrau é um monômero; núcleo ordenado ~94–225; glicanos e GPI projetam-se do lobo C-terminal. Cepas = conformações diferentes da mesma sequência. A cauda 23–90 é removida por proteinase K — está exposta e móvel. <span class="tag tag-e">E</span></p>
+
+<h3>6.2 Cinética de duas fases</h3>
+<p>Sandberg &amp; Collinge 2011: <strong>Fase 1</strong> — exponencial, clinicamente silenciosa, não limitada por PrP^C, título máximo em semanas. <strong>Fase 2</strong> — platô; duração determina o início clínico, inversamente proporcional à PrP^C. Tempo de duplicação: ~2–5 dias (vs ~5 anos para tau no cérebro humano). Meisl 2025: príons são verdadeiramente autocatalíticos (fragmentação-elongação); tau/α-syn são limitados por amplificação. <span class="tag tag-e">E</span></p>
+
+<h3>6.3 A trava auto-inibitória</h3>
+<p>RMN: encaixe intramolecular cauda/domínio globular. Ligantes à cauda abolem correntes iônicas. Cauda isolada induz correntes; magnitude escala com o comprimento. Anticorpos contra o domínio globular causam toxicidade priônica. FTgpi (cauda + GPI sem globular) = neurodegeneração letal. <span class="tag tag-e">E</span></p>
+
+<h3>6.4 A cauda N-terminal como AMP funcional</h3>
+<p>Mangé et al. 2009: atividade antimicrobiana direta (Gram+, Gram−, fungos), localizada no N-terminal, mecanismo = perturbação de membrana. Nature Microbiology 2026 ("prionins"): 1.179 AMPs de proteínas priônicas; 59/75 testados inibiram patógenos; dobramento induzido por contato com membrana. É identidade literal, não analogia. <span class="tag tag-e">E</span></p>
+
+<h3>6.5 A âncora GPI suprime LLPS</h3>
+<p>Tatzelt Lab, PNAS 2025: confinamento topológico 2D da membrana restringe interações intermoleculares que sustentam LLPS. PrP liberada da membrana transiciona espontaneamente para agregados insolúveis. O N-terminal é "necessário e suficiente" para LLPS. Lin et al. 2013: GPI-PrP liberada de vesículas tem alta tendência a misfolding; membrana-ancorada é estável. <span class="tag tag-e">E</span></p>
+
+<h3>6.6 LLPS → conversão amiloide é mecanismo geral</h3>
+<p>Confirmado para α-sinucleína, tau, Aβ, FUS, TDP-43. A transição é dirigida pelas mesmas regiões de sequência que medeiam LLPS. Dois limiares distintos: Csat (LLPS) e um mais alto para líquido → sólido. Para PrP (grupo Yi Liang/Cong Liu): motivos polibásicos N-terminais dirigem LLPS. <span class="tag tag-e">E</span></p>
+
+<h3>6.7 G127V — protetor natural que mira a conversão</h3>
+<p>Variante dos Fore de Papua Nova Guiné. Resíduo 127 no domínio hidrofóbico (112–133). Três mecanismos: impede conversão β (impedimento estérico), modula LLPS (mantém condensados líquidos), e é dominante-negativo (fibrilas que incorporam V127 são instáveis). Funciona em trans, persiste após cessar a expressão, universal entre cepas. Não toca na cauda N-terminal — a proteção é inteiramente sobre a conversão. <span class="tag tag-e">E</span></p>
+
+<h3>6.8 Vias a jusante</h3>
+<p>Sináptica: influxo de Ca²⁺ via NMDA → p38 MAPK/MK2-3 → colapso de actina → retração de espinhas. Proteostase: PERK → eIF2α-P → queda de tradução. Espongiose: zDHHC9/21 → PIKfyve → vacúolos. Knockin G92N: convulsões, necrose, influxo persistente de Ca²⁺, beading dendrítico — resgatado por antagonista de NMDA. <span class="tag tag-e">E</span></p>
+
+<!-- ============================================================ -->
+<h2 id="crossfield">7. Achados cross-disciplinares</h2>
+
+<p>Peças que já estavam publicadas sob outro rótulo e que o campo priônico não integrou:</p>
+
+<div class="card">
+  <div class="card-title">AMPs sub-líticos modulam NMDA por mecanossensibilidade</div>
+  <p>Melitina potencia AMPA a 50 ng/mL (sub-lítico) com seletividade por subtipo de receptor (Bhatt 1992). NMDA é mecanossensível à tensão da bicamada (Bhatt PNAS 2007). CARPs bloqueiam NMDA por carga, não por sequência (Front Neurol 2020). A cadeia cauda → Ca²⁺ funciona sem receptor específico.</p>
+</div>
+
+<div class="card">
+  <div class="card-title">Inversão de sinal por dose em LL-37</div>
+  <p>LL-37 (cathelicidina humana): antimicrobiano a 0.02–16 µM; protetor no cérebro em condições fisiológicas; causa fenótipos de Alzheimer quando acumula (Mol Psychiatry 2022). Liga Aβ. É catiônico, anfipático, associado a membrana. O paralelo com PrP N-terminal é estrutural, não metafórico.</p>
+</div>
+
+<div class="card">
+  <div class="card-title">Curvatura de membrana → seletividade sináptica</div>
+  <p>AMPs inserem-se preferencialmente em membranas curvadas (defeitos de empacotamento lipídico). Pescoço da espinha: raio 50–200 nm — entre as maiores curvaturas em neurônios. Espinhas são enriquecidas em lipid rafts. Predição: colapso do pescoço antes da perda da cabeça — consistente com beading dendrítico observado.</p>
+</div>
+
+<div class="card">
+  <div class="card-title">NINJ1 como analogia estrutural mais próxima</div>
+  <p>Nature 2024: NINJ1 forma homodímero auto-inibido; re-oligomeriza em filamentos que expõem a face efetora → ruptura de membrana. Mecanismo de liberação = mudança de estado oligomérico (não fosforilação nem clivagem). Diretamente citotóxico. O fuzzy coat amiloide (JBC 2023 review) generaliza: fibrilas universalmente liberam flancos desordenados que medeiam interação com membranas.</p>
+</div>
+
+<div class="card">
+  <div class="card-title">Carga líquida do flanco correlaciona com severidade</div>
+  <p>PrP N-terminal: +7 a +9 (carpet model, mais disruptivo). α-sinucleína: +4 (hélice anfipática). Tau: polianfólito. Aβ42: −3 (aniônico, mecanismo de poro, completamente diferente). O gradiente carga → severidade (meses → anos → décadas) é consistente, com caveats sobre confundidores.</p>
+</div>
+
+<div class="card">
+  <div class="card-title">Heparan sulfato liga KKRPKP — reinterpretação do PPS</div>
+  <p>Três sítios de ligação HS na PrP: resíduos 23–52, 53–93, 110–128 (JBC 2002). Polianions neutralizam AMPs por ligação eletrostática (mecanismo endógeno, heparan sulfato 2-O-sulfatado neutraliza LL-37). PPS: inibiu toxicidade em células mas estimulou conversão cell-free — paradoxo resolvido se PPS neutraliza o AMP, não a conversão.</p>
+</div>
+
+<div class="card">
+  <div class="card-title">Cobre-PrP: condensados protetores → amiloide patológico</div>
+  <p>Evans et al. Sci Adv 2023: cobre dirige LLPS de PrP em razões fisiológicas; mantém condensados líquidos (função proposta: tamponamento de cobre sináptico). Cu + H₂O₂ dispara transição sólida → amiloide com pontes de ditirosina. Alvo terapêutico: o gatilho oxidativo, não o cobre. Quelação é a estratégia errada.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="lacunas">8. Lacunas — resolvidas e abertas</h2>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>#</th><th>Lacuna</th><th>Status v5</th><th>Resposta / candidato</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>L1</td><td>PrP^L em ensaio de sinaptotoxicidade</td><td><span class="tag tag-h">Candidato</span></td><td>Intermediários LLPS na transição líquido → sólido; β-oligômeros; assembleias sarkosil-sensíveis. PrP^L nunca foi positivamente identificada — 5 candidatos competem.</td></tr>
+    <tr><td>L2</td><td>Dosar fragmento N-terminal durante infecção</td><td><span class="tag tag-c">Aberta</span></td><td>Testável e agora motivada por prionins. Ninguém mediu.</td></tr>
+    <tr><td>L3</td><td>Títulos em camundongos truncados</td><td><span class="tag tag-h">Explicada</span></td><td>Cauda mais curta = AMP menos potente (menor carga). Confundidor persiste: deleções também prejudicam conversão.</td></tr>
+    <tr><td>L4</td><td>Por que α-clivagem protege se o fragmento é tóxico</td><td><span class="tag tag-e">Resolvida</span></td><td>Destruição de substrato: α-clivagem corta dentro do núcleo da fibrila (~111); C1 e N1 não podem converter. N1 transgênico não protege in vivo (Bhullar 2020 — falha de translocação pelo RE). Inversão de sinal não é necessária.</td></tr>
+    <tr><td>L5</td><td>O que a cauda toca na bicamada</td><td><span class="tag tag-e">Resolvida</span></td><td>Mecanismo carpet/AMP (sem hélice, dependente de carga). NMDA modulado por mecanossensibilidade da bicamada + PLA2 → ácido araquidônico. Sem receptor específico.</td></tr>
+    <tr><td>L6</td><td>23–33 é sítio de ligação e efetor?</td><td><span class="tag tag-e">Resolvida</span></td><td>Sim, mesmo sítio. Dependente de carga (+4 em 6 resíduos), não de receptor. CARPs demonstram que qualquer peptídeo suficientemente catiônico faz o mesmo.</td></tr>
+    <tr><td>L7</td><td>Cepa → topografia clínica</td><td><span class="tag tag-h">Candidato forte</span></td><td>Interação tripartite: conformação de cepa × composição lipídica regional (esfingomielina, sialilação, fronteiras de raft) × rotas endocíticas célula-específicas.</td></tr>
+    <tr><td>L8</td><td>Primeira molécula na doença esporádica</td><td><span class="tag tag-h">Resolvida</span></td><td>Convergência de três vulnerabilidades: trânsito endossomal (MVB, pH 4.5, GPI liberada) + Cu/ROS (Evans 2023) + degradação de raft com idade. Sem mutações somáticas encontradas (2024, 205 casos).</td></tr>
+    <tr><td>L9</td><td>Função fisiológica da PrP^C</td><td><span class="tag tag-h">Candidato forte</span></td><td>AMP ancestral + tamponamento de cobre sináptico via condensados LLPS líquidos. Doença priônica = fogo amigo — o AMP endógeno vira-se contra a membrana do hospedeiro.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="terapeutica">9. Mapa terapêutico</h2>
+
+<h3>Na trilha certa — miram conversão/substrato</h3>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Tratamento</th><th>Mecanismo</th><th>Status</th><th>Veredito v5</th></tr></thead>
+  <tbody>
+    <tr><td><strong>ION717</strong> (Ionis ASO)</td><td>Degrada mRNA de PRNP</td><td>Fase 1/2a, 56 pac.</td><td>Certo — remove substrato</td></tr>
+    <tr><td><strong>PRiSM</strong> (Broad/Regeneron siRNA)</td><td>siRNA divalente, dose única ICV</td><td>Fase 1, 15 pac.</td><td>Certo — 64% extensão pós-sintom.</td></tr>
+    <tr><td><strong>Gate Bioscience</strong></td><td>Oral; bloqueia exportação do RE</td><td>Pré-clínico</td><td>Certo — 80% redução em 1 sem</td></tr>
+    <tr><td><strong>CRISPR base editing</strong></td><td>Instala stop R37X ou G127V</td><td>Pré-clínico</td><td>Certo — permanente</td></tr>
+    <tr><td><strong>G127V AAV</strong></td><td>Dominante-negativo em trans</td><td>Pré-clínico 2026</td><td>Certo — e bloqueia LLPS→sólido</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Pontos cegos — v5 prediz que deveriam funcionar, ninguém está testando</h3>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Abordagem ausente</th><th>Mecanismo sob v5</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Antagonista de NMDA</strong> (memantina)</td><td>Bloqueia NMDA mecanossensível; já resgatou G92N in vivo; protegeu contra PrP^Sc in vitro em 1993</td><td>Gap de 33 anos — nunca testada em camundongo infectado</td></tr>
+    <tr><td><strong>Neutralizador de AMP</strong> (análogo HS low-MW)</td><td>Liga KKRPKP, neutraliza cauda; mesmo mecanismo pelo qual o PPS teve efeito parcial</td><td>Completamente inexplorado</td></tr>
+    <tr><td><strong>Modulador de LLPS</strong> (c-mod)</td><td>Mantém condensados líquidos, impede transição sólida</td><td>Campo ativo para Alzheimer/ELA; zero testes em príon</td></tr>
+    <tr><td><strong>ROS scavenger direcionado</strong></td><td>Previne Cu + H₂O₂ → transição sólida no endossomo</td><td>Quelação testada (D-penicillamina: +11 dias); scavenger direcionado não</td></tr>
+    <tr><td><strong>Perfil de AMPs endógenos</strong></td><td>Testa loop de feedback neuroinflamação → AMPs</td><td>Ninguém mediu AMPs em cérebro priônico</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>A combinação ótima sob v5</h3>
+
+<div class="tier tier-1">
+  <div class="tier-label">Tier 1 — Mata a fonte (intratecal)</div>
+  <p><strong>ASO/siRNA</strong> (ION717 ou PRiSM) — reduz substrato<br>
+  <strong>G127V AAV</strong> — envenena fibrilas existentes, cepa-universal</p>
+</div>
+
+<div class="tier tier-2">
+  <div class="tier-label">Tier 2 — Neutraliza o AMP (intratecal, mesmo acesso)</div>
+  <p><strong>Análogo de heparan sulfato low-MW</strong> — liga KKRPKP, neutraliza cauda liberada</p>
+</div>
+
+<div class="tier tier-3">
+  <div class="tier-label">Tier 3 — Protege neurônios (oral, já aprovados)</div>
+  <p><strong>Memantina</strong> — bloqueia NMDA mecanossensível<br>
+  <strong>ROS scavenger</strong> — previne transição líquido → sólido<br>
+  <strong>Lítio (dose baixa)</strong> — autofagia mTOR-independente, neuroproteção</p>
+</div>
+
+<div class="tier tier-4">
+  <div class="tier-label">Tier 4 — Preventivo (portadores genéticos)</div>
+  <p><strong>CRISPR base editing</strong> — instala G127V permanentemente<br>
+  <strong>Modulador de LLPS</strong> — mantém condensados líquidos</p>
+</div>
+
+<p><strong>Por que combinação, não monoterapia?</strong> O coquetel anti-PrP^Sc gera cepas resistentes (Berry et al. 2020 — resistência combinação-específica). A combinação v5 mira o <em>hospedeiro</em> e propriedades biofísicas — sem escape evolutivo. Isso restaura a lógica do coquetel HIV.</p>
+
+<h3>Por que os tratamentos anteriores falharam</h3>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Tratamento</th><th>Resultado</th><th>Explicação sob v5</th></tr></thead>
+  <tbody>
+    <tr><td>Quinacrina</td><td>Zero benefício; resistência</td><td>Mirou PrP^Sc (evolui sob pressão); nunca reduziu príon em células humanas</td></tr>
+    <tr><td>PPS</td><td>Parcial em animal; falha em humano</td><td>Mecanismo real: neutralização do AMP (não anti-conversão). Falha = entrega, não mecanismo</td></tr>
+    <tr><td>PRN100 (anticorpo)</td><td>Zero eficácia</td><td>Liga PrP^C na superfície; não impede conversão no endossomo</td></tr>
+    <tr><td>CTEP pós-sintomático</td><td>Zero efeito</td><td>Ramo, não tronco — perturbação AMP continua</td></tr>
+    <tr><td>Deleção de Bax / Bcl-2</td><td>Zero efeito</td><td>Apoptose é consequência tardia, não mecanismo</td></tr>
+    <tr><td>D-penicillamina</td><td>+11 dias</td><td>Quelação destruiu condensados protetores; alvo era o ROS, não o cobre</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="experimentos">10. Experimentos prioritários</h2>
+
+<h4>Prioridade 1 — Decidem o modelo</h4>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Exp.</th><th>Desenho</th><th>Predição v5</th><th>Dificuldade</th></tr></thead>
+  <tbody>
+    <tr><td><strong>E1</strong></td><td>Memantina em camundongo RML — sobrevida</td><td>Extensão de 15–30%</td><td>Trivial — droga e modelo existem</td></tr>
+    <tr><td><strong>E2</strong></td><td>Dosar fragmento N-terminal livre ao longo da infecção (anticorpo N-terminal + material seriado)</td><td>Curva sobe na transição fase 1 → 2, proporcional a PrP^C</td><td>Fácil</td></tr>
+    <tr><td><strong>E3</strong></td><td>Heparan sulfato low-MW intratecal em camundongo infectado</td><td>Extensão parcial; sinérgico com ASO</td><td>Moderada</td></tr>
+    <tr><td><strong>E4</strong></td><td>Memantina + ASO combinação em camundongo RML</td><td>Extensão maior que qualquer um isolado</td><td>Moderada</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h4>Prioridade 2 — Mecanismo fino</h4>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Exp.</th><th>Desenho</th><th>Predição v5</th></tr></thead>
+  <tbody>
+    <tr><td><strong>E5</strong></td><td>N1 em RT-QuIC/PMCA como substrato → não deve formar fibrilas infecciosas</td><td>N1 faz LLPS mas não converte (α-clivagem = destruição de substrato)</td></tr>
+    <tr><td><strong>E6</strong></td><td>Perfil transcriptômico/proteômico de AMPs endógenos ao longo da infecção</td><td>LL-37/CRAMP sobem com neuroinflamação → loop de feedback AMP</td></tr>
+    <tr><td><strong>E7</strong></td><td>Peptídeos sintéticos com cargas +4, +6, +8 em ensaio de espinhas dendríticas</td><td>Dose-resposta escalonada por carga, não por sequência</td></tr>
+    <tr><td><strong>E8</strong></td><td>Csat de PrP como função de idade/estado de PTM/composição lipídica</td><td>Csat diminui com idade; PTMs oxidativas aceleram</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="historico">11. Histórico de revisões</h2>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Versão</th><th>Proposta</th><th>O que a matou</th></tr></thead>
+  <tbody>
+    <tr><td>v1</td><td>Agregados de PrP^Sc são o agente tóxico</td><td>Correlação fraca; doença sem placa; príons puros não são tóxicos</td></tr>
+    <tr><td>v2</td><td>Avidez multivalente agrupa PrP^C → destrava cauda</td><td>PrP^Sc incompatível liga mas não é tóxica (Gatdula 2026)</td></tr>
+    <tr><td>v3</td><td>Conversão destrói a trava; efetor precisa de GPI</td><td>Fragmento N-terminal solúvel é tóxico por si (Sci Adv 2026)</td></tr>
+    <tr><td>v4</td><td>Cauda liberada é efetor específico com inversão de sinal</td><td>N1 não protege in vivo (Bhullar 2020); toxicidade é dependente de carga, não de sequência (CARPs); LLPS como via upstream não considerada</td></tr>
+    <tr><td><strong>v5</strong></td><td>AMP ancestral liberado por conversão amiloide geral; especificidade na replicação auto-templante; tropismo por composição lipídica; nucleação esporádica por convergência endossomal</td><td><em>Em aberto</em></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Ideias que sobreviveram a todas as revisões: a cauda N-terminal é o efetor; existe limiar de dose; a conversão é o evento de destravamento. O que mudou de v4 para v5: a especificidade migrou do <em>mecanismo de toxicidade</em> para o <em>mecanismo de replicação</em>.</p>
+
+<!-- ============================================================ -->
+<h2 id="limitacoes">12. Limitações honestas</h2>
+
+<p><strong>Sobre o método.</strong> A trajetória desta investigação foi de confiança crescente — cada rodada de busca encontrou apoio. Isso é estruturalmente suspeito. As buscas foram direcionadas por hipóteses que o modelo já favorecia, o que cria viés de confirmação. O modelo foi corrigido quatro vezes de forma substantiva (v1→v5) — bom sinal —, mas nunca foi abandonado.</p>
+
+<p><strong>Sobre o viés de busca.</strong> Os achados cross-disciplinares (AMPs, LLPS, NINJ1, LL-37) vieram de campos que não citam o campo priônico. Isso quase garante que existam outros reenquadramentos não tentados. A busca foi em inglês, chinês (traduzido), e português; outros idiomas podem conter achados relevantes.</p>
+
+<p><strong>Sobre resultados negativos.</strong> "Ninguém fez" e "alguém fez e não deu nada" são indistinguíveis por busca. A memantina nunca testada in vivo pode significar "gap" ou "tentaram e não publicaram."</p>
+
+<p><strong>Sobre a elegância.</strong> O modelo ficou mais bonito a cada rodada. Todas as lacunas encontraram candidatos. A combinação terapêutica tem uma narrativa coerente. Sistemas biológicos raramente são tão limpos. A facilidade com que as peças encaixaram pode significar seleção de peças que encaixavam.</p>
+
+<p><strong>Sobre as predições não testadas.</strong> As predições centrais do v5 (memantina protege in vivo; HS neutraliza toxicidade; AMPs sobem na neuroinflamação; carga determina potência do flanco) são todas testáveis, mas nenhuma foi testada. Um modelo com predições elegantes e zero validação experimental direta é uma hipótese com boa roupa, não um fato.</p>
+
+<p><strong>Sobre o "friendly fire."</strong> A narrativa evolutiva (PrP como AMP ancestral → doença = fogo amigo) é sedutora e pode ter capturado a investigação. A mesma narrativa foi proposta para Aβ (Moir-Tanzi) e é contestada. Narrativa não é evidência.</p>
+
+<!-- ============================================================ -->
+<h2 id="referencias">13. Referências selecionadas</h2>
+
+<h4>Estrutura e fundação</h4>
+<p>Prusiner SB. Science 1982;216:136–144. &bull; Manka SW et al. Nat Commun 2022;13:4004. &bull; Hoyt F et al. Nat Commun 2022;13:4005. &bull; Manka SW et al. Nat Chem Biol 2023. &bull; Li Q et al. Nat Struct Mol Biol 2022;29:962–965.</p>
+
+<h4>Cinética de duas fases</h4>
+<p>Sandberg MK et al. Nature 2011;470:540–542. &bull; Sandberg MK et al. Nat Commun 2014;5:5347. &bull; Benilova I et al. PNAS 2020;117. &bull; Meisl G et al. Nat Struct Mol Biol 2021. &bull; Meisl G. Alz &amp; Dementia 2025.</p>
+
+<h4>Cauda N-terminal e auto-inibição</h4>
+<p>Sonati T et al. Nature 2013. &bull; Wu B et al. eLife 2017;6:e23473. &bull; Sci Adv 2026; doi:10.1126/sciadv.adw6867. &bull; Solomon IH et al. JBC 2010. &bull; Bhullar et al. PMC7253391 (2020).</p>
+
+<h4>LLPS e separação de fases</h4>
+<p>Yi Liang group: JBC 2021 (PMC8289115); JBC 2023 (PMC10641668); JACS 2024. &bull; Tatzelt Lab: PNAS 2025 (PMC11725851). &bull; Evans et al. Sci Adv 2023 (PMC10624353). &bull; Alberti &amp; Dormann. Dev Cell 2020. &bull; Shin &amp; Brangwynne. Science 2017.</p>
+
+<h4>G127V</h4>
+<p>Asante EA et al. Nature 2015. &bull; Sci Rep 2018 (PMC6123418). &bull; Commun Biol 2020 (PMC7391680). &bull; J Neurochem 2023. &bull; ScienceDirect 2026. &bull; PLoS Pathog 2026.</p>
+
+<h4>AMPs e prionins</h4>
+<p>Mangé/Pasupuleti et al. PLoS One 2009 (PMC2752989). &bull; De la Fuente Lab: Nature Microbiology 2026. &bull; Moir &amp; Tanzi. Alz &amp; Dementia 2018; Sci Transl Med 2016. &bull; PubMed 30480243 (PrP + Aβ + LL-37 parallel).</p>
+
+<h4>Biofísica de membrana e curvatura</h4>
+<p>Bhatt et al. Biochem Biophys Res Commun 1992. &bull; Bhatt et al. PNAS 2007. &bull; Elssner et al. JBC 2004. &bull; Vanni et al. JBC 2008. &bull; J Phys Chem Lett 2024 (PMC10788957). &bull; ACS Chem Biol 2010.</p>
+
+<h4>Lipid rafts e tropismo</h4>
+<p>Nat Commun 2024 (atlas lipidômico cerebral). &bull; PubMed 22885355 (colesterol vs AMP em rafts). &bull; PMC9871914 (esfingomielina e conversão). &bull; Makarava et al. IJMS 2020. &bull; Barria et al. JBC 2018. &bull; Tuzi et al. J Virol 2008.</p>
+
+<h4>Analogias cross-disciplinares</h4>
+<p>NINJ1: Nature 2024. &bull; MLKL: Murphy et al. Immunity 2013; Hildebrand et al. PNAS 2014; Samson et al. Nat Commun 2020. &bull; Gasdermin D: Liu et al. Structure 2018. &bull; Fuzzy coat: JBC 2023 (PMC7736610). &bull; N-WASP: Banjade &amp; Rosen. eLife 2014;3:e04123.</p>
+
+<h4>Polianions e heparan sulfato</h4>
+<p>JBC 2002 (sítios de ligação HS na PrP). &bull; PMC10995223 (heparina neutraliza AMPs). &bull; Hayashida 2025 (PMC12806164). &bull; CureFFI: pentosan polysulfate analysis.</p>
+
+<h4>Terapêutica</h4>
+<p>ION717: Minikel et al. Nucleic Acids Res 2020;48:10615–10631. &bull; PRiSM: Broad Institute 2026; bioRxiv 2024. &bull; Gate Bioscience: CJD Foundation. &bull; Berry et al. PLoS Pathog 2020 (resistência combinação-específica). &bull; Müller et al. Eur J Pharmacol 1993 (memantina in vitro). &bull; JCI 2025 (G92N + NMDA antagonist). &bull; Expert Opin Drug Discov 2026 (combinação proposta).</p>
+
+<h4>Doença esporádica e endossomo</h4>
+<p>J Cell Sci 2015 (PMC4379730, MVB como sítio de conversão). &bull; PLoS One 2009 (PMC2671965, macropinocitose necessária). &bull; PMC11328154 (2024, sem mutações somáticas em sCJD). &bull; Sigurdsson et al. JBC 2003 (D-penicillamina).</p>
+
+<div class="footnote">
+  <p>Documento gerado a partir de investigação exploratória com 24 buscas cross-disciplinares em 4 rodadas. Modelo Opus 4.6 (1M context). Não revisado por pares. Não constitui orientação clínica. Checkpoint do estado do conhecimento em 28 de agosto de 2026.</p>
+</div>

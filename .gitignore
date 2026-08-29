@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# MD simulation output (large binary files)
+md_output/
+md_membrane_output/
+*.dcd
+*.chk
+
+# uv lock (reproducible but large)
+uv.lock
+
+# Analysis output (regenerable)
+*.json
+!package.json

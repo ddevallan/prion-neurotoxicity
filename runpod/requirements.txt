@@ -1,0 +1,7 @@
+openmm>=8.6.0
+pdbfixer
+mdtraj
+numpy
+scipy
+matplotlib
+requests
