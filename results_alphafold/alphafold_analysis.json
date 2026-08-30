@@ -1,0 +1,33 @@
+{
+  "pdb_file": "/Users/allan/Projects/cjd/results_alphafold/prp_alphafold.pdb",
+  "n_atoms": 1947,
+  "n_residues": 253,
+  "plddt_by_region": {
+    "Signal peptide (1-22)": 67.2,
+    "N-terminal tail (23-93)": 39.2,
+    "Linker (94-111)": 42.7,
+    "Hydrophobic gatekeeper (112-133)": 59.5,
+    "Globular domain (128-225)": 86.3,
+    "GPI signal (226-253)": 69.3
+  },
+  "n_contacts_nterm_glob": 0,
+  "contact_cutoff_nm": 0.8,
+  "contacts": [],
+  "closest_pair": {
+    "nterm": "GLY79",
+    "glob": "GLY142",
+    "dist_nm": 1.254
+  },
+  "g127": {
+    "resname": "GLY",
+    "plddt": 79.25,
+    "near_nterm": false,
+    "near_glob": true,
+    "at_interface": false
+  },
+  "com_distances": {
+    "nterm_glob_nm": 2.247,
+    "nterm_hydrophobic_nm": 2.415
+  },
+  "interpretation": "AlphaFold does NOT predict close contacts between N-terminal and globular domain (closest pair at 1.254 nm, cutoff 0.8 nm). This is expected: AlphaFold struggles with disordered regions (N-terminal pLDDT=39). The auto-inhibition is a dynamic interaction seen by NMR, not a static contact that AlphaFold captures."
+}

@@ -1,0 +1,134 @@
+"""Steered MD on REAL POPC:POPS membrane from CHARMM-GUI."""
+import openmm as mm
+import openmm.app as app
+import openmm.unit as unit
+import numpy as np
+import json, sys, os, time
+
+os.chdir('/workspace/charmm_gui/openmm')
+
+psf = app.CharmmPsfFile('step5_input.psf')
+pdb = app.PDBFile('step5_input.pdb')
+params = app.CharmmParameterSet('toppar.str')
+
+system = psf.createSystem(params,
+    nonbondedMethod=app.PME,
+    nonbondedCutoff=1.2*unit.nanometers,
+    switchDistance=1.0*unit.nanometers,
+    constraints=app.HBonds)
+
+# Barostat for membrane
+baro = mm.MonteCarloMembraneBarostat(
+    1.0*unit.bar, 0.0*unit.bar*unit.nanometers, 303.15*unit.kelvin,
+    mm.MonteCarloMembraneBarostat.XYIsotropic,
+    mm.MonteCarloMembraneBarostat.ZFree)
+system.addForce(baro)
+
+# Identify peptide atoms (protein chains, not lipid/water/ion)
+pep_atoms = [a.index for a in psf.topology.atoms()
+             if a.residue.chain.id in ('A','B','C','D','E','F')
+             and a.residue.name not in ('TIP3','SOD','CLA','POT','POPC','POPS')]
+if len(pep_atoms) == 0:
+    pep_atoms = [a.index for a in psf.topology.atoms()
+                 if a.residue.segment_id.startswith('PRO')]
+n_pep = len(pep_atoms)
+print(f'Peptide atoms: {n_pep}')
+
+# Steered MD: pull peptide from current z toward membrane center (z=0)
+PULL_RATE = 0.0003  # nm/ps (slower for real membrane)
+K_PULL = 300.0      # kJ/mol/nm^2 per atom
+TOTAL_NS = 15.0     # longer for real membrane
+DT = 0.002
+
+# Get initial peptide z
+sim_init = app.Simulation(psf.topology, system,
+    mm.LangevinMiddleIntegrator(303.15*unit.kelvin, 1.0/unit.picosecond, DT*unit.picoseconds),
+    mm.Platform.getPlatformByName('CUDA'), {'Precision':'mixed'})
+
+# Load equilibrated state
+rst_file = 'step7_production.rst'
+if os.path.exists(rst_file):
+    sim_init.loadState(rst_file)
+    print(f'Loaded equilibrated state from {rst_file}')
+else:
+    sim_init.context.setPositions(pdb.positions)
+    sim_init.minimizeEnergy()
+    print('Minimized from PDB')
+
+state = sim_init.context.getState(getPositions=True)
+pos = state.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
+z_start = float(np.mean(pos[pep_atoms, 2]))
+
+# Find membrane center (average z of phosphorus atoms)
+p_atoms = [a.index for a in psf.topology.atoms() if a.name == 'P']
+if p_atoms:
+    mem_center = float(np.mean(pos[p_atoms, 2]))
+    mem_upper = float(np.max(pos[p_atoms, 2]))
+    print(f'Membrane center: {mem_center:.3f} nm, upper: {mem_upper:.3f} nm')
+else:
+    mem_center = 0.0
+    mem_upper = 2.0
+    print('No P atoms found, using z=0 as center')
+
+z_end = mem_center  # pull toward membrane center
+print(f'Peptide start z: {z_start:.3f}, target: {z_end:.3f}')
+del sim_init
+
+# Add pulling force
+pull = mm.CustomExternalForce('0.5*k_smd*(z-z_smd_target)^2')
+pull.addGlobalParameter('k_smd', K_PULL / n_pep)
+pull.addGlobalParameter('z_smd_target', z_start)
+for idx in pep_atoms:
+    pull.addParticle(idx, [])
+system.addForce(pull)
+
+integ = mm.LangevinMiddleIntegrator(303.15*unit.kelvin, 1.0/unit.picosecond, DT*unit.picoseconds)
+sim = app.Simulation(psf.topology, system, integ,
+    mm.Platform.getPlatformByName('CUDA'), {'Precision':'mixed'})
+
+if os.path.exists(rst_file):
+    sim.loadState(rst_file)
+else:
+    sim.context.setPositions(pdb.positions)
+    sim.minimizeEnergy()
+
+sim.context.setVelocitiesToTemperature(303.15*unit.kelvin)
+
+n_total = int(TOTAL_NS * 1e6 / (DT * 1000))
+collect_every = 500
+z_targets = np.linspace(z_start, z_end, n_total // collect_every)
+
+out_dir = '/workspace/steered_real'
+os.makedirs(out_dir, exist_ok=True)
+z_data = []
+
+print(f'Running {TOTAL_NS} ns steered MD...')
+t0 = time.time()
+for si, zt in enumerate(z_targets):
+    sim.context.setParameter('z_smd_target', zt)
+    sim.step(collect_every)
+    st = sim.context.getState(getPositions=True)
+    p = st.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
+    pz = float(np.mean(p[pep_atoms, 2]))
+    dz = pz - zt
+    z_data.append({'t':float(si*collect_every*DT/1000), 'zt':float(zt), 'z':float(pz), 'dz':float(dz)})
+    if si % 200 == 0:
+        elapsed = time.time()-t0
+        ns = si*collect_every*DT/1000
+        spd = ns/(elapsed/86400) if elapsed>0 else 0
+        print(f'  t={ns:.1f}ns zt={zt:.3f} z={pz:.3f} dz={dz:+.3f} {spd:.0f}ns/day')
+
+cum_work = np.cumsum([d['dz']*K_PULL*PULL_RATE*DT for d in z_data])
+results = {
+    'system': 'KKRPKP + POPC:POPS 80:20 (CHARMM-GUI, real membrane)',
+    'membrane_center': mem_center, 'z_start': z_start, 'z_end': z_end,
+    'pull_rate': PULL_RATE, 'k_pull': K_PULL, 'total_ns': TOTAL_NS,
+    'total_work_kj': float(cum_work[-1]),
+    'total_work_kcal': float(cum_work[-1]/4.184),
+    'trajectory': z_data[:100],  # subsample
+}
+with open(f'{out_dir}/results.json','w') as f:
+    json.dump(results, f, indent=2)
+print(f'\nTotal work: {cum_work[-1]:.2f} kJ/mol ({cum_work[-1]/4.184:.2f} kcal/mol)')
+print(f'Done in {(time.time()-t0)/60:.1f} min')
+print(f'Saved to {out_dir}/results.json')
