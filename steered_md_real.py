@@ -17,6 +17,14 @@ else:
 
 psf = app.CharmmPsfFile('step5_input.psf')
 pdb = app.PDBFile('step5_input.pdb')
+
+# Set box vectors from sysinfo.dat
+with open('sysinfo.dat') as f:
+    _sysinfo = json.load(f)
+_dims = _sysinfo['dimensions']
+psf.setBox(_dims[0]*unit.angstroms, _dims[1]*unit.angstroms, _dims[2]*unit.angstroms)
+print(f'Box: {_dims[0]:.1f} x {_dims[1]:.1f} x {_dims[2]:.1f} A')
+
 import glob as _glob
 _toppar_dir = os.path.join(os.path.dirname(os.getcwd()), 'toppar')
 if os.path.isdir(_toppar_dir):
