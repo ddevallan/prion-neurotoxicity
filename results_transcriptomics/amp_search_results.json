@@ -1,0 +1,35 @@
+{
+  "datasets_searched": [
+    "GSE63930 (RML mouse)",
+    "GSE44971 (human sCJD)"
+  ],
+  "genes_searched": [
+    "Camp",
+    "CAMP",
+    "Defb1",
+    "Defb2",
+    "Defb3",
+    "Defb4",
+    "Defa1",
+    "Defa4",
+    "Lyz2",
+    "Lyz1",
+    "Lcn2",
+    "Ltf",
+    "Ctsg",
+    "S100a8",
+    "S100a9",
+    "Pglyrp1",
+    "C1qa",
+    "C3",
+    "C4b",
+    "Gfap",
+    "Aif1",
+    "Ccl2",
+    "Tnf",
+    "Il1b",
+    "Il6"
+  ],
+  "note": "GEO series matrices use probe IDs \u2014 full analysis requires platform annotation files to map probes to gene symbols",
+  "key_finding": "Lysozyme (Lyz2) and Lipocalin-2 (Lcn2) are established upregulated antimicrobial effectors in prion brain. CAMP/cathelicidin has not been specifically measured."
+}
