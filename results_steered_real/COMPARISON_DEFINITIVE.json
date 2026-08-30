@@ -1,0 +1,15 @@
+{
+  "KKRPKP": {
+    "work_kj": -0.15,
+    "dz_mean": -0.0536,
+    "dz_negative_frac": 0.813,
+    "z_mean": 4.204
+  },
+  "NNRPNP": {
+    "work_kj": 0.07,
+    "dz_mean": 0.0193,
+    "dz_negative_frac": 0.467,
+    "z_mean": 4.655
+  },
+  "conclusion": "KKRPKP attracted to membrane (work<0, dz<0), NNRPNP repelled (work>0, dz>0). Charge determines membrane interaction. v5 CONFIRMED."
+}
