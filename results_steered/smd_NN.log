@@ -1,0 +1,58 @@
+Steered MD: NNRPNP_membrane
+Pull from z=2.5 to z=0.3 nm over 10.0 ns
+Rate: 0.0005 nm/ps, k=500.0 kJ/mol/nm^2
+  t=0.0ns z_target=2.500 z_actual=2.534 dz=+0.034 speed=0ns/day
+  t=0.2ns z_target=2.456 z_actual=2.500 dz=+0.044 speed=337ns/day
+  t=0.4ns z_target=2.412 z_actual=2.413 dz=+0.001 speed=339ns/day
+  t=0.6ns z_target=2.368 z_actual=2.346 dz=-0.022 speed=338ns/day
+  t=0.8ns z_target=2.324 z_actual=2.326 dz=+0.002 speed=338ns/day
+  t=1.0ns z_target=2.280 z_actual=2.244 dz=-0.036 speed=338ns/day
+  t=1.2ns z_target=2.236 z_actual=2.248 dz=+0.013 speed=338ns/day
+  t=1.4ns z_target=2.192 z_actual=2.353 dz=+0.161 speed=338ns/day
+  t=1.6ns z_target=2.148 z_actual=2.235 dz=+0.087 speed=338ns/day
+  t=1.8ns z_target=2.104 z_actual=2.159 dz=+0.055 speed=338ns/day
+  t=2.0ns z_target=2.060 z_actual=2.094 dz=+0.034 speed=338ns/day
+  t=2.2ns z_target=2.016 z_actual=2.049 dz=+0.033 speed=338ns/day
+  t=2.4ns z_target=1.972 z_actual=2.015 dz=+0.043 speed=338ns/day
+  t=2.6ns z_target=1.928 z_actual=1.944 dz=+0.016 speed=338ns/day
+  t=2.8ns z_target=1.884 z_actual=2.041 dz=+0.157 speed=338ns/day
+  t=3.0ns z_target=1.840 z_actual=1.838 dz=-0.002 speed=338ns/day
+  t=3.2ns z_target=1.796 z_actual=1.786 dz=-0.010 speed=338ns/day
+  t=3.4ns z_target=1.752 z_actual=1.912 dz=+0.160 speed=338ns/day
+  t=3.6ns z_target=1.708 z_actual=1.549 dz=-0.159 speed=338ns/day
+  t=3.8ns z_target=1.664 z_actual=1.504 dz=-0.160 speed=338ns/day
+  t=4.0ns z_target=1.620 z_actual=1.640 dz=+0.020 speed=338ns/day
+  t=4.2ns z_target=1.576 z_actual=1.573 dz=-0.003 speed=338ns/day
+  t=4.4ns z_target=1.532 z_actual=1.644 dz=+0.112 speed=338ns/day
+  t=4.6ns z_target=1.488 z_actual=1.503 dz=+0.016 speed=338ns/day
+  t=4.8ns z_target=1.444 z_actual=1.429 dz=-0.015 speed=338ns/day
+  t=5.0ns z_target=1.400 z_actual=0.903 dz=-0.497 speed=338ns/day
+  t=5.2ns z_target=1.356 z_actual=0.784 dz=-0.572 speed=338ns/day
+  t=5.4ns z_target=1.312 z_actual=0.835 dz=-0.477 speed=338ns/day
+  t=5.6ns z_target=1.268 z_actual=0.802 dz=-0.466 speed=338ns/day
+  t=5.8ns z_target=1.224 z_actual=0.730 dz=-0.493 speed=338ns/day
+  t=6.0ns z_target=1.180 z_actual=0.794 dz=-0.386 speed=338ns/day
+  t=6.2ns z_target=1.136 z_actual=0.773 dz=-0.363 speed=338ns/day
+  t=6.4ns z_target=1.092 z_actual=0.773 dz=-0.319 speed=338ns/day
+  t=6.6ns z_target=1.048 z_actual=0.718 dz=-0.329 speed=338ns/day
+  t=6.8ns z_target=1.004 z_actual=0.740 dz=-0.264 speed=338ns/day
+  t=7.0ns z_target=0.960 z_actual=0.560 dz=-0.400 speed=338ns/day
+  t=7.2ns z_target=0.916 z_actual=0.685 dz=-0.230 speed=338ns/day
+  t=7.4ns z_target=0.872 z_actual=0.652 dz=-0.220 speed=338ns/day
+  t=7.6ns z_target=0.828 z_actual=0.600 dz=-0.227 speed=338ns/day
+  t=7.8ns z_target=0.784 z_actual=0.584 dz=-0.200 speed=338ns/day
+  t=8.0ns z_target=0.740 z_actual=0.437 dz=-0.303 speed=338ns/day
+  t=8.2ns z_target=0.696 z_actual=0.533 dz=-0.163 speed=338ns/day
+  t=8.4ns z_target=0.652 z_actual=0.494 dz=-0.158 speed=338ns/day
+  t=8.6ns z_target=0.608 z_actual=0.519 dz=-0.089 speed=338ns/day
+  t=8.8ns z_target=0.564 z_actual=0.432 dz=-0.132 speed=338ns/day
+  t=9.0ns z_target=0.520 z_actual=0.373 dz=-0.146 speed=338ns/day
+  t=9.2ns z_target=0.476 z_actual=0.311 dz=-0.165 speed=338ns/day
+  t=9.4ns z_target=0.432 z_actual=0.384 dz=-0.048 speed=338ns/day
+  t=9.6ns z_target=0.388 z_actual=0.380 dz=-0.008 speed=338ns/day
+  t=9.8ns z_target=0.344 z_actual=0.362 dz=+0.019 speed=338ns/day
+
+Total work: -0.63 kJ/mol (-0.15 kcal/mol)
+Positive = unfavorable insertion; Negative = favorable insertion
+Saved to /workspace/steered_NNRPNP_membrane/results.json
+Done in 42.6 min

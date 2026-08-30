@@ -1,0 +1,188 @@
+{
+  "KKRPKP_membrane": {
+    "name": "KKRPKP_membrane",
+    "label": "KKRPKP (+4, wild-type)",
+    "charge": 4,
+    "sequence": "KKRPKP",
+    "n_frames": 1249,
+    "z": {
+      "mean": 0.7556,
+      "std": 1.1621,
+      "min": 0.2352,
+      "initial": 2.5418,
+      "final": 0.29,
+      "delta": -2.2519
+    },
+    "sasa": {
+      "mean": 12.042,
+      "std": 0.421,
+      "per_residue": {
+        "LYS1": 2.715,
+        "LYS2": 2.192,
+        "ARG3": 2.216,
+        "PRO4": 1.139,
+        "LYS5": 2.064,
+        "PRO6": 1.714
+      }
+    },
+    "rg": {
+      "mean": 0.7,
+      "std": 0.031
+    },
+    "e2e": {
+      "mean": 1.304
+    },
+    "ss": {
+      "helix": 0.0,
+      "sheet": 0.0,
+      "coil": 100.0
+    },
+    "per_residue_z": {
+      "LYS1": 0.786,
+      "LYS2": 0.765,
+      "ARG3": 0.742,
+      "PRO4": 0.617,
+      "LYS5": 0.784,
+      "PRO6": 0.801
+    },
+    "per_residue_min_z": {
+      "LYS1": 0.008,
+      "LYS2": 0.008,
+      "ARG3": -0.054,
+      "PRO4": -0.125,
+      "LYS5": -0.071,
+      "PRO6": -0.063
+    }
+  },
+  "NNRPNP_membrane": {
+    "name": "NNRPNP_membrane",
+    "label": "NNRPNP (0, neutral)",
+    "charge": 0,
+    "sequence": "NNRPNP",
+    "n_frames": 1236,
+    "z": {
+      "mean": 0.3937,
+      "std": 0.1769,
+      "min": 0.2493,
+      "initial": 2.4073,
+      "final": 0.4629,
+      "delta": -1.9444
+    },
+    "sasa": {
+      "mean": 10.183,
+      "std": 0.468,
+      "per_residue": {
+        "ASN1": 2.031,
+        "ASN2": 1.445,
+        "ARG3": 2.142,
+        "PRO4": 1.258,
+        "ASN5": 1.503,
+        "PRO6": 1.804
+      }
+    },
+    "rg": {
+      "mean": 0.59,
+      "std": 0.026
+    },
+    "e2e": {
+      "mean": 1.039
+    },
+    "ss": {
+      "helix": 0.0,
+      "sheet": 0.0,
+      "coil": 100.0
+    },
+    "per_residue_z": {
+      "ASN1": 0.447,
+      "ASN2": 0.38,
+      "ARG3": 0.321,
+      "PRO4": 0.397,
+      "ASN5": 0.402,
+      "PRO6": 0.455
+    },
+    "per_residue_min_z": {
+      "ASN1": -0.081,
+      "ASN2": -0.078,
+      "ARG3": 0.001,
+      "PRO4": -0.104,
+      "ASN5": -0.093,
+      "PRO6": -0.09
+    }
+  },
+  "PrP_23_35_membrane": {
+    "name": "PrP_23_35_membrane",
+    "label": "PrP 23-35 (+4, Trp)",
+    "charge": 4,
+    "sequence": "KKRPKPGGWNTGG",
+    "n_frames": 1236,
+    "z": {
+      "mean": 0.3927,
+      "std": 0.3247,
+      "min": 0.266,
+      "initial": 2.5519,
+      "final": 0.3367,
+      "delta": -2.2151
+    },
+    "sasa": {
+      "mean": 18.496,
+      "std": 0.864,
+      "per_residue": {
+        "LYS1": 2.55,
+        "LYS2": 2.171,
+        "ARG3": 2.311,
+        "PRO4": 1.238,
+        "LYS5": 1.375,
+        "PRO6": 1.05,
+        "GLY7": 0.766,
+        "GLY8": 0.601,
+        "TRP9": 2.579,
+        "ASN10": 1.328,
+        "THR11": 0.822,
+        "GLY12": 0.548,
+        "GLY13": 1.157
+      }
+    },
+    "rg": {
+      "mean": 0.957,
+      "std": 0.062
+    },
+    "e2e": {
+      "mean": 1.185
+    },
+    "ss": {
+      "helix": 0.0,
+      "sheet": 0.7,
+      "coil": 99.3
+    },
+    "per_residue_z": {
+      "LYS1": 0.357,
+      "LYS2": 0.381,
+      "ARG3": 0.357,
+      "PRO4": 0.569,
+      "LYS5": 0.343,
+      "PRO6": 0.574,
+      "GLY7": 0.348,
+      "GLY8": 0.337,
+      "TRP9": 0.363,
+      "ASN10": 0.312,
+      "THR11": 0.418,
+      "GLY12": 0.353,
+      "GLY13": 0.455
+    },
+    "per_residue_min_z": {
+      "LYS1": -0.006,
+      "LYS2": -0.031,
+      "ARG3": -0.036,
+      "PRO4": 0.067,
+      "LYS5": -0.035,
+      "PRO6": 0.063,
+      "GLY7": -0.048,
+      "GLY8": -0.077,
+      "TRP9": -0.071,
+      "ASN10": -0.12,
+      "THR11": -0.065,
+      "GLY12": -0.083,
+      "GLY13": -0.056
+    }
+  }
+}
