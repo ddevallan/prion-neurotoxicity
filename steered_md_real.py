@@ -5,14 +5,21 @@ import openmm.unit as unit
 import numpy as np
 import json, sys, os, time
 
-# Support both local and Vast.ai paths
-for path in ['/workspace/charmm_gui/openmm',
-             '/workspace/prion-neurotoxicity/charmm_gui_membrane/charmm-gui-8797249059/openmm']:
-    if os.path.isdir(path):
-        os.chdir(path)
+# Support KKRPKP and NNRPNP systems
+peptide_name = sys.argv[1] if len(sys.argv) > 1 else 'KKRPKP'
+PATHS = {
+    'KKRPKP': 'charmm_gui_membrane/charmm-gui-8797249059/openmm',
+    'NNRPNP': 'charmm_gui_nnrpnp/charmm-gui-8811352165/openmm',
+}
+rel = PATHS.get(peptide_name, PATHS['KKRPKP'])
+for base in ['/workspace/prion-neurotoxicity', '/Users/allan/Projects/cjd', '/workspace']:
+    p = os.path.join(base, rel)
+    if os.path.isdir(p):
+        os.chdir(p)
+        print(f'System: {peptide_name}, dir: {p}')
         break
 else:
-    print("ERROR: Cannot find openmm directory")
+    print(f"ERROR: Cannot find openmm directory for {peptide_name}")
     sys.exit(1)
 
 psf = app.CharmmPsfFile('step5_input.psf')
