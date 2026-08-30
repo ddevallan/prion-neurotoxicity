@@ -5,11 +5,29 @@ import openmm.unit as unit
 import numpy as np
 import json, sys, os, time
 
-os.chdir('/workspace/charmm_gui/openmm')
+# Support both local and Vast.ai paths
+for path in ['/workspace/charmm_gui/openmm',
+             '/workspace/prion-neurotoxicity/charmm_gui_membrane/charmm-gui-8797249059/openmm']:
+    if os.path.isdir(path):
+        os.chdir(path)
+        break
+else:
+    print("ERROR: Cannot find openmm directory")
+    sys.exit(1)
 
 psf = app.CharmmPsfFile('step5_input.psf')
 pdb = app.PDBFile('step5_input.pdb')
-params = app.CharmmParameterSet('toppar.str')
+import glob as _glob
+_toppar_dir = os.path.join(os.path.dirname(os.getcwd()), 'toppar')
+if os.path.isdir(_toppar_dir):
+    _pfiles = sorted(_glob.glob(os.path.join(_toppar_dir, '*.rtf'))) + \
+              sorted(_glob.glob(os.path.join(_toppar_dir, '*.prm'))) + \
+              sorted(_glob.glob(os.path.join(_toppar_dir, '*.str'))) + ['toppar.str']
+    params = app.CharmmParameterSet(*_pfiles)
+    print(f'Loaded {len(_pfiles)} parameter files from toppar/')
+else:
+    params = app.CharmmParameterSet('toppar.str')
+    print('Using toppar.str only')
 
 system = psf.createSystem(params,
     nonbondedMethod=app.PME,
