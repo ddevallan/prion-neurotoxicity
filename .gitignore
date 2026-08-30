@@ -25,7 +25,6 @@ uv.lock
 !docs/analysis/*.json
 
 # CHARMM-GUI large files (regenerable)
-charmm_gui_membrane/*/toppar/
 charmm_gui_membrane/*/*.tar.gz
 charmm_gui_membrane/*/*.crd
 charmm_gui_membrane/*/*.psf
