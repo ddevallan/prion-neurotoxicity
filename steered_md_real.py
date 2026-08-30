@@ -50,13 +50,12 @@ baro = mm.MonteCarloMembraneBarostat(
     mm.MonteCarloMembraneBarostat.ZFree)
 system.addForce(baro)
 
-# Identify peptide atoms (protein chains, not lipid/water/ion)
+# Identify peptide atoms by residue name (protein amino acids)
+PROTEIN_RES = {'ALA','ARG','ASN','ASP','CYS','GLU','GLN','GLY','HIS','HSD','HSE','HSP',
+               'ILE','LEU','LYS','MET','PHE','PRO','SER','THR','TRP','TYR','VAL'}
+EXCLUDE_RES = {'TIP3','HOH','SOD','CLA','POT','POPC','POPS','NA','CL','K','WAT'}
 pep_atoms = [a.index for a in psf.topology.atoms()
-             if a.residue.chain.id in ('A','B','C','D','E','F')
-             and a.residue.name not in ('TIP3','SOD','CLA','POT','POPC','POPS')]
-if len(pep_atoms) == 0:
-    pep_atoms = [a.index for a in psf.topology.atoms()
-                 if a.residue.segment_id.startswith('PRO')]
+             if a.residue.name in PROTEIN_RES and a.residue.name not in EXCLUDE_RES]
 n_pep = len(pep_atoms)
 print(f'Peptide atoms: {n_pep}')
 
