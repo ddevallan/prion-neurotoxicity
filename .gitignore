@@ -29,8 +29,6 @@ charmm_gui_membrane/*/toppar/
 charmm_gui_membrane/*/*.tar.gz
 charmm_gui_membrane/*/*.crd
 charmm_gui_membrane/*/*.psf
-charmm_gui_membrane/*/openmm/step5_input.crd
-charmm_gui_membrane/*/openmm/step5_input.psf
 
 # Membrane system build outputs (regenerable)
 membrane_systems/*.pdb

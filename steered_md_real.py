@@ -45,15 +45,19 @@ sim_init = app.Simulation(psf.topology, system,
     mm.LangevinMiddleIntegrator(303.15*unit.kelvin, 1.0/unit.picosecond, DT*unit.picoseconds),
     mm.Platform.getPlatformByName('CUDA'), {'Precision':'mixed'})
 
-# Load equilibrated state
+# Load or create equilibrated state
 rst_file = 'step7_production.rst'
 if os.path.exists(rst_file):
     sim_init.loadState(rst_file)
     print(f'Loaded equilibrated state from {rst_file}')
 else:
+    print('No restart file — running quick equilibration from PDB...')
     sim_init.context.setPositions(pdb.positions)
-    sim_init.minimizeEnergy()
-    print('Minimized from PDB')
+    sim_init.minimizeEnergy(maxIterations=5000)
+    print('  Minimized. Running 1 ns NVT equilibration...')
+    sim_init.context.setVelocitiesToTemperature(303.15*unit.kelvin)
+    sim_init.step(500000)  # 1 ns at 2 fs
+    print('  Equilibrated 1 ns.')
 
 state = sim_init.context.getState(getPositions=True)
 pos = state.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
