@@ -159,9 +159,12 @@ phos_set = set(phos.tolist())
 is_pops = np.concatenate([np.zeros(len(popc), bool), np.ones(len(pops), bool)])
 print(f"peptide {len(pep)} | POPC {len(popc)} | POPS {len(pops)} | "
       f"P {len(phos)} | water {len(wat_o)} | sn1 carbons {len(tail)}", flush=True)
-for nm_, sel in [('peptide', pep), ('P', phos), ('water', wat_o), ('lipid', lipid)]:
+HAS_PEPTIDE = len(pep) > 0
+for nm_, sel in [('P', phos), ('water', wat_o), ('lipid', lipid)]:
     if len(sel) == 0:
         sys.exit(f"ERROR: {nm_} selection empty")
+if not HAS_PEPTIDE:
+    print("  No peptide found — running as bare membrane control.", flush=True)
 
 # sn-1 carbons indexed per lipid residue, so the order parameter can be split
 # by each lipid's own position relative to the peptide.
@@ -193,6 +196,39 @@ def leaflet_split(zp):
 
 
 def frame(pos, box):
+    if not HAS_PEPTIDE:
+        # Bare membrane: only global properties
+        zp = pos[phos, 2]
+        up_mask, lo_mask = leaflet_split(zp)
+        z_up, z_lo = zp[up_mask].mean(), zp[lo_mask].mean()
+        upper_lipids = {ri: idx for ri, idx in lipid_res.items()
+                        if pos[idx][:, 2].mean() > zp.mean()}
+        def _scd_bare(sel):
+            vals = []
+            for cname in SN1_CARBONS:
+                ci, hi = [], []
+                for ri in sel:
+                    e = res_sn1.get(ri, {}).get(cname)
+                    if e:
+                        for h in e[1]:
+                            ci.append(e[0])
+                            hi.append(h)
+                if not ci:
+                    continue
+                v = pos[hi] - pos[ci]
+                cos2 = (v[:, 2]**2) / (v**2).sum(axis=1)
+                vals.append(float(np.abs((3*cos2 - 1) / 2).mean()))
+            return float(np.mean(vals)) if vals else float('nan')
+        scd_all = _scd_bare(list(upper_lipids)) if len(upper_lipids) >= 3 else float('nan')
+        return {'z_com': float('nan'), 'z_rel': float('nan'),
+                'min_dist': float('inf'), 'contacts_popc': 0, 'contacts_pops': 0,
+                'thickness_local': float('nan'), 'thickness_distal': float('nan'),
+                'thinning': float('nan'),
+                'apl': float(box[0][0]*box[1][1]*100.0 / max(up_mask.sum(), 1)),
+                'scd_local': float('nan'), 'scd_distal': float('nan'),
+                'scd_global': scd_all, 'thickness_global': float(z_up - z_lo),
+                'disordering': float('nan'),
+                'n_local_lipids': 0, 'n_local_P': 0, 'radial': []}
     P = pos[pep]
     com = P.mean(axis=0)
     zp = pos[phos, 2]
@@ -305,15 +341,20 @@ def frame(pos, box):
 # ---- restrained equilibration, CHARMM-GUI's schedule ---------------------
 pos0 = pdb.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
 
-# The peptide is held in 3D: it must still be unbound when production starts,
-# or time-to-bind is measured from an already-attached state.
-rest = mm.CustomExternalForce('k_rest*periodicdistance(x,y,z,x0,y0,z0)^2')
-rest.addGlobalParameter('k_rest', 0.0)
-for p_ in ('x0', 'y0', 'z0'):
-    rest.addPerParticleParameter(p_)
-for i in pep:
-    rest.addParticle(int(i), pos0[i])
-system.addForce(rest)
+# The peptide is held in 3D: it must still be unbound when production starts.
+if HAS_PEPTIDE:
+    rest = mm.CustomExternalForce('k_rest*periodicdistance(x,y,z,x0,y0,z0)^2')
+    rest.addGlobalParameter('k_rest', 0.0)
+    for p_ in ('x0', 'y0', 'z0'):
+        rest.addPerParticleParameter(p_)
+    for i in pep:
+        rest.addParticle(int(i), pos0[i])
+    system.addForce(rest)
+else:
+    # Dummy parameter so the equilibration loop does not crash
+    rest = mm.CustomExternalForce('k_rest*0')
+    rest.addGlobalParameter('k_rest', 0.0)
+    system.addForce(rest)
 
 # Phosphates are held in z only, as CHARMM-GUI's membrane_restraint.str does.
 # Pinning them in x and y as well would stop lateral diffusion and prevent the
