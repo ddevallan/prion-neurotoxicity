@@ -1,0 +1,15 @@
+ATOM      1  N   ASN     5      15.200   0.000   0.000  0.00  0.00      PROE
+ATOM      2  H   ASN     5      14.936  -0.605   0.989  0.00  0.00      PROE
+ATOM      3  CA  ASN     5      16.658   0.000   0.000  0.00  0.00      PROE
+ATOM      4  HA  ASN     5      16.929  -0.095   1.160  0.00  0.00      PROE
+ATOM      5  C   ASN     5      17.209   1.420   0.000  0.00  0.00      PROE
+ATOM      6  O   ASN     5      16.451   2.390   0.000  0.00  0.00      PROE
+ATOM      7  CB  ASN     5      17.074  -0.383  -1.427  0.00  0.00      PROE
+ATOM      8  HB2 ASN     5      16.210   0.151  -2.067  0.00  0.00      PROE
+ATOM      9  HB3 ASN     5      17.872   0.284  -2.018  0.00  0.00      PROE
+ATOM     10  CG  ASN     5      16.718  -1.801  -1.909  0.00  0.00      PROE
+ATOM     11  OD1 ASN     5      17.019  -2.138  -3.045  0.00  0.00      PROE
+ATOM     12  ND2 ASN     5      16.078  -2.659  -1.090  0.00  0.00      PROE
+ATOM     13 HD21 ASN     5      16.481  -3.340  -0.197  0.00  0.00      PROE
+ATOM     14 HD22 ASN     5      15.349  -3.434  -1.633  0.00  0.00      PROE
+TER

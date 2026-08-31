@@ -17,10 +17,35 @@ two methodological faults:
    bilayer tension, so adsorption alone does not close the mechanism. Those
    metrics are now computed inline.
 
-Perturbation is measured LOCAL vs DISTAL within the same frame: the patch
-under the peptide against the rest of the same bilayer. That is a built-in
-control -- same lipids, same frame, same thermostat -- and avoids comparing
-against a separate bare-membrane run.
+Perturbation is measured two ways, because neither control is clean alone:
+
+  SPATIAL  local (<1.5 nm of the peptide) vs distal (>2.5 nm), same frame.
+  TEMPORAL global bilayer properties before vs after the peptide binds.
+
+Three limits are worth stating before any number is read:
+
+1. The distal reference is not unperturbed. In the 6.6 nm hexapeptide box the
+   farthest a lipid can sit from the peptide is 3.3 nm, so the distal annulus
+   spans only 2.5-3.3 nm; peptide-induced perturbation typically reaches
+   1-3 nm. The PrP box (8.5 nm, 4.2 nm max) is better but not clean. So this
+   measures a LOWER BOUND: a positive thinning signal is real and probably
+   understated, while a null result is ambiguous -- the reference may be just
+   as perturbed as the test region. The temporal control exists to cover that
+   case.
+
+2. One peptide per box is P:L = 1:130 (hexapeptides) and 1:216 (PrP).
+   Carpet-model thinning in experiments is usually seen at 1:100 to 1:10.
+   We may be below the threshold at which a single peptide measurably thins a
+   bilayer, so again a null result is weak evidence against the mechanism.
+
+3. 1.9 ns of restrained equilibration relaxes clashes; it does not converge
+   the area per lipid, which typically needs tens of ns. Area and order
+   parameter are therefore tracked through production and only the last 20 ns
+   is averaged, with the trace kept so convergence can be checked rather than
+   assumed. A CHARMM-GUI starting structure has |S_CD| flat near 0.36 because
+   the library tails are built extended; a properly equilibrated POPC bilayer
+   relaxes to a plateau near 0.20 that falls toward the chain end. That
+   relaxation is the check that equilibration worked.
 
 Hydrogen mass repartitioning allows a 4 fs step (Balusek et al., JCTC 2019,
 validated for CHARMM36 lipids), roughly doubling sampling per GPU-hour.
@@ -131,25 +156,50 @@ for nm_, sel in [('peptide', pep), ('P', phos), ('water', wat_o), ('lipid', lipi
 
 # sn-1 carbons indexed per lipid residue, so the order parameter can be split
 # by each lipid's own position relative to the peptide.
-res_sn1 = {}
+# S_CD is defined on the C-H vector, not on consecutive carbons. This is an
+# all-atom model, so the hydrogens are present and the real quantity is
+# available; using C-C vectors would give S_CC, a different number that only
+# maps onto S_CD through a transformation. Build carbon -> bonded-hydrogen
+# from the topology.
+_bonded = {}
+for _b in psf.topology.bonds():
+    _bonded.setdefault(_b[0].index, []).append(_b[1])
+    _bonded.setdefault(_b[1].index, []).append(_b[0])
+
+res_sn1 = {}          # residue -> {carbon name: (C index, [H indices])}
 for ridx, nm, i in tail:
-    res_sn1.setdefault(ridx, {})[nm] = i
-_names = sorted({nm for _, nm, _ in tail}, key=lambda x: int(x[2:]))
-SN1_PAIRS = list(zip(_names[:-1], _names[1:]))
-print(f"sn-1 chain: {len(_names)} carbons, {len(SN1_PAIRS)} C-C vectors", flush=True)
+    hs = [x.index for x in _bonded.get(i, []) if x.name.startswith('H')]
+    if hs:
+        res_sn1.setdefault(ridx, {})[nm] = (i, hs)
+SN1_CARBONS = sorted({nm for d in res_sn1.values() for nm in d},
+                     key=lambda x: int(x[2:]))
+_nh = sum(len(h) for d in res_sn1.values() for _, h in d.values())
+print(f"sn-1: {len(SN1_CARBONS)} carbons with H, {_nh} C-H vectors "
+      f"over {len(res_sn1)} lipids", flush=True)
 
 # ---- restrained equilibration, CHARMM-GUI's schedule ---------------------
+pos0 = pdb.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
+
+# The peptide is held in 3D: it must still be unbound when production starts,
+# or time-to-bind is measured from an already-attached state.
 rest = mm.CustomExternalForce('k_rest*periodicdistance(x,y,z,x0,y0,z0)^2')
 rest.addGlobalParameter('k_rest', 0.0)
 for p_ in ('x0', 'y0', 'z0'):
     rest.addPerParticleParameter(p_)
-pos0 = pdb.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
-# Restrain the peptide and the lipid phosphates. Holding the peptide is the
-# point: it must still be unbound when production starts, or time-to-bind is
-# measured from an already-attached state.
-for i in np.concatenate([pep, phos]):
+for i in pep:
     rest.addParticle(int(i), pos0[i])
 system.addForce(rest)
+
+# Phosphates are held in z only, as CHARMM-GUI's membrane_restraint.str does.
+# Pinning them in x and y as well would stop lateral diffusion and prevent the
+# bilayer from relaxing its area under the barostat -- the one thing this
+# equilibration exists to allow.
+zrest = mm.CustomExternalForce('k_zrest*(z-z0)^2')
+zrest.addGlobalParameter('k_zrest', 0.0)
+zrest.addPerParticleParameter('z0')
+for i in phos:
+    zrest.addParticle(int(i), [pos0[i][2]])
+system.addForce(zrest)
 
 platform = mm.Platform.getPlatformByName('CUDA')
 props = {'Precision': 'mixed', 'DeviceIndex': gpu_index}
@@ -169,12 +219,14 @@ SCHEDULE = [(4000, 0.125, 0.001, False), (2000, 0.125, 0.001, False),
             (200, 0.5, 0.002, True),     (50, 0.5, 0.004, True)]
 for n, (k, ns, dt, baro_on) in enumerate(SCHEDULE, 1):
     sim.context.setParameter('k_rest', k)
+    sim.context.setParameter('k_zrest', k / 4.0)   # lipids relax faster than the peptide
     sim.integrator.setStepSize(dt*unit.picoseconds)
     sim.context.setParameter(baro.Pressure(), (1.0 if baro_on else 0.0)*unit.bar)
     sim.step(int(ns*1000/dt))
     print(f"  equil {n}/6: k={k:>5} {ns} ns @ {dt*1000:.0f} fs "
           f"{'NPT' if baro_on else 'NVT'}", flush=True)
 sim.context.setParameter('k_rest', 0.0)          # release everything
+sim.context.setParameter('k_zrest', 0.0)
 sim.context.setParameter(baro.Pressure(), 1.0*unit.bar)
 sim.integrator.setStepSize(DT*unit.picoseconds)
 print("Restraints released; production begins with the peptide unbound.", flush=True)
@@ -186,7 +238,7 @@ def leaflet_split(zp):
     return zp > m, zp <= m
 
 
-def frame(pos):
+def frame(pos, box):
     P = pos[pep]
     com = P.mean(axis=0)
     zp = pos[phos, 2]
@@ -229,32 +281,44 @@ def frame(pos):
              for ri, idx in upper_lipids.items()}
 
     def scd(sel):
+        """|S_CD| averaged over the sn-1 chain. theta is the angle between each
+        C-H bond and the bilayer normal (z). Reported as the absolute value,
+        the convention in the lipid literature, where the plateau sits near
+        0.20 for POPC."""
         vals = []
-        for a_, b_ in SN1_PAIRS:
-            va, vb = [], []
+        for cname in SN1_CARBONS:
+            ci, hi = [], []
             for ri in sel:
-                ia, ib = res_sn1.get(ri, {}).get(a_), res_sn1.get(ri, {}).get(b_)
-                if ia is not None and ib is not None:
-                    va.append(ia)
-                    vb.append(ib)
-            if not va:
+                e = res_sn1.get(ri, {}).get(cname)
+                if e:
+                    for h in e[1]:
+                        ci.append(e[0])
+                        hi.append(h)
+            if not ci:
                 continue
-            v = pos[vb] - pos[va]
+            v = pos[hi] - pos[ci]
             cos2 = (v[:, 2]**2) / (v**2).sum(axis=1)
-            vals.append(float((3*cos2.mean() - 1) / 2))
+            vals.append(float(np.abs((3*cos2 - 1) / 2).mean()))
         return float(np.mean(vals)) if vals else float('nan')
 
     loc_res = [ri for ri, d in lip_r.items() if d < 1.5]
     dis_res = [ri for ri, d in lip_r.items() if d > 2.5]
     scd_loc = scd(loc_res) if len(loc_res) >= 3 else float('nan')
     scd_dis = scd(dis_res) if len(dis_res) >= 3 else float('nan')
+    # Whole-leaflet values, for the temporal control and for the equilibration
+    # check described at the top of this file.
+    scd_all = scd(list(upper_lipids))
+    th_all = float(z_up - z_lo)
 
     return {'z_com': float(com[2]), 'z_rel': float(com[2] - z_up),
             'min_dist': dmin, 'contacts_popc': n_pc, 'contacts_pops': n_ps,
             'thickness_local': th_loc, 'thickness_distal': th_dis,
             'thinning': th_dis - th_loc,
-            'apl': float(dims[0]*dims[1]/100.0 / max(up_mask.sum(), 1)),
+            # Live box vectors: under NPT the box breathes, so the initial
+            # dimensions would give a constant, wrong area per lipid.
+            'apl': float(box[0][0]*box[1][1]*100.0 / max(up_mask.sum(), 1)),
             'scd_local': scd_loc, 'scd_distal': scd_dis,
+            'scd_global': scd_all, 'thickness_global': th_all,
             'disordering': (scd_dis - scd_loc) if np.isfinite(scd_loc) and
                            np.isfinite(scd_dis) else float('nan'),
             'n_local_lipids': len(loc_res), 'n_local_P': int(loc.sum())}
@@ -267,9 +331,10 @@ traj = []
 t0 = time.time()
 for i in range(n_frames):
     sim.step(every)
-    pos = sim.context.getState(getPositions=True).getPositions(
-        asNumpy=True).value_in_unit(unit.nanometers)
-    f = frame(pos)
+    st = sim.context.getState(getPositions=True)
+    pos = st.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
+    box = st.getPeriodicBoxVectors(asNumpy=True).value_in_unit(unit.nanometers)
+    f = frame(pos, box)
     f['t_ns'] = (i + 1) * SAMPLE_PS / 1000
     traj.append(f)
     if i % 100 == 0:

@@ -1,0 +1,25 @@
+ATOM      1  N   ARG     3       7.600   0.000   0.000  0.00  0.00      PROC
+ATOM      2  H   ARG     3       7.305  -1.129  -0.229  0.00  0.00      PROC
+ATOM      3  CA  ARG     3       9.058   0.000   0.000  0.00  0.00      PROC
+ATOM      4  HA  ARG     3       9.275  -0.317   1.128  0.00  0.00      PROC
+ATOM      5  C   ARG     3       9.609   1.420   0.000  0.00  0.00      PROC
+ATOM      6  O   ARG     3       8.851   2.390   0.000  0.00  0.00      PROC
+ATOM      7  CB  ARG     3       9.291  -0.259  -1.521  0.00  0.00      PROC
+ATOM      8  HB2 ARG     3       8.385   0.107  -2.218  0.00  0.00      PROC
+ATOM      9  HB3 ARG     3       9.114  -1.429  -1.704  0.00  0.00      PROC
+ATOM     10  CG  ARG     3      10.620   0.313  -2.056  0.00  0.00      PROC
+ATOM     11  HG2 ARG     3      11.378   1.156  -1.657  0.00  0.00      PROC
+ATOM     12  HG3 ARG     3       9.975   1.277  -2.402  0.00  0.00      PROC
+ATOM     13  CD  ARG     3      10.995   0.121  -3.536  0.00  0.00      PROC
+ATOM     14  HD2 ARG     3      10.910  -0.948  -4.075  0.00  0.00      PROC
+ATOM     15  HD3 ARG     3      10.237   0.564  -4.361  0.00  0.00      PROC
+ATOM     16  NE  ARG     3      12.203   0.905  -3.817  0.00  0.00      PROC
+ATOM     17  HE  ARG     3      11.990   1.958  -4.336  0.00  0.00      PROC
+ATOM     18  CZ  ARG     3      13.487   0.549  -3.865  0.00  0.00      PROC
+ATOM     19  NH1 ARG     3      13.968  -0.699  -3.646  0.00  0.00      PROC
+ATOM     20 HH11 ARG     3      15.104  -0.782  -4.014  0.00  0.00      PROC
+ATOM     21 HH12 ARG     3      13.654  -1.770  -4.080  0.00  0.00      PROC
+ATOM     22  NH2 ARG     3      14.364   1.507  -4.160  0.00  0.00      PROC
+ATOM     23 HH21 ARG     3      14.483   1.855  -5.294  0.00  0.00      PROC
+ATOM     24 HH22 ARG     3      15.116   2.169  -3.518  0.00  0.00      PROC
+TER

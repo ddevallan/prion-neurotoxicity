@@ -1,0 +1,15 @@
+ATOM      1  N   PRO     4      11.400   0.000   0.000  0.00  0.00      PROD
+ATOM      2  CA  PRO     4      12.858   0.000   0.000  0.00  0.00      PROD
+ATOM      3  HA  PRO     4      13.101  -0.089   1.167  0.00  0.00      PROD
+ATOM      4  C   PRO     4      13.409   1.420   0.000  0.00  0.00      PROD
+ATOM      5  O   PRO     4      12.651   2.390   0.000  0.00  0.00      PROD
+ATOM      6  CD  PRO     4      11.435  -1.451  -0.044  0.00  0.00      PROD
+ATOM      7  HD2 PRO     4      11.590  -1.553   1.149  0.00  0.00      PROD
+ATOM      8  HD3 PRO     4      10.883  -2.522  -0.011  0.00  0.00      PROD
+ATOM      9  CG  PRO     4      11.916  -1.605  -1.479  0.00  0.00      PROD
+ATOM     10  HG2 PRO     4      12.670  -2.531  -1.310  0.00  0.00      PROD
+ATOM     11  HG3 PRO     4      11.235  -2.287  -2.195  0.00  0.00      PROD
+ATOM     12  CB  PRO     4      12.925  -0.443  -1.473  0.00  0.00      PROD
+ATOM     13  HB2 PRO     4      14.083  -0.710  -1.559  0.00  0.00      PROD
+ATOM     14  HB3 PRO     4      12.574  -0.517  -2.590  0.00  0.00      PROD
+TER

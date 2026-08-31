@@ -1,0 +1,23 @@
+ATOM      1  N   LYS     5      15.200   0.000   0.000  0.00  0.00      PROE
+ATOM      2  H   LYS     5      14.989  -1.136   0.273  0.00  0.00      PROE
+ATOM      3  CA  LYS     5      16.658   0.000   0.000  0.00  0.00      PROE
+ATOM      4  HA  LYS     5      16.802  -0.193  -1.167  0.00  0.00      PROE
+ATOM      5  C   LYS     5      17.209   1.420   0.000  0.00  0.00      PROE
+ATOM      6  O   LYS     5      16.451   2.390   0.000  0.00  0.00      PROE
+ATOM      7  CB  LYS     5      17.028  -0.203   1.490  0.00  0.00      PROE
+ATOM      8  HB2 LYS     5      16.203   0.533   1.953  0.00  0.00      PROE
+ATOM      9  HB3 LYS     5      18.029   0.372   1.783  0.00  0.00      PROE
+ATOM     10  CG  LYS     5      16.865  -1.483   2.321  0.00  0.00      PROE
+ATOM     11  HG2 LYS     5      15.764  -1.939   2.422  0.00  0.00      PROE
+ATOM     12  HG3 LYS     5      17.447  -2.505   2.113  0.00  0.00      PROE
+ATOM     13  CD  LYS     5      17.215  -0.882   3.687  0.00  0.00      PROE
+ATOM     14  HD2 LYS     5      16.316  -0.217   4.117  0.00  0.00      PROE
+ATOM     15  HD3 LYS     5      18.157  -0.158   3.816  0.00  0.00      PROE
+ATOM     16  CE  LYS     5      17.349  -1.739   4.945  0.00  0.00      PROE
+ATOM     17  HE2 LYS     5      16.435  -2.499   5.089  0.00  0.00      PROE
+ATOM     18  HE3 LYS     5      17.277  -1.094   5.951  0.00  0.00      PROE
+ATOM     19  NZ  LYS     5      18.587  -2.536   4.959  0.00  0.00      PROE
+ATOM     20  HZ1 LYS     5      18.863  -3.337   4.113  0.00  0.00      PROE
+ATOM     21  HZ2 LYS     5      19.595  -1.919   5.152  0.00  0.00      PROE
+ATOM     22  HZ3 LYS     5      18.536  -3.239   5.931  0.00  0.00      PROE
+TER

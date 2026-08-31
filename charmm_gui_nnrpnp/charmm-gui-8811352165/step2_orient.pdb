@@ -1,0 +1,123 @@
+REMARK  CALC TOPAREA = 54.0400985                                                     
+REMARK  CALC BOTAREA = 65.542285                                                      
+REMARK  CALC XMAX = 3.58321107                                                        
+REMARK  CALC XMIN = -1.77041003                                                       
+REMARK  CALC YMAX = 2.6262562                                                         
+REMARK  CALC YMIN = -2.85469042                                                       
+REMARK  CALC ZMAX = 11.3324505                                                        
+REMARK  CALC ZMIN = -10.94969                                                         
+REMARK   DATE:     8/30/26     14:14: 7      CREATED BY USER: charmm-gui              
+ATOM      1  N   ASN     1      -0.221   0.847 -10.950  1.00  0.00      PROA
+ATOM      2  HT1 ASN     1      -0.874   1.567 -11.319  1.00  0.00      PROA
+ATOM      3  HT2 ASN     1      -0.500  -0.089 -11.306  1.00  0.00      PROA
+ATOM      4  HT3 ASN     1       0.747   1.062 -11.265  1.00  0.00      PROA
+ATOM      5  CA  ASN     1      -0.269   0.847  -9.492  1.00  0.00      PROA
+ATOM      6  HA  ASN     1      -1.293   0.977  -9.177  1.00  0.00      PROA
+ATOM      7  CB  ASN     1       0.289  -0.506  -9.041  1.00  0.00      PROA
+ATOM      8  HB1 ASN     1       0.299  -0.494  -7.932  1.00  0.00      PROA
+ATOM      9  HB2 ASN     1       1.330  -0.565  -9.418  1.00  0.00      PROA
+ATOM     10  CG  ASN     1      -0.393  -1.820  -9.451  1.00  0.00      PROA
+ATOM     11  OD1 ASN     1       0.156  -2.855  -9.118  1.00  0.00      PROA
+ATOM     12  ND2 ASN     1      -1.542  -1.843 -10.145  1.00  0.00      PROA
+ATOM     13 HD21 ASN     1      -1.880  -2.705 -10.524  1.00  0.00      PROA
+ATOM     14 HD22 ASN     1      -2.060  -0.999 -10.284  1.00  0.00      PROA
+ATOM     15  C   ASN     1       0.656   1.909  -8.911  1.00  0.00      PROA
+ATOM     16  OT1 ASN     1       1.316   2.622  -9.713  1.00  0.00      PROA
+ATOM     17  OT2 ASN     1       0.714   2.021  -7.657  1.00  0.00      PROA
+ATOM     18  N   ASN     2      -0.346   0.848  -7.152  1.00  0.00      PROB
+ATOM     19  HT1 ASN     2      -0.715   1.752  -7.511  1.00  0.00      PROB
+ATOM     20  HT2 ASN     2      -0.927   0.067  -7.518  1.00  0.00      PROB
+ATOM     21  HT3 ASN     2       0.638   0.725  -7.466  1.00  0.00      PROB
+ATOM     22  CA  ASN     2      -0.394   0.848  -5.695  1.00  0.00      PROB
+ATOM     23  HA  ASN     2      -1.430   0.798  -5.395  1.00  0.00      PROB
+ATOM     24  CB  ASN     2       0.386  -0.353  -5.145  1.00  0.00      PROB
+ATOM     25  HB1 ASN     2       0.438  -0.251  -4.041  1.00  0.00      PROB
+ATOM     26  HB2 ASN     2       1.413  -0.316  -5.565  1.00  0.00      PROB
+ATOM     27  CG  ASN     2      -0.190  -1.744  -5.455  1.00  0.00      PROB
+ATOM     28  OD1 ASN     2       0.445  -2.735  -5.136  1.00  0.00      PROB
+ATOM     29  ND2 ASN     2      -1.377  -1.847  -6.069  1.00  0.00      PROB
+ATOM     30 HD21 ASN     2      -1.690  -2.735  -6.407  1.00  0.00      PROB
+ATOM     31 HD22 ASN     2      -1.951  -1.037  -6.188  1.00  0.00      PROB
+ATOM     32  C   ASN     2       0.531   1.910  -5.113  1.00  0.00      PROB
+ATOM     33  OT1 ASN     2       1.191   2.623  -5.915  1.00  0.00      PROB
+ATOM     34  OT2 ASN     2       0.588   2.022  -3.859  1.00  0.00      PROB
+ATOM     35  N   ARG     3      -0.471   0.849  -3.354  1.00  0.00      PROC
+ATOM     36  HT1 ARG     3      -0.856   1.746  -3.714  1.00  0.00      PROC
+ATOM     37  HT2 ARG     3      -1.038   0.057  -3.719  1.00  0.00      PROC
+ATOM     38  HT3 ARG     3       0.514   0.743  -3.668  1.00  0.00      PROC
+ATOM     39  CA  ARG     3      -0.519   0.849  -1.897  1.00  0.00      PROC
+ATOM     40  HA  ARG     3      -1.510   0.608  -1.546  1.00  0.00      PROC
+ATOM     41  CB  ARG     3       0.520  -0.287  -1.629  1.00  0.00      PROC
+ATOM     42  HB1 ARG     3       1.334  -0.163  -2.373  1.00  0.00      PROC
+ATOM     43  HB2 ARG     3       0.003  -1.250  -1.813  1.00  0.00      PROC
+ATOM     44  CG  ARG     3       1.191  -0.393  -0.239  1.00  0.00      PROC
+ATOM     45  HG1 ARG     3       0.369  -0.530   0.491  1.00  0.00      PROC
+ATOM     46  HG2 ARG     3       1.682   0.583  -0.057  1.00  0.00      PROC
+ATOM     47  CD  ARG     3       2.253  -1.483   0.092  1.00  0.00      PROC
+ATOM     48  HD1 ARG     3       2.991  -1.567  -0.734  1.00  0.00      PROC
+ATOM     49  HD2 ARG     3       1.760  -2.463   0.264  1.00  0.00      PROC
+ATOM     50  NE  ARG     3       2.973  -1.105   1.319  1.00  0.00      PROC
+ATOM     51  HE  ARG     3       3.758  -0.518   1.154  1.00  0.00      PROC
+ATOM     52  CZ  ARG     3       2.781  -1.396   2.621  1.00  0.00      PROC
+ATOM     53  NH1 ARG     3       1.749  -2.192   2.951  1.00  0.00      PROC
+ATOM     54 HH11 ARG     3       1.147  -2.552   2.237  1.00  0.00      PROC
+ATOM     55 HH12 ARG     3       1.583  -2.424   3.909  1.00  0.00      PROC
+ATOM     56  NH2 ARG     3       3.583  -0.914   3.583  1.00  0.00      PROC
+ATOM     57 HH21 ARG     3       4.255  -0.206   3.365  1.00  0.00      PROC
+ATOM     58 HH22 ARG     3       3.509  -1.263   4.517  1.00  0.00      PROC
+ATOM     59  C   ARG     3       0.405   1.911  -1.315  1.00  0.00      PROC
+ATOM     60  OT1 ARG     3       1.066   2.624  -2.117  1.00  0.00      PROC
+ATOM     61  OT2 ARG     3       0.463   2.022  -0.061  1.00  0.00      PROC
+ATOM     62  N   PRO     4      -0.597   0.850   0.444  1.00  0.00      PROD
+ATOM     63  HN1 PRO     4      -0.959   1.680   0.020  1.00  0.00      PROD
+ATOM     64  HN2 PRO     4       0.300   0.626   0.062  1.00  0.00      PROD
+ATOM     65  CD  PRO     4      -1.530  -0.265   0.472  1.00  0.00      PROD
+ATOM     66  HD1 PRO     4      -1.945  -0.490  -0.532  1.00  0.00      PROD
+ATOM     67  HD2 PRO     4      -2.360  -0.100   1.189  1.00  0.00      PROD
+ATOM     68  CA  PRO     4      -0.645   0.850   1.901  1.00  0.00      PROD
+ATOM     69  HA  PRO     4      -1.663   0.844   2.254  1.00  0.00      PROD
+ATOM     70  CB  PRO     4       0.158  -0.452   2.016  1.00  0.00      PROD
+ATOM     71  HB1 PRO     4       0.071  -0.898   3.029  1.00  0.00      PROD
+ATOM     72  HB2 PRO     4       1.232  -0.292   1.784  1.00  0.00      PROD
+ATOM     73  CG  PRO     4      -0.528  -1.325   0.953  1.00  0.00      PROD
+ATOM     74  HG1 PRO     4       0.167  -1.650   0.153  1.00  0.00      PROD
+ATOM     75  HG2 PRO     4      -1.025  -2.217   1.387  1.00  0.00      PROD
+ATOM     76  C   PRO     4       0.280   1.912   2.483  1.00  0.00      PROD
+ATOM     77  OT1 PRO     4       0.941   2.624   1.681  1.00  0.00      PROD
+ATOM     78  OT2 PRO     4       0.338   2.023   3.737  1.00  0.00      PROD
+ATOM     79  N   ASN     5      -0.722   0.851   4.242  1.00  0.00      PROE
+ATOM     80  HT1 ASN     5      -1.097   1.752   3.882  1.00  0.00      PROE
+ATOM     81  HT2 ASN     5      -1.297   0.065   3.876  1.00  0.00      PROE
+ATOM     82  HT3 ASN     5       0.263   0.735   3.928  1.00  0.00      PROE
+ATOM     83  CA  ASN     5      -0.770   0.851   5.699  1.00  0.00      PROE
+ATOM     84  HA  ASN     5      -1.800   0.794   6.018  1.00  0.00      PROE
+ATOM     85  CB  ASN     5       0.028  -0.383   6.142  1.00  0.00      PROE
+ATOM     86  HB1 ASN     5       0.115  -0.351   7.248  1.00  0.00      PROE
+ATOM     87  HB2 ASN     5       1.040  -0.311   5.693  1.00  0.00      PROE
+ATOM     88  CG  ASN     5      -0.542  -1.763   5.767  1.00  0.00      PROE
+ATOM     89  OD1 ASN     5       0.073  -2.770   6.089  1.00  0.00      PROE
+ATOM     90  ND2 ASN     5      -1.702  -1.861   5.089  1.00  0.00      PROE
+ATOM     91 HD21 ASN     5      -1.992  -2.743   4.718  1.00  0.00      PROE
+ATOM     92 HD22 ASN     5      -2.273  -1.051   4.956  1.00  0.00      PROE
+ATOM     93  C   ASN     5       0.155   1.913   6.281  1.00  0.00      PROE
+ATOM     94  OT1 ASN     5       0.815   2.625   5.479  1.00  0.00      PROE
+ATOM     95  OT2 ASN     5       0.213   2.024   7.535  1.00  0.00      PROE
+ATOM     96  N   PRO     6      -0.847   0.852   8.040  1.00  0.00      PROF
+ATOM     97  HN1 PRO     6      -1.208   1.686   7.621  1.00  0.00      PROF
+ATOM     98  HN2 PRO     6       0.055   0.636   7.663  1.00  0.00      PROF
+ATOM     99  CD  PRO     6      -1.770  -0.260   8.024  1.00  0.00      PROF
+ATOM    100  HD1 PRO     6      -2.170  -0.471   7.012  1.00  0.00      PROF
+ATOM    101  HD2 PRO     6      -2.607  -0.133   8.739  1.00  0.00      PROF
+ATOM    102  CA  PRO     6      -0.895   0.852   9.497  1.00  0.03      PROF
+ATOM    103  HA  PRO     6      -1.898   0.742   9.873  1.00  0.05      PROF
+ATOM    104  CB  PRO     6       0.020  -0.374   9.483  1.00  0.03      PROF
+ATOM    105  HB1 PRO     6       0.096  -0.842  10.487  1.00  0.06      PROF
+ATOM    106  HB2 PRO     6       1.041  -0.120   9.127  1.00  0.02      PROF
+ATOM    107  CG  PRO     6      -0.715  -1.280   8.491  1.00  0.01      PROF
+ATOM    108  HG1 PRO     6      -0.060  -1.622   7.663  1.00  0.00      PROF
+ATOM    109  HG2 PRO     6      -1.170  -2.165   8.982  1.00  0.02      PROF
+ATOM    110  C   PRO     6       0.030   1.913  10.079  1.00  0.04      PROF
+ATOM    111  OT1 PRO     6       0.690   2.626   9.277  1.00  0.03      PROF
+ATOM    112  OT2 PRO     6       0.087   2.025  11.332  1.00  0.05      PROF
+TER     113      PRO      6
+END

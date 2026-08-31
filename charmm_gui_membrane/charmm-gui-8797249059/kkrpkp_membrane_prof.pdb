@@ -1,0 +1,16 @@
+ATOM      1  N   PRO     6      19.000   0.000   0.000  0.00  0.00      PROF
+ATOM      2  CA  PRO     6      20.458   0.000   0.000  0.00  0.00      PROF
+ATOM      3  HA  PRO     6      21.215  -0.448   0.806  0.00  0.00      PROF
+ATOM      4  C   PRO     6      21.009   1.420   0.000  0.00  0.00      PROF
+ATOM      5  O   PRO     6      20.251   2.390   0.000  0.00  0.00      PROF
+ATOM      6  CD  PRO     6      18.996  -1.447  -0.064  0.00  0.00      PROF
+ATOM      7  HD2 PRO     6      18.105  -2.233  -0.214  0.00  0.00      PROF
+ATOM      8  HD3 PRO     6      19.676  -2.117   0.661  0.00  0.00      PROF
+ATOM      9  CG  PRO     6      19.397  -1.484  -1.547  0.00  0.00      PROF
+ATOM     10  HG2 PRO     6      18.705  -1.439  -2.521  0.00  0.00      PROF
+ATOM     11  HG3 PRO     6      19.970  -2.516  -1.766  0.00  0.00      PROF
+ATOM     12  CB  PRO     6      20.398  -0.306  -1.515  0.00  0.00      PROF
+ATOM     13  HB2 PRO     6      21.493  -0.624  -1.878  0.00  0.00      PROF
+ATOM     14  HB3 PRO     6      20.112   0.517  -2.333  0.00  0.00      PROF
+ATOM     15  OXT PRO     6      22.271   1.501   0.000  0.00  0.00      PROF
+TER
