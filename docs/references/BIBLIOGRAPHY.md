@@ -1,6 +1,27 @@
 # Bibliography
 
-References compiled during the exploratory investigation into prion disease neurotoxicity (v5 model). Organized by topic. Entries verified against abstracts and text excerpts; volume/page details should be confirmed before formal use.
+References compiled during the exploratory investigation into prion disease neurotoxicity (v5 model). Organized by topic.
+
+> ## ⚠ Attribution audit — read before citing anything here
+>
+> Six entries were checked against indexed databases on 2026-08-31. **Three had
+> fabricated author attributions and one had the wrong year and authors:**
+>
+> | claim | was cited as | actually is |
+> |---|---|---|
+> | NMDA mechanosensitivity | Bhatt DK, PNAS 2007 | **Kloda T** et al., PNAS 2007 |
+> | Melittin / AMPA Ca²⁺ | Bhatt DK, *BBRC* 1992 | **Phillis JW** et al., ***Brain Res*** 1992 |
+> | Copper drives PrP LLPS | "Evans, Li et al." | **do Amaral MJ** et al. |
+> | Soluble N-term neurotoxicity | de la Fuente, *Sci Adv* **2026** | **Yan R** et al., *Sci Adv* **2025** |
+>
+> Two were correct (Torres/de la Fuente-Nunez 2026; Riemer 2008). The same
+> invented author name — "Bhatt DK" — had been attached to two unrelated papers
+> fifteen years apart, which is what prompted the audit.
+>
+> **A 4-in-6 error rate means the rest of this file is unaudited, not verified.**
+> Entries carrying a DOI or PMID below have been checked. Entries without one
+> have not. Do not quote an unchecked entry in anything that leaves this
+> repository — correspondence with clinicians included.
 
 ---
 
@@ -31,7 +52,18 @@ References compiled during the exploratory investigation into prion disease neur
 - McDonald AJ, Harris DA. An inter-domain regulatory mechanism controls toxic activities of PrPC. *Prion* 2017.
 - Aguzzi A, et al. Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP. *PLoS One* 2015;10:e0117412.
 - Solomon IH, Huettner JE, Harris DA. An N-terminal polybasic domain and cell surface localization are required for mutant prion protein toxicity. *J Biol Chem* 2010.
-- Soluble N-terminal region of prion protein causes rapid neurodegeneration in prion disease. *Sci Adv* 2026. doi:10.1126/sciadv.adw6867.
+- **Yan R, Zhang Y, Zhang J, Zhang X, Han Y, Wang M, Wang D, Huang S, Liu W, Shi Q,
+  Dong X, Zou WQ, Li Z, Ma J.** Soluble N-terminal region of prion protein causes rapid
+  neurodegeneration in prion disease. *Sci Adv* **2025** Aug 8;11(32):eadw6867.
+  doi:10.1126/sciadv.adw6867. PMID 40768577. PMC12327452.
+  - PrP 1-110 or 1-90 fused to a nanobody causes rapid lethal neurodegeneration in mice
+    (spongiosis, gliosis, microgliosis). The toxic fragment is **soluble and peripherally
+    membrane-associated, and toxicity requires the KKRPKP (CC1) motif — deleting CC1
+    abolishes it.** Co-expression accelerates neurodegeneration in prion-infected mice.
+  - This is the strongest published support for the v5 model: it puts the exact motif
+    we simulate (KKRPKP, 23-28) at the centre of in vivo toxicity, and it says the
+    effector is membrane-associated rather than acting through a receptor.
+  - Earlier drafts dated this 2026 and credited it to the de la Fuente lab. Both wrong.
 - Bhullar AS, et al. N1 fragment of the prion protein does not protect against prion disease in transgenic mice. *PMC7253391* 2020.
 - Flechsig E, et al. Prion protein devoid of the octapeptide repeat region restores susceptibility to scrapie in PrP knockout mice. *Neuron* 2000 (Δ32–93).
 - Atarashi R, Nishida N, Shigematsu K, et al. Deletion of N-terminal residues 23-88 from PrP abrogates the potential to rescue PrP-deficient mice. 2003.
@@ -51,7 +83,13 @@ References compiled during the exploratory investigation into prion disease neur
 - Yi Liang group. Dog PrP Arg177/Asp159 slow LLPS and inhibit human PrP amyloid formation. *JBC* 2023. PMC10641668.
 - JACS 2024. Post-LLPS conformational shift modulated by polymeric antagonist.
 - Tatzelt Lab. GPI membrane anchor suppresses PrP phase separation through topological confinement. *PNAS* 2025. PMC11725851.
-- do Amaral MJ, et al. Copper drives PrP phase separation; Cu + H₂O₂ triggers liquid-to-solid transition. *Sci Adv* 2023;9(44):eadi7347. PMC10624353. (UFRJ/DZNE. Cited in earlier drafts as "Evans, Li et al." — that attribution was wrong.)
+- **do Amaral MJ, Mohapatra S, Passos AR, Lopes da Silva TS, Carvalho RS, da Silva
+  Almeida M, Pinheiro AS, Wegmann S, Cordeiro Y.** Copper drives prion protein phase
+  separation and modulates aggregation. *Sci Adv* 2023 Nov 3;9(44):eadi7347.
+  doi:10.1126/sciadv.adi7347. PMID 37922348. PMC10624353. (UFRJ/DZNE.)
+  - Cu²⁺ promotes PrP condensation at the cell surface and in vitro; oxidation by H₂O₂
+    drives a liquid-to-solid transition and amyloid-like aggregation.
+  - Cited in earlier drafts as "Evans, Li et al." — that attribution was fabricated.
 - Alberti S, Dormann D. Liquid-liquid phase separation in disease. *Dev Cell* 2020.
 - Shin Y, Brangwynne CP. Liquid phase condensation in cell physiology and disease. *Science* 2017.
 - Lin et al. GPI-PrP liberated from lipid vesicles misfolds into amyloid fibrils; membrane-bound GPI-PrP is stable. *IJMS* 2013. PMC3794761.
@@ -77,7 +115,18 @@ References compiled during the exploratory investigation into prion disease neur
 ## AMPs and Prionins
 
 - Pasupuleti M, Mangé A, et al. Antimicrobial activity of human prion protein is mediated by its N-terminal region. *PLoS One* 2009. PMC2752989.
-- De la Fuente Lab. Prionins: antimicrobial peptides from prion and prion-like proteins discovered by deep learning. *Nature Microbiology* 2026.
+- **Torres MDT, Wan F, de la Fuente-Nunez C.** Deep learning reveals antimicrobial
+  peptides within prions. *Nat Microbiol* 2026 Jun 19;11(8):2119-2125.
+  doi:10.1038/s41564-026-02408-1. PMID 42321536. PMC13423867.
+  - APEX 1.1 screened 19.3 million fragments from 2,897 prion-related proteins, yielding
+    1,179 candidate "prionins". Of 75 synthesised, 59 inhibited bacterial pathogens
+    (mainly Gram-negative), 53 perturbed membranes, 2 reduced *A. baumannii* infection
+    in a mouse skin-abscess model.
+  - **Important limit: the human PrP 23-93 fragment and the KKRPKP (23-28) motif are NOT
+    among the highlighted tested prionins.** In vivo work was on prionin-7
+    (*Thelonectria olida*) and prionin-38 (*C. elegans*). This paper establishes that
+    prion-family proteins harbour AMPs in general — it does not establish that the human
+    PrP N-terminus is one. For that, cite Pasupuleti 2009 (PLoS One) instead.
 - Moir RD, Tanzi RE. Aβ as antimicrobial peptide. *Alz & Dementia* 2018; *Sci Transl Med* 2016.
 - PrP, Aβ, and LL-37 share membrane-penetrating and antimicrobial properties. PMID 30480243 (2018 review).
 - Park SC, et al. α-Synuclein antimicrobial activity. *BBRC* 2016. PMID 27520375.
@@ -92,15 +141,28 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## Membrane Biophysics and Curvature
 
-- **[AUTHOR UNVERIFIED]** Melittin potentiates AMPA-receptor Ca²⁺ influx at sub-lytic concentrations. *Biochem Biophys Res Commun* 1992.
-- **[AUTHOR UNVERIFIED]** NMDA receptors are mechanosensitive to bilayer tension. *PNAS* 2007.
-  - Both were attributed to "Bhatt DK, et al." — the same author on two unrelated
-    papers fifteen years apart, which is the signature of a confabulated
-    attribution rather than a real bibliography entry. The findings may well be
-    real (mechanosensitivity of NMDA receptors to membrane stretch is an
-    established result), but the author names must be checked before either is
-    cited. This matters: NMDA mechanosensitivity is mechanism (B) of the v5
-    model, one of three convergent Ca²⁺ routes.
+- **Phillis JW, Song D, O'Regan MH.** Melittin enhances excitatory amino acid release and
+  AMPA-stimulated ⁴⁵Ca²⁺ influx in cultured neurons. *Brain Res* 1992 Jul 17;586(1):72-7.
+  doi:10.1016/0006-8993(92)91373-m. PMID 1380882.
+  - Melittin at 50 ng/ml potentiated AMPA-stimulated ⁴⁵Ca²⁺ influx in cerebellar granule
+    cells. **The effect was attributed to phospholipase A₂ activation, not to direct
+    AMPA-receptor modulation.** The v5 model should not cite this as evidence of a
+    direct AMP-on-receptor effect.
+  - Previously cited as "Bhatt DK, et al., Biochem Biophys Res Commun 1992" — wrong
+    authors and wrong journal.
+- **Kloda T, Maneshi M, Sachs F, Hua L, Auerbach A, et al.** Liposome reconstitution and
+  modulation of recombinant N-methyl-D-aspartate receptor channels by membrane stretch.
+  *PNAS* 2007 Jan 30;104(5):1540-5. doi:10.1073/pnas.0609649104. PMID 17242368.
+  - NR1a/NR2A reconstituted into liposomes; membrane stretch potentiates NMDA currents
+    even with intracellular Mg²⁺, i.e. direct mechanosensitivity via bilayer tension.
+    **It shows modulation of existing channel activity by mechanical force, not
+    glutamate-independent gating** — the v5 model's mechanism (B) must be stated that way.
+  - Previously attributed to "Bhatt DK, et al." — wrong first author (Kloda).
+  - Stronger later evidence for agonist-independent mechanical activation:
+    Maneshi et al. 2017 (shear-stress Ca²⁺ entry in astrocytes, blocked by MK-801 but not
+    by competitive glutamate antagonists) and Singaravelu et al. 2022 (mild stretch can
+    substitute for glutamate in gating recombinant NMDARs). Both need their own
+    verification before citation.
 - Elssner A, et al. LL-37 modulates P2X7 channels at sub-lytic concentrations. *JBC* 2004.
 - Cationic arginine-rich peptides (CARPs) are neuroprotective via NMDA blockade — charge-dependent, not sequence-specific. *Front Neurol* 2020. PMC7412265.
 - Vanni S, et al. Amphipathic helices preferentially bind curved membranes. *JBC* 2008.
@@ -173,10 +235,12 @@ References compiled during the exploratory investigation into prion disease neur
 - Wang Y, et al. Presymptomatic mGluR5 inhibition (CTEP) improves survival. *Acta Neuropathol Commun* 2026;14:83.
 - Goniotaki D, et al. Inhibition of group-I mGluRs protects against prion toxicity. *PLoS Pathog* 2017.
 - Memantine protects against PrPSc toxicity in vitro. Müller et al. *Eur J Pharmacol* 1993. PMID 7901042.
-- **[NEEDS FULL CITATION]** Riemer C, et al. Memantine in prion-infected mice, 30 mg/kg
-  from day 100: survival 196 ± 11.7 vs 181 ± 7.2 dpi (+8%). ~2008. This is the in vivo
-  test whose existence an earlier draft denied ("33-year gap since in vitro data"); the
-  journal and volume were never captured and need to be filled in.
+- **Riemer C, Schulz-Schaeffer W, Kretzschmar HA, Baier M.** Evaluation of drugs for
+  treatment of prion infections of the central nervous system. *J Gen Virol* 2008
+  Feb;89(Pt 2):594-597. doi:10.1099/vir.0.83281-0. PMID 18198391.
+  - Five drugs in scrapie-infected mice. Memantine at 30 mg/kg/day from early
+    post-infection: survival 196 ± 11.7 vs 181 ± 7.2 dpi (n=8/group, P<0.01) — about
+    15 days, +8%. This is the in vivo test an earlier draft denied existed.
 - NMDA receptor binding changes in prion-infected hippocampus. *Neuropathol Appl Neurobiol* 2001. PMID 11493033.
 
 ## Therapeutics — Historical Failures

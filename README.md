@@ -125,7 +125,15 @@ uv run python md_membrane.py --steps 5000000 --peptide wt
 
 ## Key Findings
 
-- PrP N-terminal fragments are literal AMPs (prionins, Nature Microbiology 2026)
+- **The soluble PrP N-terminus is the toxic effector in vivo, and it needs KKRPKP.**
+  Yan R et al., *Sci Adv* 2025;11(32):eadw6867 — PrP 1-110 or 1-90 fused to a nanobody
+  causes rapid lethal neurodegeneration in mice; the fragment is soluble and
+  peripherally membrane-associated, and **deleting the KKRPKP (CC1) motif abolishes
+  toxicity.** This is the strongest published support for the v5 model.
+- Human PrP's N-terminal region has antimicrobial activity (Pasupuleti 2009, *PLoS One*).
+  The 2026 "prionins" paper (Torres/de la Fuente-Nunez, *Nat Microbiol*) shows prion-family
+  proteins harbour AMPs in general, but **did not test human PrP 23-93 or KKRPKP** — an
+  earlier draft of this list cited it for a claim it does not make.
 - The GPI anchor suppresses LLPS (Tatzelt, PNAS 2025) — dual brake/amplifier
 - G127V protects by keeping LLPS condensates liquid, not by altering toxicity
 - NMDA receptors are mechanosensitive to bilayer tension (no specific receptor needed)
