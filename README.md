@@ -28,6 +28,15 @@ The model evolved from v4 to v5 through 4 rounds of 24 parallel literature searc
 simulations. All AI-generated content is marked; all claims are tagged [E]stablished,
 [C]ontested, or [H]ypothesis.
 
+## Read this first
+
+[`docs/COMPUTATIONAL_CORRECTIONS.md`](docs/COMPUTATIONAL_CORRECTIONS.md) **retracts
+the earlier steered-MD membrane comparison** and documents why: the peptide was
+placed at the bilayer centre with zero hydration, so no insertion was ever
+sampled. Rebuilt systems and an unbiased adsorption protocol replace it. Nothing
+in the literature review, kinetic model, sequence analyses, or therapeutic
+assessment depends on the retracted simulation.
+
 ## Status
 
 **Checkpoint: August 28, 2026.** Model version 5. Not peer-reviewed. Not clinical guidance.
@@ -40,13 +49,17 @@ KKRPKP peptide in water completed (7 ns on M1 Pro GPU via OpenMM/OpenCL).
 
 ## Next Steps
 
-1. **Membrane MD simulation on Vast.ai** (~$10): KKRPKP vs NNRPNP on explicit POPC
-   bilayer (3 × 300 ns per peptide, CHARMM-GUI + OpenMM on A40 GPU). Tests the core
-   prediction: charged peptide inserts and thins membrane, neutral control does not.
+1. **Unbiased adsorption MD** (in progress, Vast.ai): KKRPKP (+4), NNRPNP (+1) and
+   PrP 23-93 on POPC:POPS 80:20, peptide starting in bulk water, 4 replicas each.
+   Tests whether the peptide binds at all, how deep it inserts, and whether it
+   prefers the anionic lipid. Systems and protocol in
+   [`docs/COMPUTATIONAL_CORRECTIONS.md`](docs/COMPUTATIONAL_CORRECTIONS.md).
 2. **Charge variant ladder**: +2, +3, +4 peptides on membrane to test dose-response.
 3. **Cross-species N-terminal on membrane**: test if identical charge (+6.5) produces
    identical membrane perturbation across species.
-4. **Publish computational results** as interactive artifacts with charts.
+4. **Calibration against a benchmark AMP** (LL-37 or melittin) in the same system and
+   protocol, so the PrP numbers have an external scale.
+5. **Publish computational results** as interactive artifacts with charts.
 
 ## Repository Structure
 
@@ -116,7 +129,9 @@ uv run python md_membrane.py --steps 5000000 --peptide wt
 - The GPI anchor suppresses LLPS (Tatzelt, PNAS 2025) — dual brake/amplifier
 - G127V protects by keeping LLPS condensates liquid, not by altering toxicity
 - NMDA receptors are mechanosensitive to bilayer tension (no specific receptor needed)
-- Memantine has never been tested in prion-infected mice (33-year gap since in vitro data)
+- Memantine *has* been tested in prion-infected mice — Riemer 2008, 30 mg/kg from
+  day 100, survival 196 ± 11.7 vs 181 ± 7.2 dpi (+8%). An earlier draft of this
+  README claimed a "33-year gap" with no in vivo test; that was wrong.
 - Octarepeat insertions correlate r = −0.989 with age of onset (charge dose-response)
 - Combination therapy (ASO + NMDA antagonist + AMP neutralizer) is predicted but untested
 
