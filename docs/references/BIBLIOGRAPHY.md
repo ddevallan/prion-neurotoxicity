@@ -51,7 +51,7 @@ References compiled during the exploratory investigation into prion disease neur
 - Yi Liang group. Dog PrP Arg177/Asp159 slow LLPS and inhibit human PrP amyloid formation. *JBC* 2023. PMC10641668.
 - JACS 2024. Post-LLPS conformational shift modulated by polymeric antagonist.
 - Tatzelt Lab. GPI membrane anchor suppresses PrP phase separation through topological confinement. *PNAS* 2025. PMC11725851.
-- Evans, Li et al. Copper drives PrP phase separation; Cu + H₂O₂ triggers liquid-to-solid transition. *Sci Adv* 2023. PMC10624353.
+- do Amaral MJ, et al. Copper drives PrP phase separation; Cu + H₂O₂ triggers liquid-to-solid transition. *Sci Adv* 2023;9(44):eadi7347. PMC10624353. (UFRJ/DZNE. Cited in earlier drafts as "Evans, Li et al." — that attribution was wrong.)
 - Alberti S, Dormann D. Liquid-liquid phase separation in disease. *Dev Cell* 2020.
 - Shin Y, Brangwynne CP. Liquid phase condensation in cell physiology and disease. *Science* 2017.
 - Lin et al. GPI-PrP liberated from lipid vesicles misfolds into amyloid fibrils; membrane-bound GPI-PrP is stable. *IJMS* 2013. PMC3794761.
@@ -92,8 +92,15 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## Membrane Biophysics and Curvature
 
-- Bhatt DK, et al. Melittin potentiates AMPA-receptor Ca²⁺ influx at sub-lytic concentrations. *Biochem Biophys Res Commun* 1992.
-- Bhatt DK, et al. NMDA receptors are mechanosensitive to bilayer tension. *PNAS* 2007.
+- **[AUTHOR UNVERIFIED]** Melittin potentiates AMPA-receptor Ca²⁺ influx at sub-lytic concentrations. *Biochem Biophys Res Commun* 1992.
+- **[AUTHOR UNVERIFIED]** NMDA receptors are mechanosensitive to bilayer tension. *PNAS* 2007.
+  - Both were attributed to "Bhatt DK, et al." — the same author on two unrelated
+    papers fifteen years apart, which is the signature of a confabulated
+    attribution rather than a real bibliography entry. The findings may well be
+    real (mechanosensitivity of NMDA receptors to membrane stretch is an
+    established result), but the author names must be checked before either is
+    cited. This matters: NMDA mechanosensitivity is mechanism (B) of the v5
+    model, one of three convergent Ca²⁺ routes.
 - Elssner A, et al. LL-37 modulates P2X7 channels at sub-lytic concentrations. *JBC* 2004.
 - Cationic arginine-rich peptides (CARPs) are neuroprotective via NMDA blockade — charge-dependent, not sequence-specific. *Front Neurol* 2020. PMC7412265.
 - Vanni S, et al. Amphipathic helices preferentially bind curved membranes. *JBC* 2008.
@@ -166,6 +173,10 @@ References compiled during the exploratory investigation into prion disease neur
 - Wang Y, et al. Presymptomatic mGluR5 inhibition (CTEP) improves survival. *Acta Neuropathol Commun* 2026;14:83.
 - Goniotaki D, et al. Inhibition of group-I mGluRs protects against prion toxicity. *PLoS Pathog* 2017.
 - Memantine protects against PrPSc toxicity in vitro. Müller et al. *Eur J Pharmacol* 1993. PMID 7901042.
+- **[NEEDS FULL CITATION]** Riemer C, et al. Memantine in prion-infected mice, 30 mg/kg
+  from day 100: survival 196 ± 11.7 vs 181 ± 7.2 dpi (+8%). ~2008. This is the in vivo
+  test whose existence an earlier draft denied ("33-year gap since in vitro data"); the
+  journal and volume were never captured and need to be filled in.
 - NMDA receptor binding changes in prion-infected hippocampus. *Neuropathol Appl Neurobiol* 2001. PMID 11493033.
 
 ## Therapeutics — Historical Failures
