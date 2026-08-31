@@ -18,18 +18,10 @@ for cand in ["/workspace/prion-neurotoxicity", "/Users/allan/Projects/cjd"]:
 SRC = os.path.join(BASE, "calibration_peptides/PrP_23_93.pdb")
 OUT = os.path.join(BASE, "calibration_peptides/PrP_23_93_compact.pdb")
 
-from pdbfixer import PDBFixer
-fixer = PDBFixer(filename=SRC)
-fixer.findMissingResidues()
-fixer.findMissingAtoms()
-fixer.addMissingAtoms()
-fixer.addMissingHydrogens(7.4)
-
-tmp = "/tmp/prp_tail_fixed.pdb"
-with open(tmp, 'w') as f:
-    app.PDBFile.writeFile(fixer.topology, fixer.positions, f)
-
-pdb = app.PDBFile(tmp)
+# Hydrogens are pre-added (PrP_23_93_H.pdb) so this runs without pdbfixer,
+# which conflicts with the openmm 8.1.1 required by openmm-cuda.
+SRC_H = SRC.replace(".pdb", "_H.pdb")
+pdb = app.PDBFile(SRC_H if os.path.exists(SRC_H) else SRC)
 ff = app.ForceField('amber14-all.xml', 'implicit/gbn2.xml')
 system = ff.createSystem(pdb.topology,
                          nonbondedMethod=app.NoCutoff,
