@@ -67,6 +67,8 @@ PATHS = {
     'NNRPNP_water': 'charmm_gui_nnrpnp_water/openmm',
     'PrP_23_93': 'charmm_gui_prp2393/openmm',
     'PrP_dCC1': 'charmm_gui_prp_dcc1/openmm',
+    'bare_66': 'charmm_gui_bare_66/openmm',
+    'bare_85': 'charmm_gui_bare_85/openmm',
 }
 for base in ['/workspace/prion-neurotoxicity', '/Users/allan/Projects/cjd']:
     p = os.path.join(base, PATHS[system_name])
