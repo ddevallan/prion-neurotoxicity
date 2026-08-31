@@ -1,0 +1,379 @@
+{
+  "OK": [
+    {
+      "entry": {
+        "author": "Prusiner SB",
+        "title": "Novel proteinaceous infectious particles cause scrapie",
+        "year": "1982",
+        "has_id": false,
+        "raw": "Prusiner SB. Novel proteinaceous infectious particles cause scrapie. *Science* 1982;216:136\u2013144."
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "6801762",
+          "title": "Novel proteinaceous infectious particles cause scrapie",
+          "authors": [
+            "Prusiner SB"
+          ],
+          "journal": "Science (New York, N.Y.)",
+          "year": "1982",
+          "volume": "216",
+          "pages": "136-44",
+          "doi": ""
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Pan KM",
+        "title": "Conversion of alpha-helices into beta-sheets features in the formation of the scrapie prion proteins",
+        "year": "1993",
+        "has_id": false,
+        "raw": "Pan KM, Baldwin M, Nguyen J, et al. Conversion of alpha-helices into beta-sheets features in the formation of the scrapie prion pr"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "7902575",
+          "title": "Conversion of alpha-helices into beta-sheets features in the formation of the scrapie prion proteins",
+          "authors": [
+            "Pan KM",
+            "Baldwin M",
+            "Nguyen J",
+            "Gasset M",
+            "Serban A",
+            "Groth D"
+          ],
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": "1993",
+          "volume": "90",
+          "pages": "10962-6",
+          "doi": ""
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Hoyt F",
+        "title": "Cryo-EM structure of anchorless RML prion reveals variations in shared motifs between distinct strains",
+        "year": "2022",
+        "has_id": false,
+        "raw": "Hoyt F, Standke HG, Artikis E, et al. Cryo-EM structure of anchorless RML prion reveals variations in shared motifs between distin"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "35831291",
+          "title": "Cryo-EM structure of anchorless RML prion reveals variations in shared motifs between distinct strains",
+          "authors": [
+            "Hoyt F",
+            "Standke HG",
+            "Artikis E",
+            "Schwartz CL",
+            "Hansen B",
+            "Li K"
+          ],
+          "journal": "Nature communications",
+          "year": "2022",
+          "volume": "13",
+          "pages": "4005",
+          "doi": "doi: 10.1038/s41467-022-30458-6"
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Manka SW",
+        "title": "A structural basis for prion strain diversity",
+        "year": "2023",
+        "has_id": false,
+        "raw": "Manka SW, et al. A structural basis for prion strain diversity. *Nat Chem Biol* 2023."
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "36646960",
+          "title": "A structural basis for prion strain diversity",
+          "authors": [
+            "Manka SW",
+            "Wenborn A",
+            "Betts J",
+            "Joiner S",
+            "Saibil HR",
+            "Collinge J"
+          ],
+          "journal": "Nature chemical biology",
+          "year": "2023",
+          "volume": "19",
+          "pages": "607-613",
+          "doi": "doi: 10.1038/s41589-022-01229-7"
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Alam P",
+        "title": "Cryo-EM structure of a natural prion: chronic wasting disease fibrils from deer",
+        "year": "2024",
+        "has_id": false,
+        "raw": "Alam P, Hoyt F, Artikis E, et al. Cryo-EM structure of a natural prion: chronic wasting disease fibrils from deer. *Acta Neuropath"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "39448454",
+          "title": "Cryo-EM structure of a natural prion: chronic wasting disease fibrils from deer",
+          "authors": [
+            "Alam P",
+            "Hoyt F",
+            "Artikis E",
+            "Soukup J",
+            "Hughson AG",
+            "Schwartz CL"
+          ],
+          "journal": "Acta neuropathologica",
+          "year": "2024",
+          "volume": "148",
+          "pages": "56",
+          "doi": "doi: 10.1007/s00401-024-02813-y"
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Li Q",
+        "title": "Cryo-EM structure of disease-related prion fibrils provides insights into seeding barriers",
+        "year": "2022",
+        "has_id": false,
+        "raw": "Li Q, Jaroniec CP, Surewicz WK. Cryo-EM structure of disease-related prion fibrils provides insights into seeding barriers. *Nat S"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "36097290",
+          "title": "Cryo-EM structure of disease-related prion fibrils provides insights into seeding barriers",
+          "authors": [
+            "Li Q",
+            "Jaroniec CP",
+            "Surewicz WK"
+          ],
+          "journal": "Nature structural & molecular biology",
+          "year": "2022",
+          "volume": "29",
+          "pages": "962-965",
+          "doi": "doi: 10.1038/s41594-022-00833-4"
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Castilla J",
+        "title": "In vitro generation of infectious scrapie prions",
+        "year": "2005",
+        "has_id": false,
+        "raw": "Castilla J, Sa\u00e1 P, Hetz C, Soto C. In vitro generation of infectious scrapie prions. *Cell* 2005;121:195\u2013206."
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "15851027",
+          "title": "In vitro generation of infectious scrapie prions",
+          "authors": [
+            "Castilla J",
+            "Sa\u00e1 P",
+            "Hetz C",
+            "Soto C"
+          ],
+          "journal": "Cell",
+          "year": "2005",
+          "volume": "121",
+          "pages": "195-206",
+          "doi": ""
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Sandberg MK",
+        "title": "Prion propagation and toxicity in vivo occur in two distinct mechanistic phases",
+        "year": "2011",
+        "has_id": false,
+        "raw": "Sandberg MK, Al-Doujaily H, Sharps B, Clarke AR, Collinge J. Prion propagation and toxicity in vivo occur in two distinct mechanis"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "21350487",
+          "title": "Prion propagation and toxicity in vivo occur in two distinct mechanistic phases",
+          "authors": [
+            "Sandberg MK",
+            "Al-Doujaily H",
+            "Sharps B",
+            "Clarke AR",
+            "Collinge J"
+          ],
+          "journal": "Nature",
+          "year": "2011",
+          "volume": "470",
+          "pages": "540-2",
+          "doi": "doi: 10.1038/nature09768"
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Sandberg MK",
+        "title": "Prion neuropathology follows the accumulation of alternate prion protein isoforms after infective titre has peaked",
+        "year": "2014",
+        "has_id": true,
+        "raw": "Sandberg MK, et al. Prion neuropathology follows the accumulation of alternate prion protein isoforms after infective titre has pe"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "25005024",
+          "title": "Prion neuropathology follows the accumulation of alternate prion protein isoforms after infective titre has peaked",
+          "authors": [
+            "Sandberg MK",
+            "Al-Doujaily H",
+            "Sharps B",
+            "De Oliveira MW",
+            "Schmidt C",
+            "Richard-Londt A"
+          ],
+          "journal": "Nature communications",
+          "year": "2014",
+          "volume": "5",
+          "pages": "4347",
+          "doi": "doi: 10.1038/ncomms5347"
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    }
+  ],
+  "MISMATCH": [
+    {
+      "entry": {
+        "author": "Kovacs GG",
+        "title": "Proteinase K resistant cores of prions and amyloids",
+        "year": "2019",
+        "has_id": false,
+        "raw": "Kovacs GG, et al. Proteinase K resistant cores of prions and amyloids. *Prion* 2019."
+      },
+      "result": {
+        "status": "MISMATCH",
+        "source": "pubmed",
+        "best": {
+          "pmid": "31876447",
+          "title": "Proteinase K resistant cores of prions and amyloids",
+          "authors": [
+            "Kushnirov VV",
+            "Dergalev AA",
+            "Alexandrov AI"
+          ],
+          "journal": "Prion",
+          "year": "2020",
+          "volume": "14",
+          "pages": "11-19",
+          "doi": "doi: 10.1080/19336896.2019.1704612"
+        },
+        "mismatch": [
+          "author 'Kovacs GG' not in ['Kushnirov VV', 'Dergalev AA', 'Alexandrov AI']",
+          "year 2019 vs 2020"
+        ],
+        "similarity": 1.0
+      }
+    }
+  ],
+  "NOT FOUND": [],
+  "NO CONFIDENT MATCH": [
+    {
+      "entry": {
+        "author": null,
+        "title": "Manka SW, Zhang W, Wenborn A, Betts J, Joiner S, Saibil HR, Collinge J, Wadsworth JDF",
+        "year": "2022",
+        "has_id": false,
+        "raw": "Manka SW, Zhang W, Wenborn A, Betts J, Joiner S, Saibil HR, Collinge J, Wadsworth JDF. 2.7 \u00c5 cryo-EM structure of ex vivo RML prio"
+      },
+      "result": {
+        "status": "NO CONFIDENT MATCH",
+        "source": "crossref",
+        "best": {
+          "doi": "10.1101/2022.05.17.492259",
+          "title": "A structural basis for prion strain diversity",
+          "authors": [
+            "Manka Szymon W.",
+            "Wenborn Adam",
+            "Betts Jemma",
+            "Joiner Susan",
+            "Saibil Helen R.",
+            "Collinge John"
+          ],
+          "journal": "",
+          "year": "2022"
+        },
+        "similarity": 0.047619047619047616,
+        "note": "search returned records but none matched the title closely"
+      }
+    },
+    {
+      "entry": {
+        "author": "Benilova I",
+        "title": "Highly infectious prions are not directly neurotoxic",
+        "year": "2020",
+        "has_id": true,
+        "raw": "Benilova I, et al. Highly infectious prions are not directly neurotoxic. *PNAS* 2020;117. PMC7525444."
+      },
+      "result": {
+        "status": "NO CONFIDENT MATCH",
+        "source": "pubmed",
+        "best": {
+          "pmid": "33195153",
+          "title": "A Novel, Reliable and Highly Versatile Method to Evaluate Different Prion Decontamination Procedures",
+          "authors": [
+            "Era\u00f1a H",
+            "P\u00e9rez-Castro M\u00c1",
+            "Garc\u00eda-Mart\u00ednez S",
+            "Charco JM",
+            "L\u00f3pez-Moreno R",
+            "D\u00edaz-Dominguez CM"
+          ],
+          "journal": "Frontiers in bioengineering and biotechnology",
+          "year": "2020",
+          "volume": "8",
+          "pages": "589182",
+          "doi": "doi: 10.3389/fbioe.2020.589182"
+        },
+        "similarity": 0.05263157894736842,
+        "note": "search returned records but none matched the title closely"
+      }
+    }
+  ]
+}

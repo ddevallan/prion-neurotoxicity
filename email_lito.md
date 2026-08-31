@@ -21,7 +21,7 @@ Escrevo porque encontrei direções que podem ser relevantes para a equipe médi
 A memantina (Namenda/Ebix) é um antagonista de NMDA aprovado pela FDA para Alzheimer. Existe uma trilha de evidências sobre antagonistas de NMDA na doença priônica que se estende por mais de 50 anos, mas nunca foi adequadamente seguida:
 
 **a) Amantadina em pacientes com DCJ (1971–1984)**
-A amantadina (antagonista fraco de NMDA, ~10× menos potente que memantina) foi testada em pacientes com DCJ nos anos 1970. Sanders & Dunn 1973 relataram dois casos: um paciente teve melhora notável por 2 meses; o outro **"aparentou estar curado" no follow-up de 30 meses.** Uma revisão sistemática posterior (Stewart 2008) encontrou **4 de 8 relatos com benefício.** Na época, não se sabia que amantadina era antagonista de NMDA — foi testada como antiviral. A conexão NMDA nunca foi feita retroativamente.
+A amantadina (antagonista fraco de NMDA, ~10× menos potente que memantina) foi testada em pacientes com DCJ nos anos 1970. Sanders & Dunn 1973 (J Neurol Neurosurg Psychiatry 1973;36(4):581-584) relataram dois casos: um paciente teve melhora notável por 2 meses; o outro **"aparentou estar curado" no follow-up de 30 meses. Ressalva importante: em ambos os casos o diagnóstico de DCJ foi apenas clínico — não houve confirmação neuropatológica (nem biópsia nem autópsia) relatada no artigo.** Uma revisão sistemática posterior (Stewart LA et al., *Neurology* 2008;70(15):1272-81, PMID 18391159) encontrou **4 de 8 relatos de amantadina com benefício clínico — e nenhuma evidência controlada de ganho de sobrevida.** Na época, não se sabia que amantadina era antagonista de NMDA — foi testada como antiviral. A conexão NMDA nunca foi feita retroativamente.
 
 **b) Memantina protege in vitro (1993)**
 Müller et al. (European Journal of Pharmacology 1993) demonstraram que memantina, um análogo, e MK-801 preveniram a morte neuronal induzida por PrPSc em culturas corticais de rato.
@@ -30,26 +30,26 @@ Müller et al. (European Journal of Pharmacology 1993) demonstraram que memantin
 Riemer et al. 2008 (Alemanha) testaram memantina em camundongos infectados com scrapie 139A: 30 mg/kg/dia oral, iniciada no dia 100 pós-infecção (tarde). **Resultado: +8% de extensão de sobrevida (196±11.7 vs 181±7.2 dias, p<0.01).** Foi o melhor resultado entre 5 drogas testadas. Porém: dose suprafisiológica (6-24× a dose humana), início tardio, n=8, nunca seguido com timing otimizado.
 
 **d) Memantina resgata modelo genético (2025)**
-JCI 2025 (doi:10.1172/JCI186432): camundongos Prnp G92N com influxo persistente de Ca²⁺ via NMDA, beading dendrítico e convulsões — tudo resgatado por memantina.
+Lin J et al. (*J Clin Invest* 2025;135(10):e186432, PMID 40185484): camundongos knock-in Prnp **G92N** com influxo persistente de Ca²⁺ via NMDA, beading dendrítico, necrose de neurônios piramidais e convulsões — memantina prolongou a sobrevida e resgatou o beading. **Ressalva: também é um modelo de PrP mutante.**
 
 **e) PrPC normalmente inibe NMDA (2008)**
-Khosravani et al. 2008 mostraram que PrPC inibe subunidades NR2D do NMDA. Quando PrPC é sequestrada pela conversão priônica, essa inibição é perdida — abrindo um segundo mecanismo de excitotoxicidade.
+Khosravani H et al. (*J Cell Biol* 2008;181(3):551-65, PMID 18443219) mostraram que neurônios sem PrP têm correntes NMDA aumentadas e prolongadas por regulação positiva de subunidades NR2D/GluN2D. Quando PrPC é sequestrada pela conversão priônica, essa inibição é perdida — abrindo um segundo mecanismo de excitotoxicidade.
 
 **f) Não é só NMDA — receptores AMPA também estão envolvidos**
-Bhatt et al. 2020 (PLoS Pathogens) mostraram que PrP mutante retém subunidades GluA2, deixando receptores AMPA permeáveis a cálcio na sinapse (10× mais morte neuronal). **Perampanel** (Fycompa), um antagonista de AMPA aprovado para epilepsia, poderia cobrir esse eixo.
+Ghirardini E et al. (*PLoS Pathog* 2020;16(7):e1008654, PMID 32673333) mostraram que PrP **mutante** (D177N, E199K) forma complexo com a subunidade GluA2 e a retém intracelularmente, aumentando na superfície os receptores AMPA sem GluA2 — permeáveis a cálcio — e agravando a excitotoxicidade. **Ressalva: o efeito é dependente da mutação e foi demonstrado em modelos de doença priônica genética, não esporádica.** **Perampanel** (Fycompa), um antagonista de AMPA aprovado para epilepsia, poderia cobrir esse eixo.
 
 **O quadro completo:** a toxicidade priônica envolve excitotoxicidade por DOIS eixos (NMDA + AMPA). Existem drogas aprovadas para ambos. A amantadina (fraca) mostrou benefício em pacientes nos anos 1970. A memantina (forte) mostrou +8% em camundongo com design subótimo. Nenhuma foi testada com timing otimizado ou em combinação.
 
 **Perfil de segurança:** memantina penetra o LCR (52% do plasma), biodisponibilidade oral de 100%, meia-vida 60-80h, sem interações com trazodona, lítio ou ASO intratecal. Sem contraindicação que impeça uso em paciente com DCJ.
 
 **Referências:**
-- Sanders WL, Dunn TL. 1973 (PMC494412) — amantadina em DCJ
-- Müller WE et al. Eur J Pharmacol 1993 (PMID 7901042) — memantina in vitro
-- Riemer et al. 2008 — memantina in vivo, +8%
-- JCI 2025, doi:10.1172/JCI186432 — resgate do G92N
-- Khosravani et al. 2008 (PMC2364707) — PrPC inibe NR2D
-- Bhatt et al. PLoS Pathog 2020 — AMPA, GluA2
-- Resenberger et al. 2011 (PMC3098494) — mecanismo NMDA compartilhado
+- Sanders WL, Dunn TL. *J Neurol Neurosurg Psychiatry* 1973;36(4):581-584 (PMC494412) — amantadina em DCJ; diagnóstico clínico, sem confirmação neuropatológica
+- Müller WE et al. *Eur J Pharmacol* 1993;246(3):261-267 (PMID 7901042) — memantina in vitro
+- Riemer C, Schulz-Schaeffer W, Kretzschmar HA, Baier M. *J Gen Virol* 2008;89(Pt 2):594-597 (PMID 18198391) — memantina in vivo, +8%
+- Lin J et al. *J Clin Invest* 2025;135(10):e186432 (PMID 40185484) — resgate do G92N por memantina
+- Khosravani H et al. *J Cell Biol* 2008;181(3):551-565 (PMID 18443219, PMC2364707) — PrPC atenua excitotoxicidade via NR2D
+- Ghirardini E et al. *PLoS Pathog* 2020;16(7):e1008654 (PMID 32673333, PMC7365390) — retenção de GluA2, AMPA permeável a Ca²⁺ (PrP mutante)
+- Resenberger UK et al. *EMBO Mol Med* 2011;3(4):220-233 (PMID 21441896, PMC3098494) — sinalização neurotóxica via PrPC e NMDA
 
 **Ressalva:** memantina não para a replicação priônica. O +8% de Riemer 2008 é consistente com o esperado para intervenções downstream (Minikel documenta 4-19%). Não é cura — mas pode proteger neurônios enquanto intervenções que reduzem PrP (ASO/siRNA) fazem efeito.
 
@@ -132,6 +132,25 @@ Nenhum tratamento isolado é suficiente depois do início dos sintomas. O modelo
 Os itens 2, 3 e 4 são drogas já aprovadas e disponíveis. O item 1 é experimental e requer inscrição em trial.
 
 **Ninguém testou essa combinação.** Cada trial testa uma droga isolada. Mas sob o modelo, a combinação não é luxo — é necessidade, porque cada componente age num passo diferente da cascata.
+
+---
+
+### 7. Viabilidade prática da combinação off-label
+
+Todas as drogas da combinação proposta são aprovadas e disponíveis. Um neurologista pode legalmente prescrever off-label com consentimento informado. Para uma doença 100% fatal sem tratamento aprovado, a barreira ética é baixa.
+
+**Abordagem de escalonamento sugerida (menor risco de interações):**
+
+1. **Semana 1**: Memantina 10→20 mg/d + NAC 600 mg 2×/d (zero interações)
+2. **Semana 2**: Adicionar trazodona 50→100 mg à noite (rotineiramente co-prescrita com memantina em Alzheimer)
+3. **Semana 3**: Adicionar lítio 150 mg 2×/d (monitorar renal e nível sérico)
+4. **Semana 4**: Considerar perampanel 2→4 mg à noite (principal risco: sedação aditiva com trazodona — titular devagar)
+
+**Monitoramento**: função renal (lítio), nível sérico de lítio, sinais de sedação excessiva. Biomarcadores: NfL sérico (se disponível) como indicador de dano neuronal.
+
+**Precedentes**: combinações off-label multi-drogas são rotina em oncologia, HIV e ELA. Para doença priônica, esta combinação específica nunca foi proposta — é nova.
+
+**Ressalva**: esta sugestão é baseada em modelos computacionais e revisão de literatura, não em dados clínicos. A decisão é exclusivamente do médico responsável.
 
 ---
 
