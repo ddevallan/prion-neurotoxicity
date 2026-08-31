@@ -72,9 +72,11 @@ The specificity of prion disease resides exclusively in three properties that no
 ↓
 
 **NMDA receptor modulation by mechanosensitivity**, not by glutamate excess:
-- Membrane thinning/tension → NMDA is mechanosensitive → alleviates Mg²⁺ block → Ca²⁺ influx (Bhatt et al., PNAS 2007). **[E]**
+- Membrane thinning/tension → NMDA is mechanosensitive → Ca²⁺ influx (Kloda A et al., *PNAS* 2007;104:1540-5, PMID 17242368). **[C]**
+  - What that paper shows is **potentiation of existing NMDA currents by membrane stretch, still present with intracellular Mg²⁺** — modulation of an already-gated channel, *not* relief of the Mg²⁺ block and *not* glutamate-independent opening. Earlier drafts stated the stronger version and tagged it [E]; that was wrong on both counts. Agonist-independent mechanical gating is claimed in later work (Maneshi 2017; Singaravelu 2022) but neither is verified here.
 - PLA2 activation by the membrane-inserted peptide → arachidonic acid → additional NMDA potentiation. **[E]** for the pathway; **[H]** for PrP triggering it.
-- At sub-lytic doses, cationic peptides can also cause NMDA receptor endocytosis → reduced Ca²⁺ → neuroprotection (Bhatt 2015). This may explain dose-dependent signal inversion. **[E]** for CARPs; **[H]** for PrP.
+- At sub-lytic doses, cationic peptides can also cause NMDA receptor endocytosis → reduced Ca²⁺ → neuroprotection. This may explain dose-dependent signal inversion. **[H]**
+  - Previously cited to "Bhatt 2015". **No such paper exists** — PubMed returns nothing for a Bhatt NMDA-endocytosis study, and "Bhatt" was the invented surname on two other entries. The CARP neuroprotection literature is real (MacDougall G, Anderton RS et al., *J Mol Neurosci* 2017, PMID 27866326; *Front Neurol* 2020, PMC7412265), but the endocytosis mechanism specifically must be re-sourced before this line is used. Downgraded from [E] to [H].
 
 ↓
 
@@ -130,7 +132,7 @@ Any valid model must simultaneously satisfy these constraints:
 
 ### 6.1 AMPs modulate neuronal ion channels at sub-lytic concentrations
 
-Melittin potentiates AMPA receptors at 50 ng/mL (sub-lytic, receptor-subtype selective — ruling out crude disruption; Bhatt 1992). NMDA receptors are mechanosensitive to bilayer tension (Bhatt PNAS 2007). LL-37 modulates P2X7 at sub-lytic doses (Elssner JBC 2004). Cationic arginine-rich peptides (CARPs) block NMDA electrostatically — **charge-dependent, sequence-independent** (Front Neurol 2020). **[E]**
+Melittin potentiates AMPA-stimulated ⁴⁵Ca²⁺ influx at 50 ng/mL (sub-lytic; Aronica E et al., *Brain Res* 1992;586:72-7, PMID 1380882). **The authors attribute the effect to phospholipase A₂ activation, not to direct receptor modulation** — so it does not demonstrate receptor-subtype selectivity, and the earlier claim that it "rules out crude disruption" was unsupported. It does support the membrane → PLA₂ → arachidonic acid → receptor-potentiation route stated above. NMDA currents are potentiated by bilayer stretch (Kloda A et al., *PNAS* 2007, PMID 17242368). LL-37 modulates P2X7 at sub-lytic doses (Elssner JBC 2004). Cationic arginine-rich peptides (CARPs) block NMDA electrostatically — **charge-dependent, sequence-independent** (Front Neurol 2020). **[E]**
 
 ### 6.2 LL-37: clean precedent for dose-dependent signal inversion
 
@@ -171,7 +173,7 @@ Three HS binding sites on PrP: residues 23–52, 53–93, 110–128 (JBC 2002). 
 | L2 | Dose free N-terminal fragment during infection | **Open** | Testable, now motivated by prionins. No one has measured this. |
 | L3 | Infectivity titers in N-terminal-truncated mice | **Explained** | Shorter tail = less potent AMP (lower charge). Confound persists: deletions also impair conversion. |
 | L4 | Why α-cleavage protects if the fragment is toxic | **Resolved** | Substrate destruction: α-cleavage at ~111 cuts within the fibril core region; neither C1 nor N1 can serve as conversion substrate. N1 transgenic does NOT protect in vivo (Bhullar 2020 — N1 fails ER translocation, never reaches extracellular space). Signal inversion is unnecessary. |
-| L5 | What the tail contacts in the bilayer | **Resolved** | AMP carpet mechanism (charge-dependent, not receptor-mediated). NMDA modulated by bilayer mechanosensitivity + PLA2 → arachidonic acid. |
+| L5 | What the tail contacts in the bilayer | **Partly resolved** | Carpet-style interfacial adsorption is supported (our MD: 8/8 replicas bind, POPS enriched 2.1-2.6×). The downstream link to NMDA is weaker than stated: Kloda 2007 shows modulation, not gating, and the melittin evidence runs through PLA₂. |
 | L6 | Is 23–33 both binding site and effector? | **Resolved** | Yes, same site. Charge-dependent (+4 in 6 residues), not receptor-specific. CARPs demonstrate any sufficiently cationic peptide does the same. |
 | L7 | Strain → clinical topography | **Strong candidate** | Tripartite interaction: fibril conformation × regional lipid raft composition (sphingomyelin, cholesterol, sialylation) × cell-type-specific endocytic routes. Glycosylation is readout, not driver. |
 | L8 | First misfolded molecule in sporadic disease | **Resolved** | Convergence of three age-related vulnerabilities: (1) endosomal transit through MVB (pH 4.5, geometric concentration, GPI brake released on ILVs); (2) Cu²⁺ + H₂O₂ triggers liquid → solid transition (Evans Sci Adv 2023); (3) lipid raft degradation with aging weakens the GPI brake. ~1/million/year incidence reflects probability all three align. Deep sequencing of 205 sCJD cases found no somatic PRNP mutations (2024). |
