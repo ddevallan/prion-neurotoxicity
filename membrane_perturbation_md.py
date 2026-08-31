@@ -153,6 +153,7 @@ pep = np.array(pep, int); pep_bb = np.array(pep_bb, int); pep_sc = np.array(pep_
 popc = np.array(popc, int); pops = np.array(pops, int)
 phos = np.array(phos, int); wat_o = np.array(wat_o, int)
 lipid = np.concatenate([popc, pops])
+phos_set = set(phos.tolist())
 is_pops = np.concatenate([np.zeros(len(popc), bool), np.ones(len(pops), bool)])
 print(f"peptide {len(pep)} | POPC {len(popc)} | POPS {len(pops)} | "
       f"P {len(phos)} | water {len(wat_o)} | sn1 carbons {len(tail)}", flush=True)
@@ -252,6 +253,29 @@ def frame(pos, box):
             vals.append(float(np.abs((3*cos2 - 1) / 2).mean()))
         return float(np.mean(vals)) if vals else float('nan')
 
+    # Radial shells rather than one local/distal split. Franco et al. 2022
+    # (BP100 at P:L 1:128, PMID 35139324) found shell analysis essential:
+    # global averages masked a local effect that was plainly there. Huang's
+    # two-state model puts P/L* near 1/50, so at our 1:130 the GLOBAL thinning
+    # expected is under 0.5 A, inside thermal noise -- only the first shells
+    # can show anything.
+    shells = [(0.0, 1.0), (1.0, 2.0), (2.0, 3.0), (3.0, 99.0)]
+    prof = []
+    for lo_r, hi_r in shells:
+        sel = [ri for ri, d in lip_r.items() if lo_r <= d < hi_r]
+        if len(sel) >= 3:
+            zs = np.concatenate([[pos[i][2] for i in lipid_res[ri]
+                                  if i in set(phos.tolist())] for ri in sel]) \
+                 if False else np.array([pos[[i for i in lipid_res[ri]
+                                              if i in phos_set]][:, 2].mean()
+                                         for ri in sel])
+            prof.append({'r': (lo_r + min(hi_r, 4.0)) / 2, 'n': len(sel),
+                         'thickness': float(zs.mean() - z_lo),
+                         'scd': scd(sel)})
+        else:
+            prof.append({'r': (lo_r + min(hi_r, 4.0)) / 2, 'n': len(sel),
+                         'thickness': float('nan'), 'scd': float('nan')})
+
     loc_res = [ri for ri, d in lip_r.items() if d < 1.5]
     dis_res = [ri for ri, d in lip_r.items() if d > 2.5]
     scd_loc = scd(loc_res) if len(loc_res) >= 3 else float('nan')
@@ -272,7 +296,8 @@ def frame(pos, box):
             'scd_global': scd_all, 'thickness_global': th_all,
             'disordering': (scd_dis - scd_loc) if np.isfinite(scd_loc) and
                            np.isfinite(scd_dis) else float('nan'),
-            'n_local_lipids': len(loc_res), 'n_local_P': int(loc.sum())}
+            'n_local_lipids': len(loc_res), 'n_local_P': int(loc.sum()),
+            'radial': prof}
 
 
 # ---- restrained equilibration, CHARMM-GUI's schedule ---------------------
