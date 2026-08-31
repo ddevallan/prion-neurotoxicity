@@ -1,0 +1,2 @@
+JOB_ID_PrP_23_93=8813626318
+JOB_ID_PrP_23_93_v2=8813640350  # single chain PROA 1-71, canonical atom order
