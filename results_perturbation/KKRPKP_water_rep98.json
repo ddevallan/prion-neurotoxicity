@@ -1,0 +1,200 @@
+{
+  "system": "KKRPKP_water",
+  "replica": 98,
+  "seed": 33291,
+  "prod_ns": 0.02,
+  "dt_fs": 4.0,
+  "hmr": true,
+  "equilibration": "CHARMM-GUI 6-stage restrained, peptide held unbound",
+  "bound_fraction": 0.0,
+  "first_contact_ns": null,
+  "thinning_nm": 0.054526249222617285,
+  "thinning_sem": NaN,
+  "disordering": 0.00890148954521304,
+  "disordering_sem": NaN,
+  "pops_enrichment": null,
+  "contacts_popc_mean": 0.0,
+  "contacts_pops_mean": 0.0,
+  "trajectory": [
+    {
+      "z_com": 3.3951481153380194,
+      "z_rel": 1.2805164148222725,
+      "min_dist": 0.5517057376666014,
+      "contacts_popc": 0,
+      "contacts_pops": 0,
+      "thickness_local": 4.304416769511263,
+      "thickness_distal": 4.367411305842985,
+      "thinning": 0.06299453633172192,
+      "apl": 65.8539949964654,
+      "scd_local": 0.37445193753427125,
+      "scd_distal": 0.35431075086386554,
+      "scd_global": 0.3574750460679106,
+      "thickness_global": 4.343347888953249,
+      "disordering": -0.02014118667040571,
+      "n_local_lipids": 11,
+      "n_local_P": 10,
+      "radial": [
+        {
+          "r": 0.5,
+          "n": 5,
+          "thickness": 4.2630621490545675,
+          "scd": 0.36849030054203585
+        },
+        {
+          "r": 1.5,
+          "n": 14,
+          "thickness": 4.320553781924833,
+          "scd": 0.38371098784668295
+        },
+        {
+          "r": 2.5,
+          "n": 23,
+          "thickness": 4.3364578864123295,
+          "scd": 0.3506691525689224
+        },
+        {
+          "r": 3.5,
+          "n": 23,
+          "thickness": 4.381565987054659,
+          "scd": 0.3459166153376189
+        }
+      ],
+      "t_ns": 0.005
+    },
+    {
+      "z_com": 3.3807350824464044,
+      "z_rel": 1.2846670853209257,
+      "min_dist": 0.6009754948654187,
+      "contacts_popc": 0,
+      "contacts_pops": 0,
+      "thickness_local": 4.280115813475389,
+      "thickness_distal": 4.32689701329529,
+      "thinning": 0.046781199819901254,
+      "apl": 64.73976969438077,
+      "scd_local": 0.35426156348044063,
+      "scd_distal": 0.3566400684611143,
+      "scd_global": 0.35467045836740085,
+      "thickness_global": 4.300027909645667,
+      "disordering": 0.002378504980673657,
+      "n_local_lipids": 10,
+      "n_local_P": 12,
+      "radial": [
+        {
+          "r": 0.5,
+          "n": 4,
+          "thickness": 4.22394463465764,
+          "scd": 0.3212876321147106
+        },
+        {
+          "r": 1.5,
+          "n": 14,
+          "thickness": 4.277739486982535,
+          "scd": 0.37616348830241797
+        },
+        {
+          "r": 2.5,
+          "n": 28,
+          "thickness": 4.301591741645729,
+          "scd": 0.35212966397067313
+        },
+        {
+          "r": 3.5,
+          "n": 19,
+          "thickness": 4.330163894973786,
+          "scd": 0.3496057809478693
+        }
+      ],
+      "t_ns": 0.01
+    },
+    {
+      "z_com": 3.3558210696814195,
+      "z_rel": 1.289782910457716,
+      "min_dist": 0.6545362819733811,
+      "contacts_popc": 0,
+      "contacts_pops": 0,
+      "thickness_local": 4.19987916304515,
+      "thickness_distal": 4.267833905953627,
+      "thinning": 0.06795474290847725,
+      "apl": 63.934245355995465,
+      "scd_local": 0.319020694021057,
+      "scd_distal": 0.36697524225686085,
+      "scd_global": 0.3617027415950666,
+      "thickness_global": 4.237299189200768,
+      "disordering": 0.04795454823580386,
+      "n_local_lipids": 9,
+      "n_local_P": 10,
+      "radial": [
+        {
+          "r": 0.5,
+          "n": 5,
+          "thickness": 4.189881902474623,
+          "scd": 0.30704795995584705
+        },
+        {
+          "r": 1.5,
+          "n": 14,
+          "thickness": 4.191005622030614,
+          "scd": 0.35456003265277425
+        },
+        {
+          "r": 2.5,
+          "n": 25,
+          "thickness": 4.255534978646498,
+          "scd": 0.37852805996146704
+        },
+        {
+          "r": 3.5,
+          "n": 21,
+          "thickness": 4.257742124337416,
+          "scd": 0.3594474498916466
+        }
+      ],
+      "t_ns": 0.015
+    },
+    {
+      "z_com": 3.3410599906489535,
+      "z_rel": 1.2835122306391877,
+      "min_dist": 0.5754290324360778,
+      "contacts_popc": 0,
+      "contacts_pops": 0,
+      "thickness_local": 4.188437109317927,
+      "thickness_distal": 4.228811627148295,
+      "thinning": 0.04037451783036872,
+      "apl": 63.41564525711647,
+      "scd_local": 0.35493293458121794,
+      "scd_distal": 0.3603470262159983,
+      "scd_global": 0.35917085898783035,
+      "thickness_global": 4.212900410552702,
+      "disordering": 0.005414091634780349,
+      "n_local_lipids": 9,
+      "n_local_P": 9,
+      "radial": [
+        {
+          "r": 0.5,
+          "n": 6,
+          "thickness": 4.199628291984281,
+          "scd": 0.3375896637563039
+        },
+        {
+          "r": 1.5,
+          "n": 13,
+          "thickness": 4.198138872780744,
+          "scd": 0.3730739760018736
+        },
+        {
+          "r": 2.5,
+          "n": 25,
+          "thickness": 4.204621616264067,
+          "scd": 0.36359053021078147
+        },
+        {
+          "r": 3.5,
+          "n": 21,
+          "thickness": 4.235686246727076,
+          "scd": 0.35146870992272666
+        }
+      ],
+      "t_ns": 0.02
+    }
+  ]
+}
