@@ -84,7 +84,13 @@ SEED = 30000 + replica * 31 + (abs(hash(system_name)) % 977)
 
 PROD_NS = float(os.environ.get('PROD_NS', 60))
 DT = 0.004                      # 4 fs, enabled by hydrogen mass repartitioning
-SAMPLE_PS = 20.0
+SAMPLE_PS = float(os.environ.get('SAMPLE_PS', 20))
+# TEST=1 shrinks everything so the whole path -- equilibration schedule,
+# restraint release, every metric, the JSON -- can be exercised locally in
+# minutes before any GPU time is spent.
+TEST = os.environ.get('TEST') == '1'
+if TEST:
+    PROD_NS, SAMPLE_PS = float(os.environ.get('PROD_NS', 0.1)), 5.0
 print(f"=== {tag} | GPU {gpu_index} | seed {SEED} | {PROD_NS} ns ===", flush=True)
 
 psf = app.CharmmPsfFile('step5_input.psf')
@@ -177,61 +183,6 @@ _nh = sum(len(h) for d in res_sn1.values() for _, h in d.values())
 print(f"sn-1: {len(SN1_CARBONS)} carbons with H, {_nh} C-H vectors "
       f"over {len(res_sn1)} lipids", flush=True)
 
-# ---- restrained equilibration, CHARMM-GUI's schedule ---------------------
-pos0 = pdb.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
-
-# The peptide is held in 3D: it must still be unbound when production starts,
-# or time-to-bind is measured from an already-attached state.
-rest = mm.CustomExternalForce('k_rest*periodicdistance(x,y,z,x0,y0,z0)^2')
-rest.addGlobalParameter('k_rest', 0.0)
-for p_ in ('x0', 'y0', 'z0'):
-    rest.addPerParticleParameter(p_)
-for i in pep:
-    rest.addParticle(int(i), pos0[i])
-system.addForce(rest)
-
-# Phosphates are held in z only, as CHARMM-GUI's membrane_restraint.str does.
-# Pinning them in x and y as well would stop lateral diffusion and prevent the
-# bilayer from relaxing its area under the barostat -- the one thing this
-# equilibration exists to allow.
-zrest = mm.CustomExternalForce('k_zrest*(z-z0)^2')
-zrest.addGlobalParameter('k_zrest', 0.0)
-zrest.addPerParticleParameter('z0')
-for i in phos:
-    zrest.addParticle(int(i), [pos0[i][2]])
-system.addForce(zrest)
-
-platform = mm.Platform.getPlatformByName('CUDA')
-props = {'Precision': 'mixed', 'DeviceIndex': gpu_index}
-integ = mm.LangevinMiddleIntegrator(303.15*unit.kelvin, 1.0/unit.picosecond,
-                                    0.001*unit.picoseconds)
-integ.setRandomNumberSeed(SEED)
-sim = app.Simulation(psf.topology, system, integ, platform, props)
-sim.context.setPositions(pdb.positions)
-
-print("Minimising...", flush=True)
-sim.minimizeEnergy(maxIterations=10000)
-sim.context.setVelocitiesToTemperature(303.15*unit.kelvin, SEED)
-
-# (force constant kJ/mol/nm^2, ns, timestep ps, barostat on)
-SCHEDULE = [(4000, 0.125, 0.001, False), (2000, 0.125, 0.001, False),
-            (1000, 0.125, 0.001, True),  (500, 0.5, 0.002, True),
-            (200, 0.5, 0.002, True),     (50, 0.5, 0.004, True)]
-for n, (k, ns, dt, baro_on) in enumerate(SCHEDULE, 1):
-    sim.context.setParameter('k_rest', k)
-    sim.context.setParameter('k_zrest', k / 4.0)   # lipids relax faster than the peptide
-    sim.integrator.setStepSize(dt*unit.picoseconds)
-    sim.context.setParameter(baro.Pressure(), (1.0 if baro_on else 0.0)*unit.bar)
-    sim.step(int(ns*1000/dt))
-    print(f"  equil {n}/6: k={k:>5} {ns} ns @ {dt*1000:.0f} fs "
-          f"{'NPT' if baro_on else 'NVT'}", flush=True)
-sim.context.setParameter('k_rest', 0.0)          # release everything
-sim.context.setParameter('k_zrest', 0.0)
-sim.context.setParameter(baro.Pressure(), 1.0*unit.bar)
-sim.integrator.setStepSize(DT*unit.picoseconds)
-print("Restraints released; production begins with the peptide unbound.", flush=True)
-
-
 # ---- perturbation metrics ------------------------------------------------
 def leaflet_split(zp):
     m = zp.mean()
@@ -322,6 +273,99 @@ def frame(pos, box):
             'disordering': (scd_dis - scd_loc) if np.isfinite(scd_loc) and
                            np.isfinite(scd_dis) else float('nan'),
             'n_local_lipids': len(loc_res), 'n_local_P': int(loc.sum())}
+
+
+# ---- restrained equilibration, CHARMM-GUI's schedule ---------------------
+pos0 = pdb.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
+
+# The peptide is held in 3D: it must still be unbound when production starts,
+# or time-to-bind is measured from an already-attached state.
+rest = mm.CustomExternalForce('k_rest*periodicdistance(x,y,z,x0,y0,z0)^2')
+rest.addGlobalParameter('k_rest', 0.0)
+for p_ in ('x0', 'y0', 'z0'):
+    rest.addPerParticleParameter(p_)
+for i in pep:
+    rest.addParticle(int(i), pos0[i])
+system.addForce(rest)
+
+# Phosphates are held in z only, as CHARMM-GUI's membrane_restraint.str does.
+# Pinning them in x and y as well would stop lateral diffusion and prevent the
+# bilayer from relaxing its area under the barostat -- the one thing this
+# equilibration exists to allow.
+zrest = mm.CustomExternalForce('k_zrest*(z-z0)^2')
+zrest.addGlobalParameter('k_zrest', 0.0)
+zrest.addPerParticleParameter('z0')
+for i in phos:
+    zrest.addParticle(int(i), [pos0[i][2]])
+system.addForce(zrest)
+
+def pick_platform():
+    for name in (os.environ.get('PLATFORM') or 'CUDA,OpenCL,CPU').split(','):
+        try:
+            pl = mm.Platform.getPlatformByName(name.strip())
+            if name.strip() == 'CUDA':
+                return pl, {'Precision': 'mixed', 'DeviceIndex': gpu_index}
+            if name.strip() == 'OpenCL':
+                # OpenCLPlatformIndex must be given explicitly: without it the
+                # automatic device search fails on Apple Silicon even though
+                # the GPU is usable ("No compatible OpenCL platform").
+                # Apple Silicon GPUs have no fp64, so 'mixed' and 'double'
+                # both fail here; only 'single' initialises. That is fine for
+                # a smoke test, which checks code paths rather than numerics --
+                # production on CUDA keeps mixed precision.
+                return pl, {'Precision': 'single',
+                            'OpenCLPlatformIndex':
+                                os.environ.get('OPENCL_PLATFORM', '0')}
+            pl.setPropertyDefaultValue('Threads',
+                                       os.environ.get('THREADS', str(os.cpu_count() or 4)))
+            return pl, {}
+        except Exception:
+            continue
+    raise RuntimeError('no usable platform')
+
+
+platform, props = pick_platform()
+print(f"Platform: {platform.getName()}", flush=True)
+integ = mm.LangevinMiddleIntegrator(303.15*unit.kelvin, 1.0/unit.picosecond,
+                                    0.001*unit.picoseconds)
+integ.setRandomNumberSeed(SEED)
+sim = app.Simulation(psf.topology, system, integ, platform, props)
+sim.context.setPositions(pdb.positions)
+
+print("Minimising...", flush=True)
+sim.minimizeEnergy(maxIterations=10000)
+sim.context.setVelocitiesToTemperature(303.15*unit.kelvin, SEED)
+
+# (force constant kJ/mol/nm^2, ns, timestep ps, barostat on)
+SCHEDULE = [(4000, 0.125, 0.001, False), (2000, 0.125, 0.001, False),
+            (1000, 0.125, 0.001, True),  (500, 0.5, 0.002, True),
+            (200, 0.5, 0.002, True),     (50, 0.5, 0.004, True)]
+if TEST:      # same six stages, same force constants, much shorter
+    _div = float(os.environ.get('TEST_DIV', 40))
+    SCHEDULE = [(k, ns/_div, dt, b) for k, ns, dt, b in SCHEDULE]
+for n, (k, ns, dt, baro_on) in enumerate(SCHEDULE, 1):
+    sim.context.setParameter('k_rest', k)
+    sim.context.setParameter('k_zrest', k / 4.0)   # lipids relax faster than the peptide
+    sim.integrator.setStepSize(dt*unit.picoseconds)
+    sim.context.setParameter(baro.Pressure(), (1.0 if baro_on else 0.0)*unit.bar)
+    sim.step(int(ns*1000/dt))
+    print(f"  equil {n}/6: k={k:>5} {ns} ns @ {dt*1000:.0f} fs "
+          f"{'NPT' if baro_on else 'NVT'}", flush=True)
+sim.context.setParameter('k_rest', 0.0)          # release everything
+sim.context.setParameter('k_zrest', 0.0)
+sim.context.setParameter(baro.Pressure(), 1.0*unit.bar)
+sim.integrator.setStepSize(DT*unit.picoseconds)
+_st = sim.context.getState(getPositions=True)
+_p = _st.getPositions(asNumpy=True).value_in_unit(unit.nanometers)
+_f = frame(_p, _st.getPeriodicBoxVectors(asNumpy=True).value_in_unit(unit.nanometers))
+print(f"After equilibration: |S_CD| global {_f['scd_global']:.3f} "
+      f"(start ~0.36; a relaxed POPC bilayer sits near 0.20), "
+      f"thickness {_f['thickness_global']*10:.1f} A, "
+      f"APL {_f['apl']:.1f} A^2, peptide dmin {_f['min_dist']:.2f} nm", flush=True)
+if _f['min_dist'] < 0.4:
+    print("  WARNING: peptide is already in contact before production; "
+          "time-to-bind will not be meaningful.", flush=True)
+print("Restraints released; production begins.", flush=True)
 
 
 n_steps = int(PROD_NS * 1000 / DT)
