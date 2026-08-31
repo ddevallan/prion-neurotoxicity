@@ -85,14 +85,47 @@ def crossref_lookup(title, rows=3):
 
 
 # Recover a searchable title and a claimed first author from a bibliography line
-TITLE_RE = re.compile(r'^(?:\*\*)?(?P<auth>[A-Z][^.*]{0,120}?)(?:\*\*)?\.\s+'
+# A surname may begin with a lowercase particle -- do Amaral, van den Berg,
+# de la Fuente, von Bergen. Requiring an initial capital silently skipped them.
+TITLE_RE = re.compile(r'^(?:\*\*)?(?P<auth>(?:(?:d[aeiou]|van|von|del|della|ter|ten|la|le)\s+)?'
+                      r'[A-Z][^.*]{0,220}?)(?:\*\*)?\.\s+'
                       r'(?P<title>[^.*]{15,300}?)\.\s')
 YEAR_RE = re.compile(r'\b(19[89]\d|20[0-2]\d)\b')
 ID_RE = re.compile(r'(?:PMID[:\s]*(\d+))|(?:PMC(\d+))|(?:doi:\s*(\S+))', re.I)
 
 
+def read_entries(path):
+    """Bullet entries with their wrapped continuation lines joined.
+
+    Reading line by line truncates a multi-line entry at its first line, which
+    for an entry formatted as '- **Author, Author, Author.**\\n  Title...'
+    leaves only the author list to search on. That made six freshly verified
+    entries come back as unmatched.
+    """
+    out, cur = [], None
+    for line in open(path):
+        if line.startswith('>'):
+            continue                       # audit banner, not a citation
+        if line.startswith('- '):
+            if cur:
+                out.append(cur)
+            cur = line.rstrip()
+        elif cur is not None and line.startswith('  ') and line.strip():
+            if line.lstrip().startswith('- '):
+                continue                   # sub-bullet: commentary, not the citation
+            cur += ' ' + line.strip()
+        elif not line.strip() or line.startswith('#'):
+            if cur:
+                out.append(cur)
+            cur = None
+    if cur:
+        out.append(cur)
+    return out
+
+
 def parse_entry(line):
     body = line.lstrip('- ').strip()
+    body = body.replace('**', '')          # bold author names break the pattern
     m = TITLE_RE.match(body)
     ids = ID_RE.search(body)
     y = YEAR_RE.search(body)
@@ -180,8 +213,7 @@ def check(entry, want_abstract=False):
 def main():
     path = sys.argv[1] if len(sys.argv) > 1 else 'docs/references/BIBLIOGRAPHY.md'
     limit = int(os.environ.get('LIMIT', '0'))
-    lines = [l for l in open(os.path.join(BASE, path))
-             if l.startswith('- ') and not l.startswith('- **[')]
+    lines = read_entries(os.path.join(BASE, path))
     entries = [e for e in (parse_entry(l) for l in lines) if e]
     if limit:
         entries = entries[:limit]

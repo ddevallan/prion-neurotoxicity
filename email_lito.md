@@ -36,7 +36,7 @@ Lin J et al. (*J Clin Invest* 2025;135(10):e186432, PMID 40185484): camundongos 
 Khosravani H et al. (*J Cell Biol* 2008;181(3):551-65, PMID 18443219) mostraram que neurônios sem PrP têm correntes NMDA aumentadas e prolongadas por regulação positiva de subunidades NR2D/GluN2D. Quando PrPC é sequestrada pela conversão priônica, essa inibição é perdida — abrindo um segundo mecanismo de excitotoxicidade.
 
 **f) Não é só NMDA — receptores AMPA também estão envolvidos**
-Ghirardini E et al. (*PLoS Pathog* 2020;16(7):e1008654, PMID 32673333) mostraram que PrP **mutante** (D177N, E199K) forma complexo com a subunidade GluA2 e a retém intracelularmente, aumentando na superfície os receptores AMPA sem GluA2 — permeáveis a cálcio — e agravando a excitotoxicidade. **Ressalva: o efeito é dependente da mutação e foi demonstrado em modelos de doença priônica genética, não esporádica.** **Perampanel** (Fycompa), um antagonista de AMPA aprovado para epilepsia, poderia cobrir esse eixo.
+Ghirardini E et al. (*PLoS Pathog* 2020;16(7):e1008654, PMID 32673372) mostraram que PrP **mutante** (D177N, E199K) forma complexo com a subunidade GluA2 e a retém intracelularmente, aumentando na superfície os receptores AMPA sem GluA2 — permeáveis a cálcio — e agravando a excitotoxicidade. **Ressalva: o efeito é dependente da mutação e foi demonstrado em modelos de doença priônica genética, não esporádica.** **Perampanel** (Fycompa), um antagonista de AMPA aprovado para epilepsia, poderia cobrir esse eixo.
 
 **O quadro completo:** a toxicidade priônica envolve excitotoxicidade por DOIS eixos (NMDA + AMPA). Existem drogas aprovadas para ambos. A amantadina (fraca) mostrou benefício em pacientes nos anos 1970. A memantina (forte) mostrou +8% em camundongo com design subótimo. Nenhuma foi testada com timing otimizado ou em combinação.
 
@@ -48,8 +48,8 @@ Ghirardini E et al. (*PLoS Pathog* 2020;16(7):e1008654, PMID 32673333) mostraram
 - Riemer C, Schulz-Schaeffer W, Kretzschmar HA, Baier M. *J Gen Virol* 2008;89(Pt 2):594-597 (PMID 18198391) — memantina in vivo, +8%
 - Lin J et al. *J Clin Invest* 2025;135(10):e186432 (PMID 40185484) — resgate do G92N por memantina
 - Khosravani H et al. *J Cell Biol* 2008;181(3):551-565 (PMID 18443219, PMC2364707) — PrPC atenua excitotoxicidade via NR2D
-- Ghirardini E et al. *PLoS Pathog* 2020;16(7):e1008654 (PMID 32673333, PMC7365390) — retenção de GluA2, AMPA permeável a Ca²⁺ (PrP mutante)
-- Resenberger UK et al. *EMBO Mol Med* 2011;3(4):220-233 (PMID 21441896, PMC3098494) — sinalização neurotóxica via PrPC e NMDA
+- Ghirardini E et al. *PLoS Pathog* 2020;16(7):e1008654 (PMID 32673372, PMC7365390) — retenção de GluA2, AMPA permeável a Ca²⁺ (PrP mutante)
+- Resenberger UK et al. *EMBO J* 2011;30(10):2057-70 (PMID 21441896, PMC3098494) — sinalização neurotóxica via PrPC e NMDA
 
 **Ressalva:** memantina não para a replicação priônica. O +8% de Riemer 2008 é consistente com o esperado para intervenções downstream (Minikel documenta 4-19%). Não é cura — mas pode proteger neurônios enquanto intervenções que reduzem PrP (ASO/siRNA) fazem efeito.
 

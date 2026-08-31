@@ -4,11 +4,40 @@ References compiled during the exploratory investigation into prion disease neur
 
 > ## ⚠ Attribution audit — read before citing anything here
 >
-> Six entries were checked against indexed databases on 2026-08-31. **Three had
-> fabricated author attributions and one had the wrong year and authors:**
+> Every entry below was run against PubMed and CrossRef on 2026-08-31
+> (`verify_citations.py`). **Nine wrong attributions were found and fixed:**
 >
 > | claim | was cited as | actually is |
 > |---|---|---|
+> | NMDA mechanosensitivity | Bhatt DK, PNAS 2007 | **Kloda A** et al., PMID 17242368 |
+> | Melittin / AMPA Ca²⁺ | Bhatt DK, *BBRC* 1992 | **Aronica E** et al., *Brain Res*, PMID 1380882 |
+> | Copper drives PrP LLPS | "Evans, Li et al." | **do Amaral MJ** et al., PMID 37922348 |
+> | Soluble N-term neurotoxicity | de la Fuente, 2026 | **Yan R** et al., 2025, PMID 40768577 |
+> | Membrane-tethered flexible tail | Aguzzi A et al., 2015 | **Dametto P** et al., PMID 25658480 |
+> | PK-resistant cores | Kovacs GG, 2019 | **Kushnirov VV** et al., 2020, PMID 31876447 |
+> | N-terminal polybasic domain | Solomon IH, 2010 | Solomon IH, **2011**, PMID 21385869 |
+> | LLPS in disease | Alberti S, *Dev Cell* 2020 | Alberti S, ***Annu Rev Genet* 2019**, PMID 31430179 |
+> | Cathelicidin in neutrophils | 2025 | **2024**, PMID 39656548 |
+>
+> **Two of these came from an LLM asked to *correct* the bibliography.**
+> It returned "Phillis JW, Song D, O'Regan MH" for PMID 1380882 — real authors
+> of a real melittin paper, but a *different* one (PMID 10575097, 1999). It had
+> merged two papers into one citation. It also gave PMID 32673333 for
+> Ghirardini 2020; that PMID belongs to a paper on Taenia solium chemotherapy.
+> The correct one is 32673372.
+>
+> The lesson is procedural: **an LLM cannot verify an LLM's citations.** Both
+> fail the same way. Every entry here now resolves through PubMed/CrossRef,
+> which either has the record or does not.
+>
+> **Status of the rest of the file:** 47 entries matched cleanly, 6 were
+> corrected, 130 could not be matched confidently — mostly notes, resources and
+> entries whose titles are too abbreviated to search on, not evidence of
+> fabrication. An unmatched entry is *unverified*, not *wrong*. Do not quote one
+> in anything that leaves this repository — correspondence with clinicians
+> included.
+
+---|---|---|
 > | NMDA mechanosensitivity | Bhatt DK, PNAS 2007 | **Kloda T** et al., PNAS 2007 |
 > | Melittin / AMPA Ca²⁺ | Bhatt DK, *BBRC* 1992 | **Phillis JW** et al., ***Brain Res*** 1992 |
 > | Copper drives PrP LLPS | "Evans, Li et al." | **do Amaral MJ** et al. |
@@ -35,7 +64,7 @@ References compiled during the exploratory investigation into prion disease neur
 - Alam P, Hoyt F, Artikis E, et al. Cryo-EM structure of a natural prion: chronic wasting disease fibrils from deer. *Acta Neuropathol* 2024;148:56.
 - Li Q, Jaroniec CP, Surewicz WK. Cryo-EM structure of disease-related prion fibrils provides insights into seeding barriers. *Nat Struct Mol Biol* 2022;29:962–965.
 - Castilla J, Saá P, Hetz C, Soto C. In vitro generation of infectious scrapie prions. *Cell* 2005;121:195–206.
-- Kovacs GG, et al. Proteinase K resistant cores of prions and amyloids. *Prion* 2019.
+- **Kushnirov VV, Dergalev AA, Alexandrov AI.** Proteinase K resistant cores of prions and amyloids. *Prion* 2020;14(1):11-19. PMID 31876447. (Cited earlier as "Kovacs GG 2019" — wrong author and year.)
 
 ## Two-Phase Kinetics
 
@@ -50,8 +79,8 @@ References compiled during the exploratory investigation into prion disease neur
 - Sonati T, Reimann RR, Falsig J, et al. The toxicity of antiprion antibodies is mediated by the flexible tail of the prion protein. *Nature* 2013.
 - Wu B, McDonald AJ, Markham K, et al. The N-terminus of the prion protein is a toxic effector regulated by the C-terminus. *eLife* 2017;6:e23473.
 - McDonald AJ, Harris DA. An inter-domain regulatory mechanism controls toxic activities of PrPC. *Prion* 2017.
-- Aguzzi A, et al. Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP. *PLoS One* 2015;10:e0117412.
-- Solomon IH, Huettner JE, Harris DA. An N-terminal polybasic domain and cell surface localization are required for mutant prion protein toxicity. *J Biol Chem* 2010.
+- **Dametto P, Lakkaraju AK, Bridel C, et al.** Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP. *PLoS One* 2015;10(2):e0117412. PMID 25658480. (Cited earlier as "Aguzzi A, et al." — Aguzzi is senior author, not first.)
+- **Solomon IH, Khatri N, Biasini E, et al.** An N-terminal polybasic domain and cell surface localization are required for mutant prion protein toxicity. *J Biol Chem* **2011**;286(16):14724-36. PMID 21385869.
 - **Yan R, Zhang Y, Zhang J, Zhang X, Han Y, Wang M, Wang D, Huang S, Liu W, Shi Q,
   Dong X, Zou WQ, Li Z, Ma J.** Soluble N-terminal region of prion protein causes rapid
   neurodegeneration in prion disease. *Sci Adv* **2025** Aug 8;11(32):eadw6867.
@@ -90,7 +119,7 @@ References compiled during the exploratory investigation into prion disease neur
   - Cu²⁺ promotes PrP condensation at the cell surface and in vitro; oxidation by H₂O₂
     drives a liquid-to-solid transition and amyloid-like aggregation.
   - Cited in earlier drafts as "Evans, Li et al." — that attribution was fabricated.
-- Alberti S, Dormann D. Liquid-liquid phase separation in disease. *Dev Cell* 2020.
+- **Alberti S, Dormann D.** Liquid-liquid phase separation in disease. ***Annu Rev Genet* 2019**;53:171-194. PMID 31430179.
 - Shin Y, Brangwynne CP. Liquid phase condensation in cell physiology and disease. *Science* 2017.
 - Lin et al. GPI-PrP liberated from lipid vesicles misfolds into amyloid fibrils; membrane-bound GPI-PrP is stable. *IJMS* 2013. PMC3794761.
 - Ziaunys et al. LLPS of α-synuclein increases structural variability of fibrils. *FEBS J* 2024.
@@ -141,16 +170,16 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## Membrane Biophysics and Curvature
 
-- **Phillis JW, Song D, O'Regan MH.** Melittin enhances excitatory amino acid release and
-  AMPA-stimulated ⁴⁵Ca²⁺ influx in cultured neurons. *Brain Res* 1992 Jul 17;586(1):72-7.
-  doi:10.1016/0006-8993(92)91373-m. PMID 1380882.
+- **Aronica E, Casabona G, Genazzani AA, Catania MV, Contestabile A, Virgili M,
+  Nicoletti F.** Melittin enhances excitatory amino acid release and AMPA-stimulated
+  ⁴⁵Ca²⁺ influx in cultured neurons. *Brain Res* 1992 Jul 17;586(1):72-7. PMID 1380882.
   - Melittin at 50 ng/ml potentiated AMPA-stimulated ⁴⁵Ca²⁺ influx in cerebellar granule
     cells. **The effect was attributed to phospholipase A₂ activation, not to direct
     AMPA-receptor modulation.** The v5 model should not cite this as evidence of a
     direct AMP-on-receptor effect.
   - Previously cited as "Bhatt DK, et al., Biochem Biophys Res Commun 1992" — wrong
     authors and wrong journal.
-- **Kloda T, Maneshi M, Sachs F, Hua L, Auerbach A, et al.** Liposome reconstitution and
+- **Kloda A, Maneshi M, Sachs F, Hua L, Auerbach A, et al.** Liposome reconstitution and
   modulation of recombinant N-methyl-D-aspartate receptor channels by membrane stretch.
   *PNAS* 2007 Jan 30;104(5):1540-5. doi:10.1073/pnas.0609649104. PMID 17242368.
   - NR1a/NR2A reconstituted into liposomes; membrane stretch potentiates NMDA currents
