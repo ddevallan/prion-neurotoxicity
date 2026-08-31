@@ -1,0 +1,18 @@
+{
+  "KKRPKP_water": {
+    "min_dist_nm": 0.2626814991012715,
+    "com_displacement_nm": -0.4035655194264755,
+    "contacts_late": 12.598,
+    "contacts_early": 12.049196787148594,
+    "waters_4A_early": 10.923469387755102,
+    "waters_4A_late": 1.0955
+  },
+  "PrP_23_93": {
+    "min_dist_nm": 0.2633599925655349,
+    "com_displacement_nm": -0.6866968873735755,
+    "contacts_late": 22.4535,
+    "contacts_early": 7.241967871485944,
+    "waters_4A_early": 86.75,
+    "waters_4A_late": 14.717
+  }
+}
