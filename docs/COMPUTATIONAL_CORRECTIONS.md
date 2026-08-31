@@ -134,11 +134,23 @@ mapped that offset into y and displaced the peptide 43 Å sideways — beside th
 patch rather than above it (`yextent` came back as 54.3 Å for a 23 Å peptide).
 Centring and pre-orienting locally before upload removes the problem.
 
-**Downloading large systems.** The `download.tgz` link truncates at
-41,876,032 bytes for a system of this size. The individual files are served as
-static paths and can be fetched directly:
+**Fetching a built system without the browser.** The individual files are
+served as static paths and can be fetched directly with curl, no session
+cookie needed:
 `https://charmm-gui.org/uploaded_pdb/<jobid>/step5_assembly.psf`. Box
 dimensions are in `step5_assembly.str`.
+
+The PrP system here was assembled that way — from `step5_assembly.psf` plus a
+hand-written `sysinfo.dat` — because the `download.tgz` for a 79k-atom system
+takes a long time and appeared to have stalled at 41,876,032 bytes. It had
+not; that is simply the archive's full size, and the download completed.
+The two routes were checked against each other afterwards and give the same
+physics: `step5_assembly.psf` (CHARMM-native) and the archive's
+`step5_input.psf` (FF-Converter output) differ in header and section
+formatting but produce identical OpenMM systems — 79,492 particles, net charge
++0.0000 e, 474.959 kDa, same force set. Note that CHARMM-GUI's `sysinfo.dat`
+carries six values (three box lengths then three crystal angles); only the
+first three are read here, which is correct for the 90° rectangular box.
 
 ---
 
