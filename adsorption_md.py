@@ -80,9 +80,17 @@ system.addForce(mm.MonteCarloMembraneBarostat(
 # --- atom selections -------------------------------------------------------
 PROTEIN_RES = {'ALA','ARG','ASN','ASP','CYS','GLU','GLN','GLY','HIS','HSD','HSE','HSP',
                'ILE','LEU','LYS','MET','PHE','PRO','SER','THR','TRP','TYR','VAL'}
+# CharmmPsfFile renames water on read: the PSF says TIP3/OH2, the OpenMM
+# topology says HOH with atoms O/H1/H2. Accept both spellings.
+WATER_RES = {'HOH', 'TIP3', 'WAT', 'SOL'}
+WATER_O = {'O', 'OH2', 'OW'}
 pep, popc, pops, phos, wat_o = [], [], [], [], []
 for a in psf.topology.atoms():
     rn, nm = a.residue.name, a.name
+    if rn in WATER_RES:
+        if nm in WATER_O:
+            wat_o.append(a.index)
+        continue
     if nm.startswith('H'):
         continue
     if rn in PROTEIN_RES:
@@ -95,13 +103,16 @@ for a in psf.topology.atoms():
         pops.append(a.index)
         if nm == 'P':
             phos.append(a.index)
-    elif rn == 'TIP3' and nm == 'OH2':
-        wat_o.append(a.index)
-pep = np.array(pep); popc = np.array(popc); pops = np.array(pops)
-phos = np.array(phos); wat_o = np.array(wat_o)
+pep = np.array(pep, dtype=int); popc = np.array(popc, dtype=int)
+pops = np.array(pops, dtype=int); phos = np.array(phos, dtype=int)
+wat_o = np.array(wat_o, dtype=int)
 lipid = np.concatenate([popc, pops])
-print(f"peptide {len(pep)} | POPC {len(popc)} | POPS {len(pops)} | P {len(phos)}",
-      flush=True)
+print(f"peptide {len(pep)} | POPC {len(popc)} | POPS {len(pops)} | "
+      f"P {len(phos)} | water {len(wat_o)}", flush=True)
+for name, sel in [('peptide', pep), ('POPC', popc), ('POPS', pops),
+                  ('phosphate', phos), ('water', wat_o)]:
+    if len(sel) == 0:
+        sys.exit(f"ERROR: {name} selection is empty -- check residue naming")
 
 platform = mm.Platform.getPlatformByName('CUDA')
 props = {'Precision': 'mixed', 'DeviceIndex': gpu_index}
@@ -132,6 +143,8 @@ def _near(pos, sel, box, margin=1.2):
     the cost and cannot change any distance below `margin`.
     """
     lo, hi = box
+    if len(sel) == 0:
+        return sel, np.zeros(0, dtype=bool)
     c = pos[sel]
     m = ((c[:, 0] > lo[0] - margin) & (c[:, 0] < hi[0] + margin) &
          (c[:, 1] > lo[1] - margin) & (c[:, 1] < hi[1] + margin) &
