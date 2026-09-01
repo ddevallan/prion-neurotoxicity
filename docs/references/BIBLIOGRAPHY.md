@@ -33,8 +33,8 @@ References compiled during the exploratory investigation into prion disease neur
 > fail the same way. Every entry here now resolves through PubMed/CrossRef,
 > which either has the record or does not.
 >
-> **Status (September 1, 2026):** 113/185 entries verified (61%). 11 wrong
-> attributions corrected (6 fabricated author names). 72 entries remain
+> **Status (September 1, 2026):** 138/185 entries verified (75%). 11 wrong
+> attributions corrected (6 fabricated author names). 47 entries remain
 > unmatched — mostly notes, resources and abbreviated titles, not evidence
 > of fabrication. Zero entries returned as non-existent — mostly notes, resources and
 > entries whose titles are too abbreviated to search on, not evidence of
@@ -48,29 +48,29 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## Structure and Foundation
 
-- Prusiner SB. Novel proteinaceous infectious particles cause scrapie. *Science* 1982;216:136–144.
-- Pan KM, Baldwin M, Nguyen J, et al. Conversion of alpha-helices into beta-sheets features in the formation of the scrapie prion proteins. *PNAS* 1993;90:10962–10966.
+- Prusiner SB. Novel proteinaceous infectious particles cause scrapie. *Science* 1982;216:136–144. PMID 6801762.
+- Pan KM, Baldwin M, Nguyen J, et al. Conversion of alpha-helices into beta-sheets features in the formation of the scrapie prion proteins. *PNAS* 1993;90:10962–10966. PMID 8248165.
 - Manka SW, Zhang W, Wenborn A, Betts J, Joiner S, Saibil HR, Collinge J, Wadsworth JDF. 2.7 Å cryo-EM structure of ex vivo RML prion fibrils. *Nat Commun* 2022;13:4004.
-- Hoyt F, Standke HG, Artikis E, et al. Cryo-EM structure of anchorless RML prion reveals variations in shared motifs between distinct strains. *Nat Commun* 2022;13:4005.
-- Manka SW, et al. A structural basis for prion strain diversity. *Nat Chem Biol* 2023.
-- Alam P, Hoyt F, Artikis E, et al. Cryo-EM structure of a natural prion: chronic wasting disease fibrils from deer. *Acta Neuropathol* 2024;148:56.
-- Li Q, Jaroniec CP, Surewicz WK. Cryo-EM structure of disease-related prion fibrils provides insights into seeding barriers. *Nat Struct Mol Biol* 2022;29:962–965.
-- Castilla J, Saá P, Hetz C, Soto C. In vitro generation of infectious scrapie prions. *Cell* 2005;121:195–206.
+- Hoyt F, Standke HG, Artikis E, et al. Cryo-EM structure of anchorless RML prion reveals variations in shared motifs between distinct strains. *Nat Commun* 2022;13:4005. PMID 35831291.
+- Manka SW, et al. A structural basis for prion strain diversity. *Nat Chem Biol* 2023. PMID 36646960.
+- Alam P, Hoyt F, Artikis E, et al. Cryo-EM structure of a natural prion: chronic wasting disease fibrils from deer. *Acta Neuropathol* 2024;148:56. PMID 39448454.
+- Li Q, Jaroniec CP, Surewicz WK. Cryo-EM structure of disease-related prion fibrils provides insights into seeding barriers. *Nat Struct Mol Biol* 2022;29:962–965. PMID 36097290.
+- Castilla J, Saá P, Hetz C, Soto C. In vitro generation of infectious scrapie prions. *Cell* 2005;121:195–206. PMID 15851027.
 - **Kushnirov VV, Dergalev AA, Alexandrov AI.** Proteinase K resistant cores of prions and amyloids. *Prion* 2020;14(1):11-19. PMID 31876447. (Cited earlier as "Kovacs GG 2019" — wrong author and year.)
 
 ## Two-Phase Kinetics
 
 - Sandberg MK, Al-Doujaily H, Sharps B, Clarke AR, Collinge J. Prion propagation and toxicity in vivo occur in two distinct mechanistic phases. *Nature* 2011;470:540–542.
-- Sandberg MK, et al. Prion neuropathology follows the accumulation of alternate prion protein isoforms after infective titre has peaked. *Nat Commun* 2014;5:5347. PMC4104459.
+- Sandberg MK, et al. Prion neuropathology follows the accumulation of alternate prion protein isoforms after infective titre has peaked. *Nat Commun* 2014;5:5347. PMC4104459. PMID 25005024.
 - Benilova I, et al. Highly infectious prions are not directly neurotoxic. *PNAS* 2020;117. PMC7525444.
 - Meisl G, et al. Scaling analysis reveals the mechanism and rates of prion replication in vivo. *Nat Struct Mol Biol* 2021. PMID 33767451.
 - Meisl G. Beyond prion-like spreading. *Alz & Dementia* 2025. doi:10.1002/alz.70789.
 
 ## N-Terminal Tail and Auto-Inhibition
 
-- Sonati T, Reimann RR, Falsig J, et al. The toxicity of antiprion antibodies is mediated by the flexible tail of the prion protein. *Nature* 2013.
-- Wu B, McDonald AJ, Markham K, et al. The N-terminus of the prion protein is a toxic effector regulated by the C-terminus. *eLife* 2017;6:e23473.
-- McDonald AJ, Harris DA. An inter-domain regulatory mechanism controls toxic activities of PrPC. *Prion* 2017.
+- Sonati T, Reimann RR, Falsig J, et al. The toxicity of antiprion antibodies is mediated by the flexible tail of the prion protein. *Nature* 2013. PMID 23903654.
+- Wu B, McDonald AJ, Markham K, et al. The N-terminus of the prion protein is a toxic effector regulated by the C-terminus. *eLife* 2017;6:e23473. PMID 28527237.
+- McDonald AJ, Harris DA. An inter-domain regulatory mechanism controls toxic activities of PrPC. *Prion* 2017. PMID 28960140.
 - **Dametto P, Lakkaraju AK, Bridel C, et al.** Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP. *PLoS One* 2015;10(2):e0117412. PMID 25658480. (Cited earlier as "Aguzzi A, et al." — Aguzzi is senior author, not first.)
 - **Solomon IH, Khatri N, Biasini E, et al.** An N-terminal polybasic domain and cell surface localization are required for mutant prion protein toxicity. *J Biol Chem* **2011**;286(16):14724-36. PMID 21385869.
 - **Yan R, Zhang Y, Zhang J, Zhang X, Han Y, Wang M, Wang D, Huang S, Liu W, Shi Q,
@@ -86,23 +86,23 @@ References compiled during the exploratory investigation into prion disease neur
     effector is membrane-associated rather than acting through a receptor.
   - Earlier drafts dated this 2026 and credited it to the de la Fuente lab. Both wrong.
 - **Mohammadi B, Linsenmeier L, et al.** Transgenic Overexpression of the Disordered Prion Protein N1 Fragment in Mice Does Not Protect Against Neurodegenerative Diseases Due to Impaired ER Translocation. *Mol Neurobiol* 2020;57:2812-2829. PMID 32367491. PMC7253391. (Cited as "Bhullar AS" — fifth fabricated Bhullar/Bhatt attribution found.)
-- Flechsig E, et al. Prion protein devoid of the octapeptide repeat region restores susceptibility to scrapie in PrP knockout mice. *Neuron* 2000 (Δ32–93).
+- Flechsig E, et al. Prion protein devoid of the octapeptide repeat region restores susceptibility to scrapie in PrP knockout mice. *Neuron* 2000 (Δ32–93). PMID 10985358.
 - Atarashi R, Nishida N, Shigematsu K, et al. Deletion of N-terminal residues 23-88 from PrP abrogates the potential to rescue PrP-deficient mice. 2003.
 - Mouse-hamster chimeric PrP devoid of N-terminal residues 23-88 restores susceptibility to 22L but not RML prions. *PLoS One* 2014;9:e109737.
 - The N-terminal polybasic region of PrP is critical in prion pathogenesis independently of the octapeptide repeat region. PMID 31707632 (Tg PrP3K3A).
 
 ## PrPC Requirement and Knockout
 
-- Büeler H, Fischer M, Lang Y, et al. Normal development and behaviour of mice lacking the neuronal cell-surface PrP protein. *Nature* 1992;356:577–582.
-- Brandner S, Isenmann S, Raeber A, et al. Normal host prion protein necessary for scrapie-induced neurotoxicity. *Nature* 1996;379:339–343.
-- Mallucci G, Dickinson A, Linehan J, et al. Depleting neuronal PrP in prion infection prevents disease and reverses spongiosis. *Science* 2003.
+- Büeler H, Fischer M, Lang Y, et al. Normal development and behaviour of mice lacking the neuronal cell-surface PrP protein. *Nature* 1992;356:577–582. PMID 1373228.
+- Brandner S, Isenmann S, Raeber A, et al. Normal host prion protein necessary for scrapie-induced neurotoxicity. *Nature* 1996;379:339–343. PMID 8552188.
+- Mallucci G, Dickinson A, Linehan J, et al. Depleting neuronal PrP in prion infection prevents disease and reverses spongiosis. *Science* 2003. PMID 14593181.
 - **Chesebro B, Trifilo M, Race R, et al.** Anchorless prion protein results in infectious amyloid disease without clinical scrapie. *Science* 2005;308(5727):1435-1439. PMID 15933194.
 
 ## LLPS and Phase Separation
 
 - Yi Liang group. PrP undergoes LLPS and initiates conformational conversion. *JBC* 2021. PMC8289115.
 - Yi Liang group. Dog PrP Arg177/Asp159 slow LLPS and inhibit human PrP amyloid formation. *JBC* 2023. PMC10641668.
-- JACS 2024. Post-LLPS conformational shift modulated by polymeric antagonist.
+- **Liu Y, et al.** Post-LLPS conformational shift modulated by polymeric antagonist. *J Am Chem Soc* 2024;146(40):27903-27914. PMID 39326869.
 - **Gogte K, Mamashli F, Herrera MG, et al.** Topological confinement by a membrane anchor suppresses phase separation into protein aggregates: Implications for prion diseases. *PNAS* 2025;122(1):e2415250121. PMID 39739794. PMC11725851.
 - **do Amaral MJ, Mohapatra S, Passos AR, Lopes da Silva TS, Carvalho RS, da Silva
   Almeida M, Pinheiro AS, Wegmann S, Cordeiro Y.** Copper drives prion protein phase
@@ -112,18 +112,18 @@ References compiled during the exploratory investigation into prion disease neur
     drives a liquid-to-solid transition and amyloid-like aggregation.
   - Cited in earlier drafts as "Evans, Li et al." — that attribution was fabricated.
 - **Alberti S, Dormann D.** Liquid-liquid phase separation in disease. ***Annu Rev Genet* 2019**;53:171-194. PMID 31430179.
-- Shin Y, Brangwynne CP. Liquid phase condensation in cell physiology and disease. *Science* 2017.
+- Shin Y, Brangwynne CP. Liquid phase condensation in cell physiology and disease. *Science* 2017. PMID 28935776.
 - Lin et al. GPI-PrP liberated from lipid vesicles misfolds into amyloid fibrils; membrane-bound GPI-PrP is stable. *IJMS* 2013. PMC3794761.
 - Ziaunys et al. LLPS of α-synuclein increases structural variability of fibrils. *FEBS J* 2024.
 - Phe-Gly motifs drive fibrillization of TDP-43's prion-like domain condensates. PMC8109789.
 - LLPS-driven fibrilization of Aβ. *ACS Chem Neurosci* 2024.
 - Molecular mechanisms of phase separation and amyloidosis of FUS and TDP-43. *Aging Dis* 2024. PMC11346406.
-- Small molecules as regulators of LLPS. *FASEB J* 2025.
-- Condensate-targeted drug discovery. *Trends Pharmacol Sci* 2026.
+- **Usman et al.** Small Molecules as Regulators of Liquid-Liquid Phase Separation. *FASEB J* 2025;39(13):e70773. PMID 40616404.
+- **Wang et al.** Condensate-targeted drug discovery. *Trends Pharmacol Sci* 2026;47(5):504-521. PMID 41946638.
 
 ## G127V
 
-- Asante EA, et al. A naturally occurring variant of the human prion protein completely prevents prion disease. *Nature* 2015 (G127V, Fore people).
+- Asante EA, et al. A naturally occurring variant of the human prion protein completely prevents prion disease. *Nature* 2015 (G127V, Fore people). PMID 26061765.
 - G127V NMR structure: steric hindrance of Tyr128. *Sci Rep* 2018. PMC6123418. PDB 5YJ4.
 - G127V inhibits dimerization in solution but not in cellulo. *Sci Rep* 2021. PMC7862613.
 - G127V promotes droplet fluidity and negatively modulates LLPS. *Commun Biol* 2020. PMC7391680.
@@ -135,7 +135,7 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## AMPs and Prionins
 
-- Pasupuleti M, Mangé A, et al. Antimicrobial activity of human prion protein is mediated by its N-terminal region. *PLoS One* 2009. PMC2752989.
+- Pasupuleti M, Mangé A, et al. Antimicrobial activity of human prion protein is mediated by its N-terminal region. *PLoS One* 2009. PMC2752989. PMID 19809501.
 - **Torres MDT, Wan F, de la Fuente-Nunez C.** Deep learning reveals antimicrobial
   peptides within prions. *Nat Microbiol* 2026 Jun 19;11(8):2119-2125.
   doi:10.1038/s41564-026-02408-1. PMID 42321536. PMC13423867.
