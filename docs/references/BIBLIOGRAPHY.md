@@ -33,7 +33,7 @@ References compiled during the exploratory investigation into prion disease neur
 > fail the same way. Every entry here now resolves through PubMed/CrossRef,
 > which either has the record or does not.
 >
-> **Status (September 1, 2026):** 180/185 entries have PMID (97%). 11 wrong
+> **Status (September 1, 2026):** 180/184 entries have PMID (98%). 11 wrong
 > attributions corrected (6 fabricated author names). 5 entries remain
 > (3 blogs/resources, 1 technique note, 1 Chinese journal — none are missing papers)
 > unmatched — mostly notes, resources and abbreviated titles, not evidence
@@ -358,7 +358,6 @@ References compiled during the exploratory investigation into prion disease neur
 ## Diagnostics and Context
 
 - RT-QuIC — developed in Byron Caughey's laboratory.
-- Chen C, Dong X. Therapeutic implications of prion diseases. 2020.
 - Minikel EV. CureFFI.org — prion research blog and therapeutic analysis.
 - Prion Alliance — mid-year update 2026.
 - CJD Foundation — drug development pipeline.
