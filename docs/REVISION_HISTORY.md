@@ -99,14 +99,14 @@ The toxicity mechanism — membrane perturbation by a polycationic peptide — i
 
 - *Prionins*: 1,179 AMP candidates from prion/prion-like proteins; 59/75 tested active; membrane perturbation as mechanism (Nature Microbiology 2026)
 - *Fuzzy coat principle*: amyloid fibrils universally free flanking disordered regions that mediate membrane interaction (JBC 2023 review)
-- *Sub-lytic AMP modulation of NMDA*: melittin potentiates AMPA at 50 ng/mL; NMDA is mechanosensitive to bilayer tension (Bhatt PNAS 2007)
-- *GPI suppresses LLPS*: topological confinement prevents phase separation (Tatzelt, PNAS 2025)
-- *G127V blocks LLPS→solid transition*: keeps condensates liquid, universal across strains (J Neurochem 2023; Commun Biol 2020)
+- *NMDA modulated by bilayer stretch*: Kloda A et al. (PNAS 2007, PMID 17242368) — potentiation of existing NMDA currents by membrane stretch. **[C]** — shows modulation, not glutamate-independent gating (see audit corrections)
+- *Melittin/AMPA via PLA₂*: Aronica E et al. (Brain Res 1992, PMID 1380882) — effect runs through phospholipase A₂, not direct receptor modulation
+- *GPI suppresses LLPS*: topological confinement prevents phase separation (Tatzelt, PNAS 2025, PMC11725851)
+- *G127V blocks LLPS→solid transition*: keeps condensates liquid (Commun Biol 2020, PMC7391680)
 - *Charge gradient correlates with severity*: PrP N-terminal +7 to +9 (months), α-synuclein +4 (years), Aβ −3 (different mechanism)
 - *Octarepeat insertion correlation*: r = −0.989 between number of inserts and age of onset
-- *Sporadic disease*: endosomal MVB provides low pH + released GPI brake + concentrated copper; Cu + H₂O₂ triggers liquid→solid transition (Evans, Sci Adv 2023)
-- *Heparan sulfate binds KKRPKP*: reinterprets pentosan polysulfate's partial preclinical efficacy as AMP neutralization, not anti-conversion
-- *Membrane curvature*: dendritic spine necks (50–200 nm radius) are among the highest-curvature neuronal structures — AMP insertion is preferential at high curvature
+- *Sporadic disease*: endosomal MVB provides low pH + released GPI brake + concentrated copper; Cu + H₂O₂ triggers liquid→solid transition (do Amaral MJ et al., Sci Adv 2023, PMID 37922348)
+- *Yan 2025*: soluble N-terminal PrP causes rapid neurodegeneration; **deleting KKRPKP abolishes toxicity** (Sci Adv 2025, PMID 40768577) — the strongest published support for this model
 
 **What could kill it:**
 - A demonstration that the N-terminal tail at physiological concentrations (not supraphysiological) does NOT perturb membranes
@@ -114,7 +114,56 @@ The toxicity mechanism — membrane perturbation by a polycationic peptide — i
 - A prion disease model where toxicity occurs without the N-terminal tail at all
 - Evidence that the fuzzy coat of prion fibrils does not contact membranes in vivo
 
-**Status:** In open testing. Five major predictions untested (see STRESS_TEST.md and the v5 dossier).
+**Status:** Partially tested computationally (see v5.1 below).
+
+---
+
+## v5.1 — Computational validation (August 31, 2026)
+
+**What changed:** Three rounds of molecular dynamics on POPC:POPS membranes,
+the third methodologically sound. Nine wrong author attributions found and
+corrected in the bibliography. Two mechanism confidence levels downgraded.
+
+**Computational evidence added:**
+
+1. **KKRPKP is necessary for membrane binding.** PrP Δ23-28 (KKRPKP deleted):
+   0/3 replicas bound in 180 ns combined. PrP 23-93 (with KKRPKP): 1/3 bound.
+   KKRPKP hexapeptide alone: 2/3 bound. Replicates Yan 2025 in silico.
+
+2. **Binding is electrostatically driven.** POPS enrichment 2.59× (KKRPKP) and
+   2.92× (PrP 23-93) against a 20% baseline. The peptide seeks the anionic
+   lipid.
+
+3. **Binding thins the membrane locally.** DELTA −0.7 to −1.0 Å in KKRPKP
+   bound replicas (frame-by-frame comparison within the same trajectory).
+   Radial profile: 36 Å under the peptide vs 41 Å at 2.5 nm.
+
+**Mechanism confidence adjusted:**
+
+- **Mechanism B (NMDA mechanosensitivity):** [E] → [C]. Kloda 2007 shows
+  modulation of already-gated channels, not glutamate-independent opening.
+  The model stated the stronger version.
+- **Signal inversion (CARP endocytosis):** [E] → [H]. The "Bhatt 2015"
+  citation was fabricated — third instance of this invented surname.
+
+**Bibliography audit:**
+- 9 wrong attributions corrected (4 fabricated author names, 5 wrong years)
+- 47/185 entries verified against PubMed/CrossRef
+- 2 corrections were themselves wrong (introduced by the LLM verifier)
+- Audit banner added: unchecked entries are unverified, not verified
+
+**What the computation does NOT show:**
+- That the thinning is sufficient to modulate NMDA (the link is extrapolation)
+- That PrP 23-93 perturbs as much as KKRPKP (insufficient binding events)
+- That the effect persists with cholesterol (simplified membrane)
+- Converged absolute values (|S_CD| stuck at 0.36 instead of ~0.20)
+
+**What could kill v5.1:**
+- PrP Δ23-28 binding at longer timescales (>μs) — would mean the deletion
+  slows but does not eliminate binding
+- The thinning being a generic IDP effect rather than charge-specific —
+  testable with a neutral IDP of similar size
+- Cholesterol blocking the binding entirely in a neuronal-composition membrane
 
 ---
 

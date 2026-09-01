@@ -1,0 +1,817 @@
+<title>Cascata Priônica</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --bg: #0F1923;
+  --bg-panel: rgba(15,25,35,0.92);
+  --text: #E8E4DF;
+  --text-dim: #8A9AAF;
+  --healthy: #4ECDC4;
+  --misfolded: #FF6B6B;
+  --membrane-top: #F4A261;
+  --membrane-bot: #E76F51;
+  --ntail: #00B4D8;
+  --calcium: #FFD93D;
+  --pops: #E63946;
+  --accent: #4ECDC4;
+  --stage-bg: rgba(15,25,35,0.85);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #F0EDE8;
+    --bg-panel: rgba(240,237,232,0.94);
+    --text: #1A1A2E;
+    --text-dim: #5A6070;
+    --stage-bg: rgba(240,237,232,0.90);
+  }
+}
+:root[data-theme="light"] {
+  --bg: #F0EDE8;
+  --bg-panel: rgba(240,237,232,0.94);
+  --text: #1A1A2E;
+  --text-dim: #5A6070;
+  --stage-bg: rgba(240,237,232,0.90);
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  margin: 0; padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  user-select: none;
+  -webkit-user-select: none;
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+}
+#overlay {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px 32px 28px;
+  background: var(--stage-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(78,205,196,0.15);
+  z-index: 10;
+  transition: opacity 0.4s;
+}
+#stage-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(18px, 3vw, 26px);
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+#stage-desc {
+  font-size: clamp(13px, 2vw, 15px);
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0 0 12px;
+  max-width: 680px;
+}
+#progress {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+#progress .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+#progress .dot.active {
+  background: var(--accent);
+  opacity: 1;
+  width: 24px;
+  border-radius: 4px;
+}
+#progress .dot.done {
+  opacity: 0.6;
+  background: var(--accent);
+}
+#hint {
+  position: fixed;
+  top: 16px; right: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--text-dim);
+  z-index: 10;
+  opacity: 0.7;
+}
+#counter {
+  position: fixed;
+  top: 16px; left: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--text-dim);
+  z-index: 10;
+}
+#glossary-btn {
+  position: fixed;
+  top: 14px;
+  right: 140px;
+  z-index: 20;
+  background: var(--bg-panel);
+  border: 1px solid rgba(78,205,196,0.25);
+  color: var(--accent);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+#glossary-btn:hover { background: rgba(78,205,196,0.15); }
+#glossary-panel {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: min(420px, 85vw);
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-left: 1px solid rgba(78,205,196,0.15);
+  z-index: 30;
+  overflow-y: auto;
+  padding: 24px 28px 40px;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+}
+#glossary-panel.open { transform: translateX(0); }
+#glossary-panel h2 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 20px;
+}
+#glossary-panel .close-btn {
+  position: absolute;
+  top: 20px; right: 20px;
+  background: none; border: none;
+  color: var(--text-dim);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+#glossary-panel dl { margin: 0; }
+#glossary-panel dt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--accent);
+  margin: 16px 0 4px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(78,205,196,0.1);
+}
+#glossary-panel dt:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+#glossary-panel dd {
+  margin: 0 0 0 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text);
+}
+#glossary-panel .cat {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin: 24px 0 8px;
+}
+#glossary-panel .cat:first-child { margin-top: 0; }
+</style>
+
+<canvas id="c"></canvas>
+<div id="overlay">
+  <div id="stage-title"></div>
+  <div id="stage-desc"></div>
+  <div id="progress"></div>
+</div>
+<div id="hint">clique ou → para avançar</div>
+<div id="counter"></div>
+<button id="glossary-btn" onclick="document.getElementById('glossary-panel').classList.toggle('open')">glossário</button>
+<div id="glossary-panel">
+  <button class="close-btn" onclick="this.parentElement.classList.remove('open')">✕</button>
+  <h2>Glossário</h2>
+  <dl>
+    <div class="cat">A proteína</div>
+    <dt>PrPᶜ (PrP celular)</dt>
+    <dd>A proteína priônica normal, presente na superfície de todos os neurônios. Dobrada em alfa-hélice, presa à membrana pela âncora GPI. Função exata debatida — parece regular receptores NMDA e homeostase de cobre.</dd>
+
+    <dt>PrPˢᶜ (PrP scrapie)</dt>
+    <dd>A mesma proteína, mesma sequência, mas dobrada errado: alfa-hélices se convertem em folhas-beta. Extraordinariamente estável e resistente à degradação. Funciona como molde para converter PrPᶜ em mais PrPˢᶜ.</dd>
+
+    <dt>KKRPKP</dt>
+    <dd>Os resíduos 23-28 do PrP humano: Lisina-Lisina-Arginina-Prolina-Lisina-Prolina. Motivo polibásico (carga +4) que ancora o N-terminal à membrana. Deletá-lo abole a toxicidade in vivo (Yan et al. 2025).</dd>
+
+    <dt>N-terminal (resíduos 23-93)</dt>
+    <dd>A "cauda" desordenada da proteína. Na PrPᶜ, fica dobrada contra o domínio globular (inativa). Quando liberada pela formação de fibrilas, age como peptídeo antimicrobiano involuntário — perturbando membranas.</dd>
+
+    <dt>Âncora GPI</dt>
+    <dd>Glicosilfosfatidilinositol — uma "cola molecular" que prende a PrP à membrana celular. Suprime LLPS mantendo a proteína diluída na superfície. A clivagem natural libera PrP solúvel que pode se concentrar e agregar.</dd>
+
+    <div class="cat">O processo de agregação</div>
+    <dt>Alfa-hélice (α-helix)</dt>
+    <dd>Estrutura secundária em espiral. É a forma saudável do domínio globular da PrP. Estável, solúvel, funcional.</dd>
+
+    <dt>Folha-beta (β-sheet)</dt>
+    <dd>Estrutura secundária em fita plana. Forma da PrPˢᶜ. As fitas se empilham facilmente entre moléculas, o que permite a formação de fibrilas.</dd>
+
+    <dt>Fibrila amiloide</dt>
+    <dd>Filamento longo e rígido formado por centenas de moléculas PrPˢᶜ empilhadas. Arquitetura PIRIBS. Resiste a fervura, protease K, formaldeído e radiação UV.</dd>
+
+    <dt>PIRIBS</dt>
+    <dd>Parallel In-Register Intermolecular Beta-Sheet — a arquitetura das fibrilas priônicas revelada por cryo-EM em 2022. Cada molécula se empilha sobre a anterior como degraus de uma escada, com os mesmos resíduos alinhados.</dd>
+
+    <dt>LLPS</dt>
+    <dd>Liquid-Liquid Phase Separation — separação de fase líquido-líquido. Proteínas se concentram em gotículas densas (como óleo em água). Para PrP, é possivelmente o passo intermediário entre proteína solúvel e fibrila: gotícula líquida → solidificação → semente amiloide.</dd>
+
+    <dt>Conversão auto-catalítica</dt>
+    <dd>O mecanismo central: PrPˢᶜ força PrPᶜ a mudar de conformação. A nova cópia também é molde. Replicação exponencial sem ácido nucleico — a forma é a informação.</dd>
+
+    <div class="cat">A membrana e a toxicidade</div>
+    <dt>Bicamada lipídica</dt>
+    <dd>A membrana celular: duas camadas de lipídios com as "cabeças" hidrofílicas para fora e as "caudas" hidrofóbicas para dentro. Espessura ~4 nm. Tudo que entra ou sai da célula precisa cruzá-la.</dd>
+
+    <dt>POPC</dt>
+    <dd>Fosfatidilcolina — o lipídio mais abundante em membranas de mamíferos. Carga neutra. Forma a maioria da bicamada nas nossas simulações (80%).</dd>
+
+    <dt>POPS</dt>
+    <dd>Fosfatidilserina — lipídio com carga negativa. Normalmente escondido no lado de dentro da célula. Atrai peptídeos catiônicos como o N-terminal da PrP. 20% nas nossas simulações.</dd>
+
+    <dt>AMP (peptídeo antimicrobiano)</dt>
+    <dd>Peptídeo curto, catiônico, que mata bactérias perfurando ou afinando suas membranas. O N-terminal da PrP tem propriedades de AMP — carga alta, afinidade por lipídio aniônico, perturbação de bicamada.</dd>
+
+    <dt>Modelo carpet</dt>
+    <dd>Um dos modelos de como AMPs danificam membranas: o peptídeo se espalha na superfície como um "tapete" e afina a bicamada, em vez de formar um poro. É o que nossas simulações mostram para o KKRPKP.</dd>
+
+    <dt>Afinamento (thinning)</dt>
+    <dd>Redução local da espessura da membrana causada pela adsorção do peptídeo. Muda as propriedades mecânicas da bicamada e pode modular canais iônicos mecanossensíveis.</dd>
+
+    <div class="cat">Dano neuronal</div>
+    <dt>Receptor NMDA</dt>
+    <dd>N-Metil-D-Aspartato — canal iônico glutamatérgico permeável a Ca²⁺. Mecanossensível: responde à tensão da bicamada (Kloda et al. 2007). A perda de PrPᶜ também remove sua inibição via subunidade NR2D.</dd>
+
+    <dt>Ca²⁺ (cálcio)</dt>
+    <dd>Íon sinalizador. Em concentração normal, essencial para sinapse. Em excesso (influxo descontrolado via NMDA), ativa cascatas de morte celular — excitotoxicidade.</dd>
+
+    <dt>Excitotoxicidade</dt>
+    <dd>Morte neuronal por excesso de estimulação glutamatérgica / influxo de Ca²⁺. O mecanismo final comum de dano em doenças priônicas, Alzheimer e AVC.</dd>
+
+    <div class="cat">Variantes e proteção</div>
+    <dt>G127V</dt>
+    <dd>Mutação natural encontrada nos Fore de Papua Nova Guiné. Glicina→Valina na posição 127. Protege completamente contra doença priônica. Mecanismo proposto: mantém gotículas de LLPS líquidas, impedindo a solidificação em fibrila.</dd>
+
+    <dt>Códon 129</dt>
+    <dd>Polimorfismo Met/Val que influencia susceptibilidade e fenótipo. Homozigoto MM é o mais comum na CJD esporádica.</dd>
+
+    <div class="cat">Terapêutica</div>
+    <dt>ASO / siRNA</dt>
+    <dd>Oligonucleotídeo antisense / RNA de interferência — silenciam o gene PRNP para reduzir a produção de PrPᶜ (o substrato da conversão). ION717 (Ionis) em ensaio clínico.</dd>
+
+    <dt>Memantina</dt>
+    <dd>Antagonista de NMDA aprovado para Alzheimer. Bloqueia o influxo excessivo de Ca²⁺. Testada em camundongos com scrapie: +8% de sobrevida (Riemer 2008). Resgatou neurônios em modelo G92N (Lin et al. JCI 2025).</dd>
+
+    <dt>Perampanel (Fycompa)</dt>
+    <dd>Antagonista de receptor AMPA aprovado para epilepsia. Relevante porque PrP mutante retém GluA2 e deixa AMPARs permeáveis a Ca²⁺ (Ghirardini et al. 2020).</dd>
+
+    <div class="cat">Métodos computacionais</div>
+    <dt>MD (dinâmica molecular)</dt>
+    <dd>Simulação que calcula a posição de cada átomo a cada 2-4 femtossegundos, resolvendo as equações de Newton. Permite "ver" como um peptídeo interage com uma membrana em resolução atômica.</dd>
+
+    <dt>CHARMM36m</dt>
+    <dd>Campo de força — o conjunto de equações e parâmetros que descreve como os átomos interagem. CHARMM36m é o padrão para proteínas e lipídios em simulações de membrana.</dd>
+
+    <dt>S_CD (parâmetro de ordem)</dt>
+    <dd>Mede quão ordenadas estão as caudas lipídicas. ~0,20 = membrana fluida normal. Valor menor = mais desordenada (perturbada pelo peptídeo).</dd>
+
+    <dt>HMR</dt>
+    <dd>Hydrogen Mass Repartitioning — redistribui massa para hidrogênios permitindo passo de 4 fs em vez de 2 fs. Dobra a velocidade sem alterar a física estrutural.</dd>
+  </dl>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let W, H, dpr;
+let stage = 0;
+let stageT = 0;
+let animFrame = 0;
+
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  W = window.innerWidth;
+  H = window.innerHeight;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+resize();
+window.addEventListener('resize', resize);
+
+const STAGES = [
+  {
+    title: '1. PrPᶜ normal na membrana',
+    desc: 'A proteína priônica celular (PrPᶜ) é ancorada à membrana por uma âncora GPI. O domínio globular (em cima) é estável em alfa-hélice. O N-terminal (cauda azul) fica dobrado contra ele, inativo — um "cobertor" que esconde o motivo KKRPKP.',
+  },
+  {
+    title: '2. Misfolding: alfa-hélice → folha-beta',
+    desc: 'Por um evento raro — espontâneo (esporádico), mutação (genético), ou contato com PrPˢᶜ (adquirido) — o domínio globular muda de conformação. As hélices se abrem e se reorganizam em folhas-beta. A proteína agora é PrPˢᶜ.',
+  },
+  {
+    title: '3. Conversão auto-catalítica',
+    desc: 'PrPˢᶜ funciona como molde: ao tocar uma PrPᶜ normal, força-a a adotar a mesma conformação. Cada cópia nova também é molde. É replicação exponencial — sem DNA, sem vírus. A própria forma é a informação infecciosa.',
+  },
+  {
+    title: '4. Formação de fibrilas amiloides',
+    desc: 'As moléculas PrPˢᶜ se empilham em fibrilas longas e extraordinariamente estáveis (resistem a fervura e protease). Arquitetura PIRIBS — cada molécula é um degrau. As fibrilas se acumulam e não são degradáveis.',
+  },
+  {
+    title: '5. Liberação do N-terminal tóxico',
+    desc: 'Na fibrila, o domínio globular está travado na estrutura beta. O N-terminal (resíduos 23-93) se solta — o "cobertor" se abre. Esse fragmento carrega carga +6 a +9 e o motivo KKRPKP. É um peptídeo antimicrobiano involuntário.',
+  },
+  {
+    title: '6. Perturbação da membrana',
+    desc: 'O N-terminal livre, carregado positivamente, é atraído pelos lipídios aniônicos (POPS, em vermelho) da membrana neuronal. Adsorve na superfície e afina a bicamada localmente — é o que estamos simulando agora no Vast.ai.',
+  },
+  {
+    title: '7. Influxo de Ca²⁺ e morte neuronal',
+    desc: 'O afinamento da membrana modula os receptores NMDA (mecanossensíveis à tensão da bicamada). Isso potencia o influxo de Ca²⁺, que ativa cascatas de morte celular. A perda de PrPᶜ também remove a inibição dos receptores NR2D — um segundo golpe.',
+  },
+];
+
+function drawDots() {
+  const prog = document.getElementById('progress');
+  prog.innerHTML = '';
+  STAGES.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === stage ? ' active' : i < stage ? ' done' : '');
+    prog.appendChild(d);
+  });
+  document.getElementById('counter').textContent = `${stage + 1} / ${STAGES.length}`;
+}
+
+function updateText() {
+  document.getElementById('stage-title').textContent = STAGES[stage].title;
+  document.getElementById('stage-desc').textContent = STAGES[stage].desc;
+  drawDots();
+}
+
+// --- drawing helpers ---
+const cs = getComputedStyle(document.documentElement);
+function col(name) {
+  return cs.getPropertyValue('--' + name).trim() || '#fff';
+}
+
+function helix(cx, cy, w, h, t, color) {
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  for (let i = 0; i <= 60; i++) {
+    const frac = i / 60;
+    const x = cx + Math.sin(frac * Math.PI * 6 + t * 2) * w * 0.4;
+    const y = cy - h / 2 + frac * h;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+}
+
+function betaSheet(cx, cy, w, h, t, color) {
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2.5;
+  const n = 5;
+  for (let j = 0; j < n; j++) {
+    const ox = cx - w / 2 + (j + 0.5) * (w / n);
+    ctx.beginPath();
+    for (let i = 0; i <= 30; i++) {
+      const frac = i / 30;
+      const x = ox + Math.sin(frac * Math.PI * 2 + t + j) * 3;
+      const y = cy - h / 2 + frac * h;
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    // arrow
+    const ay = cy + h / 2;
+    ctx.beginPath();
+    ctx.moveTo(ox - 5, ay - 6);
+    ctx.lineTo(ox, ay);
+    ctx.lineTo(ox + 5, ay - 6);
+    ctx.stroke();
+  }
+}
+
+function membrane(y, t) {
+  const mTop = col('membrane-top');
+  const mBot = col('membrane-bot');
+  const pops = col('pops');
+  // upper leaflet
+  for (let x = -20; x < W + 20; x += 14) {
+    const wave = Math.sin(x * 0.02 + t * 0.8) * 3;
+    const isPops = (Math.sin(x * 0.37 + 1.5) > 0.6);
+    ctx.fillStyle = isPops ? pops : mTop;
+    // headgroup circle
+    ctx.beginPath();
+    ctx.arc(x, y + wave, 5, 0, Math.PI * 2);
+    ctx.fill();
+    // tail
+    ctx.strokeStyle = isPops ? pops : mTop;
+    ctx.globalAlpha = 0.5;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(x, y + wave + 5);
+    ctx.lineTo(x - 2, y + wave + 28 + Math.sin(x * 0.1 + t) * 2);
+    ctx.moveTo(x, y + wave + 5);
+    ctx.lineTo(x + 2, y + wave + 26 + Math.cos(x * 0.12 + t) * 2);
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  }
+  // lower leaflet
+  const ly = y + 55;
+  for (let x = -13; x < W + 20; x += 14) {
+    const wave = Math.sin(x * 0.02 + t * 0.8 + 1) * 3;
+    ctx.fillStyle = mBot;
+    ctx.beginPath();
+    ctx.arc(x, ly + wave, 5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = mBot;
+    ctx.globalAlpha = 0.5;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(x, ly + wave - 5);
+    ctx.lineTo(x - 2, ly + wave - 28 + Math.sin(x * 0.1 + t) * 2);
+    ctx.moveTo(x, ly + wave - 5);
+    ctx.lineTo(x + 2, ly + wave - 26 + Math.cos(x * 0.12 + t) * 2);
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  }
+}
+
+function gpiAnchor(x, y1, y2, t) {
+  ctx.strokeStyle = col('text-dim');
+  ctx.setLineDash([3, 4]);
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(x, y1);
+  ctx.lineTo(x + Math.sin(t) * 3, y2);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  // anchor diamond
+  ctx.fillStyle = col('text-dim');
+  ctx.beginPath();
+  ctx.moveTo(x, y2 - 4);
+  ctx.lineTo(x + 4, y2);
+  ctx.lineTo(x, y2 + 4);
+  ctx.lineTo(x - 4, y2);
+  ctx.closePath();
+  ctx.fill();
+}
+
+function nTail(sx, sy, ex, ey, t, free) {
+  ctx.strokeStyle = col('ntail');
+  ctx.lineWidth = free ? 3 : 2;
+  ctx.globalAlpha = free ? 1 : 0.6;
+  ctx.beginPath();
+  const steps = 20;
+  for (let i = 0; i <= steps; i++) {
+    const frac = i / steps;
+    const mx = sx + (ex - sx) * frac;
+    const my = sy + (ey - sy) * frac;
+    const wobble = free ? Math.sin(frac * 8 + t * 3) * (8 + frac * 6) : Math.sin(frac * 4 + t) * 4;
+    i === 0 ? ctx.moveTo(mx + wobble, my) : ctx.lineTo(mx + wobble, my);
+  }
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+  if (free) {
+    // KKRPKP label
+    ctx.font = "600 11px 'IBM Plex Mono', monospace";
+    ctx.fillStyle = col('ntail');
+    ctx.fillText('KKRPKP', ex - 20, ey + 16);
+    // charge
+    ctx.font = "500 10px 'IBM Plex Mono', monospace";
+    ctx.fillStyle = col('calcium');
+    ctx.fillText('+6', ex + 30, ey + 16);
+  }
+}
+
+function fibril(cx, cy, n, t) {
+  const mf = col('misfolded');
+  for (let i = 0; i < n; i++) {
+    const y = cy + i * 16;
+    const wobble = Math.sin(i * 0.5 + t) * 1;
+    ctx.fillStyle = mf;
+    ctx.globalAlpha = 0.7 + 0.3 * Math.sin(i * 0.3);
+    ctx.fillRect(cx - 20 + wobble, y, 40, 12);
+    ctx.strokeStyle = 'rgba(0,0,0,0.3)';
+    ctx.lineWidth = 0.5;
+    ctx.strokeRect(cx - 20 + wobble, y, 40, 12);
+    // arrow inside
+    ctx.fillStyle = 'rgba(0,0,0,0.2)';
+    ctx.beginPath();
+    ctx.moveTo(cx - 8 + wobble, y + 3);
+    ctx.lineTo(cx + 8 + wobble, y + 6);
+    ctx.lineTo(cx - 8 + wobble, y + 9);
+    ctx.closePath();
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+}
+
+function calciumIons(cx, cy, t, count) {
+  ctx.font = "bold 10px 'IBM Plex Mono', monospace";
+  for (let i = 0; i < count; i++) {
+    const angle = (i / count) * Math.PI * 2 + t * 1.5;
+    const r = 20 + Math.sin(t * 2 + i) * 8;
+    const x = cx + Math.cos(angle) * r;
+    const y = cy + Math.sin(angle) * r * 0.6;
+    ctx.fillStyle = col('calcium');
+    ctx.globalAlpha = 0.6 + 0.4 * Math.sin(t * 3 + i);
+    ctx.beginPath();
+    ctx.arc(x, y, 3, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillText('Ca²⁺', x + 5, y + 3);
+  }
+  ctx.globalAlpha = 1;
+}
+
+function label(text, x, y, color, size) {
+  ctx.font = `500 ${size || 11}px 'IBM Plex Sans', sans-serif`;
+  ctx.fillStyle = color || col('text-dim');
+  ctx.fillText(text, x, y);
+}
+
+// --- stage renderers ---
+const memY = () => H * 0.62;
+
+function drawStage0(t) {
+  const my = memY();
+  membrane(my, t);
+  const px = W * 0.5;
+  // GPI anchor
+  gpiAnchor(px, my - 50, my - 3, t);
+  // globular domain
+  helix(px - 12, my - 100, 20, 60, t, col('healthy'));
+  helix(px + 12, my - 100, 20, 60, t + 1, col('healthy'));
+  // N-terminal tucked
+  nTail(px, my - 130, px - 30, my - 90, t, false);
+  // labels
+  label('PrPᶜ', px + 30, my - 110, col('healthy'), 13);
+  label('alfa-hélice', px + 30, my - 95, col('text-dim'), 11);
+  label('N-terminal (inativo)', px - 80, my - 138, col('ntail'), 11);
+  label('âncora GPI', px + 10, my - 20, col('text-dim'), 10);
+  label('membrana neuronal', 20, my + 30, col('membrane-top'), 11);
+  // POPS labels
+  label('● POPC (neutro)', 20, my + 75, col('membrane-top'), 10);
+  label('● POPS (aniônico)', 20, my + 88, col('pops'), 10);
+}
+
+function drawStage1(t) {
+  const my = memY();
+  membrane(my, t);
+  const px = W * 0.5;
+  gpiAnchor(px, my - 50, my - 3, t);
+  // morphing: mix helix and beta based on t
+  const morph = Math.min(1, t * 0.3);
+  if (morph < 1) {
+    ctx.globalAlpha = 1 - morph;
+    helix(px - 12, my - 100, 20, 60, t, col('healthy'));
+    helix(px + 12, my - 100, 20, 60, t + 1, col('healthy'));
+    ctx.globalAlpha = 1;
+  }
+  ctx.globalAlpha = morph;
+  betaSheet(px, my - 100, 40, 60, t, col('misfolded'));
+  ctx.globalAlpha = 1;
+  nTail(px, my - 130, px - 30, my - 90, t, false);
+  label('PrPˢᶜ', px + 30, my - 110, col('misfolded'), 13);
+  label('folha-beta', px + 30, my - 95, col('text-dim'), 11);
+  // flash
+  if (morph > 0.3 && morph < 0.8) {
+    ctx.fillStyle = col('misfolded');
+    ctx.globalAlpha = (0.8 - morph) * 1.5;
+    ctx.beginPath();
+    ctx.arc(px, my - 100, 50, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+}
+
+function drawStage2(t) {
+  const my = memY();
+  membrane(my, t);
+  const n = Math.min(4, Math.floor(t * 0.8) + 1);
+  for (let i = 0; i < n; i++) {
+    const px = W * 0.25 + i * (W * 0.15);
+    const delay = i * 0.8;
+    const appear = Math.max(0, Math.min(1, (t - delay) * 0.5));
+    ctx.globalAlpha = appear;
+    gpiAnchor(px, my - 50, my - 3, t);
+    if (i === 0) {
+      betaSheet(px, my - 100, 40, 60, t, col('misfolded'));
+      label('PrPˢᶜ', px - 10, my - 140, col('misfolded'), 11);
+    } else {
+      const conv = Math.max(0, Math.min(1, (t - delay - 0.5) * 0.8));
+      if (conv < 1) {
+        ctx.globalAlpha = appear * (1 - conv);
+        helix(px, my - 100, 20, 60, t, col('healthy'));
+      }
+      ctx.globalAlpha = appear * conv;
+      betaSheet(px, my - 100, 40, 60, t, col('misfolded'));
+      ctx.globalAlpha = appear;
+      label(conv < 0.5 ? 'PrPᶜ' : 'PrPˢᶜ', px - 10, my - 140,
+            conv < 0.5 ? col('healthy') : col('misfolded'), 11);
+    }
+    ctx.globalAlpha = 1;
+  }
+  // arrow
+  if (n >= 2) {
+    ctx.strokeStyle = col('calcium');
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([4, 4]);
+    const ax = W * 0.25 + 25;
+    ctx.beginPath();
+    ctx.moveTo(ax, my - 100);
+    ctx.lineTo(ax + W * 0.1, my - 100);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    label('templating', ax + 10, my - 108, col('calcium'), 10);
+  }
+}
+
+function drawStage3(t) {
+  const my = memY();
+  membrane(my, t);
+  const cx = W * 0.5;
+  const nBlocks = Math.min(12, Math.floor(t * 1.5) + 3);
+  fibril(cx, my - 50 - nBlocks * 8, nBlocks, t);
+  label('fibrila amiloide', cx + 30, my - 50, col('misfolded'), 12);
+  label('PIRIBS', cx + 30, my - 35, col('text-dim'), 10);
+  label('empilhamento beta', cx + 30, my - 22, col('text-dim'), 10);
+  // stability icon
+  if (t > 2) {
+    ctx.font = "500 10px 'IBM Plex Mono', monospace";
+    ctx.fillStyle = col('text-dim');
+    ctx.fillText('resiste a: fervura, protease, UV', cx - 80, my + 80);
+  }
+}
+
+function drawStage4(t) {
+  const my = memY();
+  membrane(my, t);
+  const cx = W * 0.5;
+  fibril(cx, my - 180, 10, t);
+  // freed N-terminals waving
+  const nFree = Math.min(4, Math.floor(t * 0.6) + 1);
+  for (let i = 0; i < nFree; i++) {
+    const fx = cx - 50 + i * 35;
+    const release = Math.max(0, Math.min(1, (t - i * 1.2) * 0.5));
+    const ey = my - 180 + i * 16 - release * 40;
+    nTail(fx, my - 180 + i * 16, fx - 20 * release, ey - 30 * release, t + i, release > 0.5);
+  }
+  label('N-terminal livre', cx - 100, my - 240, col('ntail'), 12);
+  label('carga +6 a +9', cx - 100, my - 225, col('calcium'), 10);
+}
+
+function drawStage5(t) {
+  const my = memY();
+  // membrane with local thinning
+  for (let x = -20; x < W + 20; x += 14) {
+    const distFromCenter = Math.abs(x - W * 0.5);
+    const thinning = Math.max(0, 1 - distFromCenter / 120) * Math.min(1, t * 0.3) * 8;
+    const wave = Math.sin(x * 0.02 + t * 0.8) * 3;
+    const isPops = (Math.sin(x * 0.37 + 1.5) > 0.6);
+    const attracted = isPops && distFromCenter < 100 && t > 1;
+    ctx.fillStyle = attracted ? col('pops') : (isPops ? col('pops') : col('membrane-top'));
+    ctx.beginPath();
+    ctx.arc(x, my + wave + thinning, attracted ? 6 : 5, 0, Math.PI * 2);
+    ctx.fill();
+    // tails
+    ctx.strokeStyle = ctx.fillStyle;
+    ctx.globalAlpha = 0.5;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(x, my + wave + thinning + 5);
+    ctx.lineTo(x - 2, my + wave + thinning + 28);
+    ctx.moveTo(x, my + wave + thinning + 5);
+    ctx.lineTo(x + 2, my + wave + thinning + 26);
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+    // lower leaflet
+    ctx.fillStyle = col('membrane-bot');
+    ctx.beginPath();
+    ctx.arc(x, my + 55 + wave - thinning, 5, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  // N-terminal approaching and binding
+  const bindPhase = Math.min(1, t * 0.25);
+  const tailY = my - 60 + bindPhase * 45;
+  nTail(W * 0.5, tailY - 40, W * 0.5, tailY, t, true);
+  // thinning annotation
+  if (t > 2) {
+    ctx.strokeStyle = col('calcium');
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 3]);
+    const ann = W * 0.5 + 100;
+    ctx.beginPath();
+    ctx.moveTo(ann, my - 5); ctx.lineTo(ann, my + 60);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    label('afinamento', ann + 5, my + 30, col('calcium'), 10);
+    label('local', ann + 5, my + 42, col('calcium'), 10);
+    // attraction arrows
+    label('← atração eletrostática →', W * 0.5 - 70, my - 10, col('pops'), 10);
+  }
+}
+
+function drawStage6(t) {
+  const my = memY();
+  // thinned membrane
+  for (let x = -20; x < W + 20; x += 14) {
+    const distFromCenter = Math.abs(x - W * 0.5);
+    const thinning = Math.max(0, 1 - distFromCenter / 120) * 8;
+    const wave = Math.sin(x * 0.02 + t * 0.8) * 3;
+    const isPops = (Math.sin(x * 0.37 + 1.5) > 0.6);
+    ctx.fillStyle = isPops ? col('pops') : col('membrane-top');
+    ctx.beginPath();
+    ctx.arc(x, my + wave + thinning, 5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = col('membrane-bot');
+    ctx.beginPath();
+    ctx.arc(x, my + 55 + wave - thinning, 5, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  // bound peptide
+  nTail(W * 0.5, my - 25, W * 0.5, my - 5, t, true);
+  // NMDA receptor
+  const rx = W * 0.5 + 80;
+  ctx.fillStyle = col('text-dim');
+  ctx.globalAlpha = 0.7;
+  ctx.fillRect(rx - 8, my - 15, 16, 70);
+  ctx.globalAlpha = 1;
+  label('NMDA', rx - 12, my - 20, col('text-dim'), 9);
+  // calcium flowing through
+  if (t > 1.5) {
+    calciumIons(rx, my + 80, t, Math.min(6, Math.floor((t - 1.5) * 2)));
+  }
+  // death cascade
+  if (t > 3) {
+    const deathAlpha = Math.min(0.6, (t - 3) * 0.15);
+    ctx.fillStyle = col('misfolded');
+    ctx.globalAlpha = deathAlpha;
+    ctx.font = "600 14px 'IBM Plex Sans', sans-serif";
+    ctx.fillText('excitotoxicidade → morte neuronal', W * 0.5 - 120, my + 120);
+    ctx.globalAlpha = 1;
+  }
+  label('tensão da bicamada → modula NMDA', W * 0.25, my + 85, col('calcium'), 10);
+}
+
+const DRAWERS = [drawStage0, drawStage1, drawStage2, drawStage3, drawStage4, drawStage5, drawStage6];
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  animFrame++;
+  stageT += 0.016;
+  const t = stageT;
+  DRAWERS[stage](t);
+  requestAnimationFrame(draw);
+}
+
+function nextStage() {
+  if (stage < STAGES.length - 1) {
+    stage++;
+    stageT = 0;
+    updateText();
+  }
+}
+function prevStage() {
+  if (stage > 0) {
+    stage--;
+    stageT = 0;
+    updateText();
+  }
+}
+
+canvas.addEventListener('click', nextStage);
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') nextStage();
+  if (e.key === 'ArrowLeft') prevStage();
+});
+
+// touch swipe
+let touchX = 0;
+canvas.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; });
+canvas.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (dx < -30) nextStage();
+  if (dx > 30) prevStage();
+});
+
+updateText();
+draw();
+</script>
