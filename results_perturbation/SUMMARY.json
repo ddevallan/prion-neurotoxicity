@@ -1,0 +1,96 @@
+{
+  "KKRPKP_water": {
+    "n": 3,
+    "bound_fraction": 0.6631111111111111,
+    "bound_fraction_sem": 0.3315582923628482,
+    "thinning_nm": 0.10715037128914749,
+    "thinning_sem": 0.02829429855813679,
+    "disordering": 0.00013378803954813544,
+    "disordering_sem": 0.0005821129319056078,
+    "pops_enrichment": 2.586523328643447,
+    "pops_enrichment_sem": 0.047560660539184056,
+    "first_contact_ns": [
+      null,
+      0.12,
+      0.32
+    ]
+  },
+  "NNRPNP_water": {
+    "n": 3,
+    "bound_fraction": 0.10099999999999999,
+    "bound_fraction_sem": 0.08800399822566986,
+    "thinning_nm": 0.40900569863062647,
+    "thinning_sem": 0.19941486178152262,
+    "disordering": -0.0006347209597857019,
+    "disordering_sem": 0.0009872755545838614,
+    "pops_enrichment": null,
+    "pops_enrichment_sem": null,
+    "first_contact_ns": [
+      0.84,
+      0.74,
+      null
+    ]
+  },
+  "PrP_23_93": {
+    "n": 3,
+    "bound_fraction": 0.22655555555555554,
+    "bound_fraction_sem": 0.22655555555555557,
+    "thinning_nm": -0.018734285280036598,
+    "thinning_sem": 0.05070764581964791,
+    "disordering": 0.0016680724030161123,
+    "disordering_sem": 0.0006293867942285844,
+    "pops_enrichment": 2.9197882558027444,
+    "pops_enrichment_sem": null,
+    "first_contact_ns": [
+      null,
+      null,
+      9.18
+    ]
+  },
+  "PrP_dCC1": {
+    "n": 3,
+    "bound_fraction": 0.0,
+    "bound_fraction_sem": 0.0,
+    "thinning_nm": 0.5680054179031306,
+    "thinning_sem": 0.30956813047155163,
+    "disordering": -0.009896615215568057,
+    "disordering_sem": 0.01516870641325303,
+    "pops_enrichment": null,
+    "pops_enrichment_sem": null,
+    "first_contact_ns": [
+      null,
+      null,
+      null
+    ]
+  },
+  "bare_66": {
+    "n": 2,
+    "bound_fraction": 0.0,
+    "bound_fraction_sem": 0.0,
+    "thinning_nm": null,
+    "thinning_sem": null,
+    "disordering": null,
+    "disordering_sem": null,
+    "pops_enrichment": null,
+    "pops_enrichment_sem": null,
+    "first_contact_ns": [
+      null,
+      null
+    ]
+  },
+  "bare_85": {
+    "n": 2,
+    "bound_fraction": 0.0,
+    "bound_fraction_sem": 0.0,
+    "thinning_nm": null,
+    "thinning_sem": null,
+    "disordering": null,
+    "disordering_sem": null,
+    "pops_enrichment": null,
+    "pops_enrichment_sem": null,
+    "first_contact_ns": [
+      null,
+      null
+    ]
+  }
+}
