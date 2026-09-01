@@ -1,0 +1,934 @@
+[
+  {
+    "pmid": "10575097",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Melittin enhances amino acid and free fatty acid release from the in vivo cerebral cortex",
+      "authors": [
+        "Phillis JW",
+        "Song D",
+        "O'Regan MH"
+      ],
+      "journal": "Brain Res",
+      "year": "1999"
+    },
+    "bib_context": "# Bibliography  References compiled during the exploratory investigation into prion disease neurotox"
+  },
+  {
+    "pmid": "10988074",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "The productive conformation of arachidonic acid bound to prostaglandin synthase",
+      "authors": [
+        "Malkowski MG",
+        "Ginell SL",
+        "Smith WL"
+      ],
+      "journal": "Science",
+      "year": "2000"
+    },
+    "bib_context": " - Mouillet-Richard S, et al. Signal transduction through prion protein. *Science* 2000;289:1925\u2013192"
+  },
+  {
+    "pmid": "12093741",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Physiological and retinoid-induced proliferations of epidermis basal keratinocytes are differently controlled",
+      "authors": [
+        "Chapellier B",
+        "Mark M",
+        "Messaddeq N"
+      ],
+      "journal": "EMBO J",
+      "year": "2002"
+    },
+    "bib_context": " - Chiarini LB, et al. PrPC transduces neuroprotective signals. *EMBO J* 2002;21:3317\u20133326. PMID 120"
+  },
+  {
+    "pmid": "12167638",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Localization versus function of Rab3 proteins. Evidence for a common regulatory role in controlling fusion",
+      "authors": [
+        "Schl\u00fcter OM",
+        "Khvotchev M",
+        "Jahn R"
+      ],
+      "journal": "J Biol Chem",
+      "year": "2002"
+    },
+    "bib_context": " - Zanata SM, et al. Stress-inducible protein 1 is a cell surface ligand for PrPC: neuroprotection. "
+  },
+  {
+    "pmid": "12196538",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Association of a photoreceptor-specific tetraspanin protein, ROM-1, with triton X-100-resistant membrane rafts from rod outer segment disk membranes",
+      "authors": [
+        "Boesze-Battaglia K",
+        "Dispoto J",
+        "Kahoe MA"
+      ],
+      "journal": "J Biol Chem",
+      "year": "2002"
+    },
+    "bib_context": " - Three independent HS binding sites on PrP: residues 23\u201352, 53\u201393, 110\u2013128. *JBC* 2002. PMID 12196"
+  },
+  {
+    "pmid": "1380882",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Melittin enhances excitatory amino acid release and AMPA-stimulated 45Ca2+ influx in cultured neurons",
+      "authors": [
+        "Aronica E",
+        "Casabona G",
+        "Genazzani AA"
+      ],
+      "journal": "Brain Res",
+      "year": "1992"
+    },
+    "bib_context": "# Bibliography  References compiled during the exploratory investigation into prion disease neurotox"
+  },
+  {
+    "pmid": "14519758",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Copper chelation delays the onset of prion disease",
+      "authors": [
+        "Sigurdsson EM",
+        "Brown DR",
+        "Alim MA"
+      ],
+      "journal": "J Biol Chem",
+      "year": "2003"
+    },
+    "bib_context": " - D-penicillamine: delayed onset ~11 days in mice. Sigurdsson et al. *JBC* 2003. PMID 14519758.  ##"
+  },
+  {
+    "pmid": "14637163",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "A role for Ca(v)1.3 in rat intestinal calcium absorption",
+      "authors": [
+        "Morgan EL",
+        "Mace OJ",
+        "Helliwell PA"
+      ],
+      "journal": "Biochem Biophys Res Commun",
+      "year": "2003"
+    },
+    "bib_context": " - Novel heparan mimetics inhibited PrPSc endocytosis and de novo infection. *BBRC* 2003. PMID 14637"
+  },
+  {
+    "pmid": "16339026",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Beta-secretase-cleaved amyloid precursor protein accumulates at actin inclusions induced in neurons by stress or amyloid beta: a feedforward mechanism for Alzheimer's disease",
+      "authors": [
+        "Maloney MT",
+        "Minamide LS",
+        "Kinley AW"
+      ],
+      "journal": "J Neurosci",
+      "year": "2005"
+    },
+    "bib_context": " - Lopes MH, et al. Interaction of PrPC and STI1 promotes neuritogenesis. *J Neurosci* 2005;25:11330"
+  },
+  {
+    "pmid": "17242368",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Liposome reconstitution and modulation of recombinant N-methyl-D-aspartate receptor channels by membrane stretch",
+      "authors": [
+        "Kloda A",
+        "Lua L",
+        "Hall R"
+      ],
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": "2007"
+    },
+    "bib_context": "# Bibliography  References compiled during the exploratory investigation into prion disease neurotox"
+  },
+  {
+    "pmid": "17504809",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "The atypical Rho family GTPase Wrch-1 regulates focal adhesion formation and cell migration",
+      "authors": [
+        "Chuang YY",
+        "Valster A",
+        "Coniglio SJ"
+      ],
+      "journal": "J Cell Sci",
+      "year": "2007"
+    },
+    "bib_context": " - Hajj GNM, et al. PrPC interaction with vitronectin supports axonal growth. *J Cell Sci* 2007;120:"
+  },
+  {
+    "pmid": "19390657",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Pathologic prion protein infects cells by lipid-raft dependent macropinocytosis",
+      "authors": [
+        "Wadia JS",
+        "Schaller M",
+        "Williamson RA"
+      ],
+      "journal": "PLoS One",
+      "year": "2008"
+    },
+    "bib_context": " - Inhibition of macropinocytosis prevents PrPC \u2192 PrPSc conversion. *PLoS One* 2009. PMC2671965. PMI"
+  },
+  {
+    "pmid": "19928811",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Synthesis of a TRPV1 receptor antagonist",
+      "authors": [
+        "Yu S",
+        "Haight A",
+        "Kotecki B"
+      ],
+      "journal": "J Org Chem",
+      "year": "2009"
+    },
+    "bib_context": " - Amphipathic \u03b1-helical peptides show size-dependent lysis (higher curvature \u2192 lower threshold). *A"
+  },
+  {
+    "pmid": "20133866",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "PAS domain containing chemoreceptor couples dynamic changes in metabolism with chemotaxis",
+      "authors": [
+        "Xie Z",
+        "Ulrich LE",
+        "Zhulin IB"
+      ],
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": "2010"
+    },
+    "bib_context": " - Balducci C, et al. Synthetic A\u03b2 oligomers impair memory independently of PrPC. *PNAS* 2010;107:22"
+  },
+  {
+    "pmid": "20703282",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Oceanography: Dead in the water",
+      "authors": [
+        "Gewin V"
+      ],
+      "journal": "Nature",
+      "year": "2010"
+    },
+    "bib_context": " - Kessels HW, et al. The prion protein as a receptor for A\u03b2. *Nature* 2010;466:E3\u2013E4. PMID 20703282"
+  },
+  {
+    "pmid": "20944260",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Proteus syndrome",
+      "authors": [
+        "Mayekar AS",
+        "Chavan RG",
+        "Phadke VA"
+      ],
+      "journal": "Indian J Dermatol Venereol Leprol",
+      "year": "1997"
+    },
+    "bib_context": " - Calella AM, et al. Prion protein and A\u03b2-related synaptic toxicity impairment. *EMBO Mol Med* 2010"
+  },
+  {
+    "pmid": "23604588",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Anle138b: a novel oligomer modulator for disease-modifying therapy of neurodegenerative diseases such as prion and Parkinson's disease",
+      "authors": [
+        "Wagner J",
+        "Ryazanov S",
+        "Leonov A"
+      ],
+      "journal": "Acta Neuropathol",
+      "year": "2013"
+    },
+    "bib_context": " - Anle138b / Emrusolmin (MODAG/Teva). *PNAS* 2013. PMC3661926; *eBioMedicine* 2022. PMID 23604588. "
+  },
+  {
+    "pmid": "23696721",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Two misfolding routes for the prion protein around pH 4.5",
+      "authors": [
+        "Garrec J",
+        "Tavernelli I",
+        "Rothlisberger U"
+      ],
+      "journal": "PLoS Comput Biol",
+      "year": "2013"
+    },
+    "bib_context": " - Low pH destabilizes PrP via two distinct routes. *PLoS One* 2013. PMC3656106. PMID 23696721."
+  },
+  {
+    "pmid": "24002382",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "DEGRO practical guidelines: radiotherapy of breast cancer I: radiotherapy following breast conserving therapy for invasive breast cancer",
+      "authors": [
+        "Sedlmayer F",
+        "Sautter-Bihl ML",
+        "Budach W"
+      ],
+      "journal": "Strahlenther Onkol",
+      "year": "2013"
+    },
+    "bib_context": " - Lin et al. GPI-PrP liberated from lipid vesicles misfolds into amyloid fibrils; membrane-bound GP"
+  },
+  {
+    "pmid": "25321392",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Phase transitions of multivalent proteins can promote clustering of membrane receptors",
+      "authors": [
+        "Banjade S",
+        "Rosen MK"
+      ],
+      "journal": "Elife",
+      "year": "2014"
+    },
+    "bib_context": " - N-WASP VCA domain sequestered by GBD; clustering required for Arp2/3 activation. Banjade S, Rosen"
+  },
+  {
+    "pmid": "25390715",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Bilateral acute idiopathic frosted branch angiitis in a pregnant woman",
+      "authors": [
+        "Sekeroglu HT",
+        "Topal D",
+        "Demircan N"
+      ],
+      "journal": "Retin Cases Brief Rep",
+      "year": "2012"
+    },
+    "bib_context": " - Mouse-hamster chimeric PrP devoid of N-terminal residues 23-88 restores susceptibility to 22L but"
+  },
+  {
+    "pmid": "25686659",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Human antimicrobial peptide LL-37 induces glial-mediated neuroinflammation",
+      "authors": [
+        "Lee M",
+        "Shi X",
+        "Barron AE"
+      ],
+      "journal": "Biochem Pharmacol",
+      "year": "2015"
+    },
+    "bib_context": " - LL-37 in neuroinflammation: microglia TNF-\u03b1/IL-6 release. *Biochem Pharmacol* 2015. PMID 25686659"
+  },
+  {
+    "pmid": "25973669",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Patients with Obstructive Sleep Apnea at Altitude",
+      "authors": [
+        "Bloch KE",
+        "Latshang TD",
+        "Ulrich S"
+      ],
+      "journal": "High Alt Med Biol",
+      "year": "2015"
+    },
+    "bib_context": " - Lipid cofactors induce different PrP conformations. PMC4474664. PMID 25973669."
+  },
+  {
+    "pmid": "26158657",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "A novel mutation of the calcium-sensing receptor gene in a Greek family from Nisyros",
+      "authors": [
+        "Zapanti E",
+        "Polonifi A",
+        "Kokkinos M"
+      ],
+      "journal": "Hormones (Athens)",
+      "year": "2015"
+    },
+    "bib_context": " - Altmeppen HC, et al. The sheddase ADAM10 is a potent modulator of prion disease. *eLife* 2015;4:e"
+  },
+  {
+    "pmid": "26911752",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "?",
+      "authors": [],
+      "journal": "?",
+      "year": ""
+    },
+    "bib_context": " - Fibrils incorporating V127 are unstable through weaker inter-layer interactions. *Sci Rep* 2016. "
+  },
+  {
+    "pmid": "27563003",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "[Antibodies against modified low-density lipoproteins and their complexes in blood of patients with various manifestations of atherosclerosis]",
+      "authors": [
+        "Belik IV",
+        "Ivantsova AA",
+        "Mamedova ZE"
+      ],
+      "journal": "Biomed Khim",
+      "year": "2016"
+    },
+    "bib_context": " - Beraldo FH, et al. PrP-mGluR5 complex regulates A\u03b2 oligomer toxicity. *JBC* 2016;291:21945\u201321955."
+  },
+  {
+    "pmid": "28341739",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Modifiers of prion protein biogenesis and recycling identified by a highly parallel endocytosis kinetics assay",
+      "authors": [
+        "Ballmer BA",
+        "Moos R",
+        "Liberali P"
+      ],
+      "journal": "J Biol Chem",
+      "year": "2017"
+    },
+    "bib_context": " - Blocking AP-2/RAB5A/VPS35/M6PR blocks PrPC internalization. *JBC* 2017. PMC5437241. PMID 28341739"
+  },
+  {
+    "pmid": "28392162",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Oncolytic Virotherapy: A Contest between Apples and Oranges",
+      "authors": [
+        "Russell SJ",
+        "Peng KW"
+      ],
+      "journal": "Mol Ther",
+      "year": "2017"
+    },
+    "bib_context": " - Ferreira DG, et al. \u03b1-Synuclein interacts with PrPC to induce cognitive impairment through mGluR5"
+  },
+  {
+    "pmid": "28453667",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Linearity of network proximity measures: implications for set-based queries and significance testing",
+      "authors": [
+        "Maxwell S",
+        "Chance MR",
+        "Koyut\u00fcrk M"
+      ],
+      "journal": "Bioinformatics",
+      "year": "2017"
+    },
+    "bib_context": " - Halliday M, et al. Trazodone and dibenzoylmethane: repurposed drugs targeting eIF2\u03b1-P translation"
+  },
+  {
+    "pmid": "30135493",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Lithium as a disease-modifying agent for prion diseases",
+      "authors": [
+        "Rela\u00f1o-Gin\u00e9s A",
+        "Lehmann S",
+        "Brillaud E"
+      ],
+      "journal": "Transl Psychiatry",
+      "year": "2018"
+    },
+    "bib_context": " - Lithium improves survival, decreases vacuolization. PMID 30135493."
+  },
+  {
+    "pmid": "30209347",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Natural killer cells and other innate lymphoid cells in cancer",
+      "authors": [
+        "Chiossone L",
+        "Dumas PY",
+        "Vienne M"
+      ],
+      "journal": "Nat Rev Immunol",
+      "year": "2018"
+    },
+    "bib_context": " - G127V NMR structure: steric hindrance of Tyr128. *Sci Rep* 2018. PMC6123418. PDB 5YJ4. PMID 30209"
+  },
+  {
+    "pmid": "30235269",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Maternal genetic features of the Iron Age Tagar population from Southern Siberia (1st millennium BC)",
+      "authors": [
+        "Pilipenko AS",
+        "Trapezov RO",
+        "Cherdantsev SV"
+      ],
+      "journal": "PLoS One",
+      "year": "2018"
+    },
+    "bib_context": " - Fang C, et al. Prions activate a p38 MAPK synaptotoxic signaling pathway. *PLoS Pathog* 2018;14:e"
+  },
+  {
+    "pmid": "30314800",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "The antimicrobial protection hypothesis of Alzheimer's disease",
+      "authors": [
+        "Moir RD",
+        "Lathe R",
+        "Tanzi RE"
+      ],
+      "journal": "Alzheimers Dement",
+      "year": "2018"
+    },
+    "bib_context": " - Moir RD, Tanzi RE. A\u03b2 as antimicrobial peptide. *Alz & Dementia* 2018; *Sci Transl Med* 2016. PMI"
+  },
+  {
+    "pmid": "30480243",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Prion Protein PRNP: A New Player in Innate Immunity? The A\u03b2 Connection",
+      "authors": [
+        "Lathe R",
+        "Darlix JL"
+      ],
+      "journal": "J Alzheimers Dis Rep",
+      "year": "2017"
+    },
+    "bib_context": " - PrP, A\u03b2, and LL-37 share membrane-penetrating and antimicrobial properties. PMID 30480243 (2018 r"
+  },
+  {
+    "pmid": "31269263",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "The physiological role of \u03b1-synuclein and its relationship to Parkinson's Disease",
+      "authors": [
+        "Sulzer D",
+        "Edwards RH"
+      ],
+      "journal": "J Neurochem",
+      "year": "2019"
+    },
+    "bib_context": " - \u03b1-Synuclein preferentially binds highly curved synaptic vesicle membranes. *J Neurochem* 2019. PM"
+  },
+  {
+    "pmid": "31296860",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Retention of paternal DNA methylome in the developing zebrafish germline",
+      "authors": [
+        "Skvortsova K",
+        "Tarbashevich K",
+        "Stehling M"
+      ],
+      "journal": "Nat Commun",
+      "year": "2019"
+    },
+    "bib_context": " - CARD9/CARD11 autoinhibition and polymerization. *Nat Commun* 2019. PMID 31296860."
+  },
+  {
+    "pmid": "31430179",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Liquid-Liquid Phase Separation in Disease",
+      "authors": [
+        "Alberti S",
+        "Dormann D"
+      ],
+      "journal": "Annu Rev Genet",
+      "year": "2019"
+    },
+    "bib_context": "# Bibliography  References compiled during the exploratory investigation into prion disease neurotox"
+  },
+  {
+    "pmid": "31659425",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "[Current trends and injuries in cycling: faster, further, e-bike?]",
+      "authors": [
+        "Hinder J",
+        "J\u00e4ger M"
+      ],
+      "journal": "Orthopade",
+      "year": "2019"
+    },
+    "bib_context": " - Corbett GT, et al. PrP is a central player in toxicity mediated by soluble aggregates. *Acta Neur"
+  },
+  {
+    "pmid": "31876447",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Proteinase K resistant cores of prions and amyloids",
+      "authors": [
+        "Kushnirov VV",
+        "Dergalev AA",
+        "Alexandrov AI"
+      ],
+      "journal": "Prion",
+      "year": "2020"
+    },
+    "bib_context": "# Bibliography  References compiled during the exploratory investigation into prion disease neurotox"
+  },
+  {
+    "pmid": "31996436",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Unravelling the Stability and Capsid Dynamics of the Three Virions of Brome Mosaic Virus Assembled Autonomously In Vivo",
+      "authors": [
+        "Chakravarty A",
+        "Reddy VS",
+        "Rao ALN"
+      ],
+      "journal": "J Virol",
+      "year": "2020"
+    },
+    "bib_context": " - Makarava N, Chang JC, Baskakov IV. PrPSc sialylation is region-dependent. *IJMS* 2020. PMC7037812"
+  },
+  {
+    "pmid": "32421758",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Associations between demographic factors and the academic trajectories of medical students in Japan",
+      "authors": [
+        "Nawa N",
+        "Numasawa M",
+        "Nakagawa M"
+      ],
+      "journal": "PLoS One",
+      "year": "2020"
+    },
+    "bib_context": " - Berry DB, et al. Combination anti-PrPSc drugs generate combination-specific resistant prion strai"
+  },
+  {
+    "pmid": "32632098",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "PD-L1 promotes tumor growth and progression by activating WIP and \u03b2-catenin signaling pathways and predicts poor prognosis in lung cancer",
+      "authors": [
+        "Yu W",
+        "Hua Y",
+        "Qiu H"
+      ],
+      "journal": "Cell Death Dis",
+      "year": "2020"
+    },
+    "bib_context": " - G127V promotes droplet fluidity and negatively modulates LLPS. *Commun Biol* 2020. PMC7391680. PM"
+  },
+  {
+    "pmid": "32984276",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "An Update on Autophagy in Prion Diseases",
+      "authors": [
+        "L\u00f3pez-P\u00e9rez \u00d3",
+        "Badiola JJ",
+        "Bolea R"
+      ],
+      "journal": "Front Bioeng Biotechnol",
+      "year": "2020"
+    },
+    "bib_context": " - Rapamycin extends survival ~16 days in GSS mouse (strain-dependent). PMC7481332; PMC6610235. PMID"
+  },
+  {
+    "pmid": "33335475",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Looking Beyond the Core: The Role of Flanking Regions in the Aggregation of Amyloidogenic Peptides and Proteins",
+      "authors": [
+        "Ulamec SM",
+        "Brockwell DJ",
+        "Radford SE"
+      ],
+      "journal": "Front Neurosci",
+      "year": "2020"
+    },
+    "bib_context": " - Amyloid fuzzy coat review. *JBC* 2023. PMC7736610. PMID 33335475."
+  },
+  {
+    "pmid": "33542319",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Blood lead level and risk of hypertension in the United States National Health and Nutrition Examination Survey 1999-2016",
+      "authors": [
+        "Tsoi MF",
+        "Lo CWH",
+        "Cheung TT"
+      ],
+      "journal": "Sci Rep",
+      "year": "2021"
+    },
+    "bib_context": " - G127V inhibits dimerization in solution but not in cellulo. *Sci Rep* 2021. PMC7862613. PMID 3354"
+  },
+  {
+    "pmid": "33914716",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Regression of Systolic Anterior Motion in Progressive Hypertrophic Cardiomyopathy",
+      "authors": [
+        "Koren O",
+        "Ehrenberg S",
+        "Bloch L"
+      ],
+      "journal": "Am J Case Rep",
+      "year": "2021"
+    },
+    "bib_context": " - Phe-Gly motifs drive fibrillization of TDP-43's prion-like domain condensates. PMC8109789. PMID 3"
+  },
+  {
+    "pmid": "34220531",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Mechanical Principles Governing the Shapes of Dendritic Spines",
+      "authors": [
+        "Alimohamadi H",
+        "Bell MK",
+        "Halpain S"
+      ],
+      "journal": "Front Physiol",
+      "year": "2021"
+    },
+    "bib_context": " - Dendritic spine membrane curvature. *Front Physiol* 2021. PMID 34220531."
+  },
+  {
+    "pmid": "34737229",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Reprogrammed transsulfuration promotes basal-like breast tumor progression via realigning cellular cysteine persulfidation",
+      "authors": [
+        "Erd\u00e9lyi K",
+        "Ditr\u00f3i T",
+        "Johansson HJ"
+      ],
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": "2021"
+    },
+    "bib_context": " - Y145Stop variant attains self-seeding amyloid state via LLPS. *PNAS* 2021. PMID 34737229."
+  },
+  {
+    "pmid": "35321204",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Regulatory Roles of Antimicrobial Peptides in the Nervous System: Implications for Neuronal Aging",
+      "authors": [
+        "Stuart BAR",
+        "Franitza AL",
+        "E L"
+      ],
+      "journal": "Front Cell Neurosci",
+      "year": "2022"
+    },
+    "bib_context": " - AMPs expressed in CNS and upregulated in neurological disorders. *Discov Immunol* 2022. PMID 3532"
+  },
+  {
+    "pmid": "36138962",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Validating a Portable Device for Blinking Analyses through Laboratory Neurophysiological Techniques",
+      "authors": [
+        "Paparella G",
+        "De Biase A",
+        "Cannavacciuolo A"
+      ],
+      "journal": "Brain Sci",
+      "year": "2022"
+    },
+    "bib_context": " - LL-37 causes AD phenotypes in mouse and monkey. *Mol Psychiatry* 2022. PMID 36138962."
+  },
+  {
+    "pmid": "36682493",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Liquid-liquid phase separation of amyloid-\u03b2 oligomers modulates amyloid fibrils formation",
+      "authors": [
+        "Gui X",
+        "Feng S",
+        "Li Z"
+      ],
+      "journal": "J Biol Chem",
+      "year": "2023"
+    },
+    "bib_context": " - Sphingomyelin depletion \u2192 4\u00d7 increase in PrPSc formation. PMC9871914. PMID 36682493."
+  },
+  {
+    "pmid": "37721399",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Mechanism of Oxygen Quenching of the Excited States of Heteroleptic Chromium(III) Phenanthroline Derivatives",
+      "authors": [
+        "Alazaly AMM",
+        "Clarkson GJ",
+        "Ward MD"
+      ],
+      "journal": "Inorg Chem",
+      "year": "2023"
+    },
+    "bib_context": " - LLPS-driven A\u03b2 fibrilization by Sudhakar et al. *ACS Chem Neurosci* 2023;14:3655-3664. PMID 37721"
+  },
+  {
+    "pmid": "37789669",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Comparison of prognostic impact of atezolizumab plus bevacizumab versus lenvatinib in patients with intermediate-stage hepatocellular carcinoma",
+      "authors": [
+        "Tada T",
+        "Kumada T",
+        "Hiraoka A"
+      ],
+      "journal": "Liver Int",
+      "year": "2024"
+    },
+    "bib_context": " - G127V modulates LLPS and inhibits amyloid fibril formation. *J Neurochem* 2023. PMID 37789669."
+  },
+  {
+    "pmid": "38153203",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Amphipathic Helices Can Sense Both Positive and Negative Curvatures of Lipid Membranes",
+      "authors": [
+        "Pajtinka P",
+        "V\u00e1cha R"
+      ],
+      "journal": "J Phys Chem Lett",
+      "year": "2024"
+    },
+    "bib_context": " - Curvature and lipid packing defects. *J Phys Chem Lett* 2024. PMC10788957. PMID 38153203."
+  },
+  {
+    "pmid": "39440669",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Double-Shell Encapsulation of Lead-Free Tin Halide Perovskite for Self-Powered Smart Windows",
+      "authors": [
+        "Wang A",
+        "Li J",
+        "Zhang Y"
+      ],
+      "journal": "Small",
+      "year": "2024"
+    },
+    "bib_context": " - Ziaunys et al. LLPS of \u03b1-synuclein increases structural variability of fibrils. *FEBS J* 2024. PM"
+  },
+  {
+    "pmid": "39470175",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Latent change-on-change between amyloid accumulation and cognitive decline",
+      "authors": [
+        "Klinger HM",
+        "Healy BC",
+        "Hanseeuw BJ"
+      ],
+      "journal": "Alzheimers Dement",
+      "year": "2024"
+    },
+    "bib_context": " - Aging shifts brain lipid profiles region-specifically. PMC11591903. PMID 39470175.  ## Structural"
+  },
+  {
+    "pmid": "39493873",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Dynamic lateralization in contralateral-projecting corticospinal neurons during motor learning",
+      "authors": [
+        "Han J",
+        "Wang R",
+        "Wang M"
+      ],
+      "journal": "iScience",
+      "year": "2024"
+    },
+    "bib_context": " - NINJ1: auto-inhibited homodimer \u2192 cytotoxic filament, membrane rupture. *Nature* 2024. PMID 39493"
+  },
+  {
+    "pmid": "39572515",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Preoperative mitral valve annulus area size is an important factor in avoiding functional mitral stenosis after mitral valve repair",
+      "authors": [
+        "Sasaki H",
+        "Takaoka H",
+        "Yoshida K"
+      ],
+      "journal": "J Echocardiogr",
+      "year": "2025"
+    },
+    "bib_context": " - CRISPR base editing (Broad Institute). BE3.9max R37X stop codon. *Nature Medicine* 2024. PMID 395"
+  },
+  {
+    "pmid": "39703642",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Investigating the efficiency of novel indicators in predicting risk of metabolic syndrome in the Iranian adult population",
+      "authors": [
+        "Bayatian A",
+        "Jangi A",
+        "Pargar F"
+      ],
+      "journal": "J Educ Health Promot",
+      "year": "2024"
+    },
+    "bib_context": " - Expert Opinion on Drug Discovery 2026. Multi-target approaches for prion disease. doi:10.1080/174"
+  },
+  {
+    "pmid": "39808617",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Revealing the Potential-Dependent Rate-Determining Step of Oxygen Reduction Reaction on Single-Atom Catalysts",
+      "authors": [
+        "Yan HM",
+        "Wang G",
+        "Lv XM"
+      ],
+      "journal": "J Am Chem Soc",
+      "year": "2025"
+    },
+    "bib_context": " - Gatdula JRP, et al. Membrane-anchored PrPSc is the trigger for prion synaptotoxicity. *PLoS Patho"
+  },
+  {
+    "pmid": "40896638",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "INFERRING SYNERGISTIC AND ANTAGONISTIC INTERACTIONS IN MIXTURES OF EXPOSURES",
+      "authors": [
+        "Chattopadhyay S",
+        "Engel SM",
+        "Dunson D"
+      ],
+      "journal": "Ann Appl Stat",
+      "year": "2025"
+    },
+    "bib_context": " - **Zerbes T, Verkuyl C, Zhang C, et al.** A self-complementary recombinant adeno-associated virus "
+  },
+  {
+    "pmid": "7901042",
+    "issue": "LOW_OVERLAP",
+    "pubmed": {
+      "title": "Cytoprotective effect of NMDA receptor antagonists on prion protein (PrionSc)-induced toxicity in rat cortical cell cultures",
+      "authors": [
+        "M\u00fcller WE",
+        "Ushijima H",
+        "Schr\u00f6der HC"
+      ],
+      "journal": "Eur J Pharmacol",
+      "year": "1993"
+    },
+    "bib_context": " - Memantine protects against PrPSc toxicity in vitro. M\u00fcller et al. *Eur J Pharmacol* 1993. PMID 79"
+  },
+  {
+    "pmid": "8248165",
+    "issue": "WRONG_PAPER",
+    "pubmed": {
+      "title": "Resolution of the HLA-DRB6 puzzle: a case of grafting a de novo-generated exon on an existing gene",
+      "authors": [
+        "Mayer WE",
+        "O'hUigin C",
+        "Klein J"
+      ],
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": "1993"
+    },
+    "bib_context": " - Pan KM, Baldwin M, Nguyen J, et al. Conversion of alpha-helices into beta-sheets features in the "
+  }
+]
