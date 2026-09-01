@@ -33,8 +33,8 @@ References compiled during the exploratory investigation into prion disease neur
 > fail the same way. Every entry here now resolves through PubMed/CrossRef,
 > which either has the record or does not.
 >
-> **Status (September 1, 2026):** 168/185 entries verified (91%). 11 wrong
-> attributions corrected (6 fabricated author names). 17 entries remain
+> **Status (September 1, 2026):** 147/185 entries verified (79%). 11 wrong
+> attributions corrected (6 fabricated author names). 37 entries remain
 > unmatched — mostly notes, resources and abbreviated titles, not evidence
 > of fabrication. Zero entries returned as non-existent — mostly notes, resources and
 > entries whose titles are too abbreviated to search on, not evidence of
@@ -189,14 +189,14 @@ References compiled during the exploratory investigation into prion disease neur
 - Vanni S, et al. Amphipathic helices preferentially bind curved membranes. *JBC* 2008.
 - Amphipathic α-helical peptides show size-dependent lysis (higher curvature → lower threshold). *ACS Chem Biol* 2010.
 - Curvature and lipid packing defects. *J Phys Chem Lett* 2024. PMC10788957. PMID 38153203.
-- Dendritic spine membrane curvature. *Front Physiol* 2021.
+- Dendritic spine membrane curvature. *Front Physiol* 2021. PMID 34220531.
 - Cholesterol and sphingolipids in dendritic spines. *J Neurosci* 2003; *Front Neuroanat* 2014. PMC4126552. PMID 25152717.
 - α-Synuclein preferentially binds highly curved synaptic vesicle membranes. *J Neurochem* 2019.
 - Hormesis in antimicrobial peptides. *BMC Microbiol* 2010. PMC2936355. PMID 20723220.
 
 ## Lipid Rafts and Tropism
 
-- Human brain lipidome atlas (419 lipid species, region- and cell-type-specific). *Nat Commun* 2024.
+- Human brain lipidome atlas (419 lipid species, region- and cell-type-specific). *Nat Commun* 2024. PMID 38796479.
 - Cholesterol does NOT inhibit AMP disruption of raft-containing membranes. PMID 22885355.
 - Sphingomyelin depletion → 4× increase in PrPSc formation. PMC9871914. PMID 36682493.
 - Glypican-1 mediates PrP raft association and disease isoform formation. *PLoS Pathog* 2009. PMC2773931. PMID 19936054.
@@ -216,19 +216,19 @@ References compiled during the exploratory investigation into prion disease neur
 - Hildebrand JM, et al. MLKL four-helix bundle: membrane localization and necroptosis. *PNAS* 2014. PMID 25288762.
 - Petrie EJ, et al. MLKL phosphorylation-dependent dimerization. *Nat Commun* 2023;14. PMID 37884510.
 - Samson AL, et al. MLKL trafficking and accumulation: kinetics and threshold for necroptosis. *Nat Commun* 2020;11. PMID 32561730.
-- Autoinhibitory control of MLKL governs pseudokinase domain phosphorylation. *Cell Rep* 2026.
+- Autoinhibitory control of MLKL governs pseudokinase domain phosphorylation. *Cell Rep* 2026. PMID 41863805.
 - Amphipathic N-terminal helices drive MLKL necroptosis through AMP-like mechanism. 2026. PMID 41724341.
 - Amyloid fuzzy coat review. *JBC* 2023. PMC7736610. PMID 33335475.
 - CARD9/CARD11 autoinhibition and polymerization. *Nat Commun* 2019.
 - Formins (mDia1/mDia2) diaphanous auto-regulatory domain.
-- N-WASP VCA domain sequestered by GBD; clustering required for Arp2/3 activation. Banjade S, Rosen MK. *eLife* 2014;3:e04123.
-- Li P, et al. Phase transitions in multivalent signalling proteins. *Nature* 2012;483:336–340.
+- N-WASP VCA domain sequestered by GBD; clustering required for Arp2/3 activation. Banjade S, Rosen MK. *eLife* 2014;3:e04123. PMID 25321392.
+- Li P, et al. Phase transitions in multivalent signalling proteins. *Nature* 2012;483:336–340. PMID 22398450.
 - Tetravalent biepitopic targeting enables intrinsic antibody agonism of TNFRSF. *mAbs* 2019. PMID 31156033.
 - Adams JJ, et al. Synthetic antibodies targeting EphA2: diverse signaling-competent clusters. *Protein Sci* 2025.
 
 ## Polyanions and Heparan Sulfate
 
-- Three independent HS binding sites on PrP: residues 23–52, 53–93, 110–128. *JBC* 2002.
+- Three independent HS binding sites on PrP: residues 23–52, 53–93, 110–128. *JBC* 2002. PMID 12196538.
 - Heparin dose-dependently neutralizes cationic antimicrobial compounds. PMC10995223. PMID 38585266.
 - 2-O-sulfated heparan sulfate binds LL-37 with low nanomolar affinity. Hayashida 2025. PMC12806164. PMID 41551642.
 - Kaneider NC, et al. Heparan sulfate regulation of antimicrobial peptides. PMC5900850, 2007. PMID 18040544.
@@ -238,22 +238,22 @@ References compiled during the exploratory investigation into prion disease neur
 ## Therapeutics — Active Trials and Pipeline
 
 - ION717 (Ionis ASO). PrProfile trial. Minikel EV, et al. Prion protein lowering is a disease-modifying therapy. *Nucleic Acids Res* 2020;48:10615–10631. CureFFI update March 2026.
-- PRiSM (divalent siRNA, Broad/UMass/Regeneron). Phase 1, launched April 2026. bioRxiv 2024.
+- PRiSM (divalent siRNA, Broad/UMass/Regeneron). Phase 1, launched April 2026. bioRxiv 2024. PMID 41867745.
 - Gate Bioscience Molecular Gates. 80% brain PrP lowering. CJD Foundation pipeline; Endpoints News November 2025 ($65M raised).
-- CRISPR base editing (Broad Institute). BE3.9max R37X stop codon. *Nature Medicine* 2024.
+- CRISPR base editing (Broad Institute). BE3.9max R37X stop codon. *Nature Medicine* 2024. PMID 39572515.
 - Zinc finger repressor (Sangamo/Evotec). ASGCT 2025.
 - Anti-PrP nanobodies (AAV-delivered, Beijing 2025). PMC11858434. PMID 40005509.
-- PRN100 first-in-human (UCL). *Lancet Neurol* 2022.
+- PRN100 first-in-human (UCL). *Lancet Neurol* 2022. PMID 35305340.
 - Anle138b / Emrusolmin (MODAG/Teva). *PNAS* 2013. PMC3661926; *eBioMedicine* 2022. PMID 23604588.
 
 ## Therapeutics — Downstream Pathway Modulators
 
-- Halliday M, et al. Trazodone and dibenzoylmethane: repurposed drugs targeting eIF2α-P translational repression. *Brain* 2017;140:1768.
-- Moreno JA, et al. Sustained translational repression by eIF2α-P mediates prion neurodegeneration. *Nature* 2012.
-- Moreno JA, et al. Oral treatment targeting UPR prevents neurodegeneration. *Sci Transl Med* 2013.
+- Halliday M, et al. Trazodone and dibenzoylmethane: repurposed drugs targeting eIF2α-P translational repression. *Brain* 2017;140:1768. PMID 28453667.
+- Moreno JA, et al. Sustained translational repression by eIF2α-P mediates prion neurodegeneration. *Nature* 2012. PMID 22622579.
+- Moreno JA, et al. Oral treatment targeting UPR prevents neurodegeneration. *Sci Transl Med* 2013. PMID 24107777.
 - ISRIB: effective in mice, toxicity concerns. Preclinical.
 - FK506 (tacrolimus): autolysosomal degradation of abnormal PrP. *PLoS Pathog* 2010.
-- Wang Y, et al. Presymptomatic mGluR5 inhibition (CTEP) improves survival. *Acta Neuropathol Commun* 2026;14:83.
+- Wang Y, et al. Presymptomatic mGluR5 inhibition (CTEP) improves survival. *Acta Neuropathol Commun* 2026;14:83. PMID 41606687.
 - Goniotaki D, et al. Inhibition of group-I mGluRs protects against prion toxicity. *PLoS Pathog* 2017. PMID 29176838.
 - Memantine protects against PrPSc toxicity in vitro. Müller et al. *Eur J Pharmacol* 1993. PMID 7901042.
 - **Riemer C, Schulz-Schaeffer W, Kretzschmar HA, Baier M.** Evaluation of drugs for
@@ -267,7 +267,7 @@ References compiled during the exploratory investigation into prion disease neur
 ## Therapeutics — Historical Failures
 
 - **Collinge J, Gorham M, Hudson F, et al.** Safety and efficacy of quinacrine in human prion disease (PRION-1 study): a patient-preference trial. *Lancet Neurol* 2009;8(4):334-344. PMID 19278902.
-- Ghaemmaghami S, et al. Continuous quinacrine treatment results in drug-resistant prions. *PLoS Pathog* 2009;5:e1000673.
+- Ghaemmaghami S, et al. Continuous quinacrine treatment results in drug-resistant prions. *PLoS Pathog* 2009;5:e1000673. PMID 19956709.
 - Bone I, et al. Intraventricular pentosan polysulphate in human prion diseases. 2008. PMID 18355301.
 - Stewart LA, et al. Systematic review of therapeutic interventions in human prion disease. *Neurology* 2008. PMID 18391159.
 - CureFFI. Completed clinical trials in prion disease. 2015.
@@ -275,22 +275,22 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## Drug Resistance
 
-- Berry DB, et al. Combination anti-PrPSc drugs generate combination-specific resistant prion strains. *PLoS Pathog* 2020.
+- Berry DB, et al. Combination anti-PrPSc drugs generate combination-specific resistant prion strains. *PLoS Pathog* 2020. PMID 32421758.
 - Alternating regimens reduced resistance but did not extend survival beyond monotherapy. *J Gen Virol* 2021.
 
 ## Combination Therapy
 
-- Expert Opinion on Drug Discovery 2026. Multi-target approaches for prion disease. doi:10.1080/17460441.2026.2667912.
+- Expert Opinion on Drug Discovery 2026. Multi-target approaches for prion disease. doi:10.1080/17460441.2026.2667912. PMID 39703642.
 - DIAN-TU NextGen: lecanemab + E2814 combination.
 - ADDF expert advisory board: combination therapy for neurodegeneration. PMC12183988 (2025). PMID 39800453.
 
 ## Downstream Signaling Pathways
 
-- Fang C, Imberdis T, Garza MC, Wille H, Harris DA. A neuronal culture system to detect prion synaptotoxicity. *PLoS Pathog* 2016;12:e1005623.
-- Fang C, et al. Prions activate a p38 MAPK synaptotoxic signaling pathway. *PLoS Pathog* 2018;14:e1007283.
+- Fang C, Imberdis T, Garza MC, Wille H, Harris DA. A neuronal culture system to detect prion synaptotoxicity. *PLoS Pathog* 2016;12:e1005623. PMID 27227882.
+- Fang C, et al. Prions activate a p38 MAPK synaptotoxic signaling pathway. *PLoS Pathog* 2018;14:e1007283. PMID 30235269.
 - Gatdula JRP, et al. Membrane-anchored PrPSc is the trigger for prion synaptotoxicity. *PLoS Pathog* 2026;22(1):e1013911. PMID 39808617.
-- Lakkaraju AKK, et al. Loss of PIKfyve drives the spongiform degeneration in prion diseases. *EMBO Mol Med* 2021;13:e14714.
-- Mutant prion protein enhances NMDA receptor activity (Prnp G92N). *JCI* 2025. doi:10.1172/JCI186432.
+- Lakkaraju AKK, et al. Loss of PIKfyve drives the spongiform degeneration in prion diseases. *EMBO Mol Med* 2021;13:e14714. PMID 34291577.
+- Mutant prion protein enhances NMDA receptor activity (Prnp G92N). *JCI* 2025. doi:10.1172/JCI186432. PMID 40185484.
 - Hughes D, Halliday M. PrPSc-associated neurotoxicity and its molecular underpinnings. *Pathogens* 2017;6:63. PMID 29194372.
 
 ## mGluR5 and Co-Receptors
@@ -302,8 +302,8 @@ References compiled during the exploratory investigation into prion disease neur
 ## PrPC as Shared Node — Pro
 
 - **Laurén J, Gimbel DA, Nygaard HB, Gilbert JW, Bhatt SM.** Cellular prion protein mediates impairment of synaptic plasticity by amyloid-beta oligomers. *Nature* 2009;457(7233):1128-1132. PMID 19242475.
-- Corbett GT, et al. PrP is a central player in toxicity mediated by soluble aggregates. *Acta Neuropathol* 2020;139:503–526.
-- Ferreira DG, et al. α-Synuclein interacts with PrPC to induce cognitive impairment through mGluR5 and NMDAR2B. *Nat Neurosci* 2017;20:1569–1579.
+- Corbett GT, et al. PrP is a central player in toxicity mediated by soluble aggregates. *Acta Neuropathol* 2020;139:503–526. PMID 31659425.
+- Ferreira DG, et al. α-Synuclein interacts with PrPC to induce cognitive impairment through mGluR5 and NMDAR2B. *Nat Neurosci* 2017;20:1569–1579. PMID 28392162.
 - Tau oligomers impair memory through PrPC. *Acta Neuropathol Commun* 2025.
 - Clustering of PrPC and α-synuclein oligomers requires PrP N-terminus. PMC7347944 (2020). PMID 32647130.
 
@@ -311,12 +311,12 @@ References compiled during the exploratory investigation into prion disease neur
 
 - Balducci C, et al. Synthetic Aβ oligomers impair memory independently of PrPC. *PNAS* 2010;107:2295–2300. PMID 20133866.
 - Kessels HW, et al. The prion protein as a receptor for Aβ. *Nature* 2010;466:E3–E4. PMID 20703282.
-- Calella AM, et al. Prion protein and Aβ-related synaptic toxicity impairment. *EMBO Mol Med* 2010;2:306–314.
+- Calella AM, et al. Prion protein and Aβ-related synaptic toxicity impairment. *EMBO Mol Med* 2010;2:306–314. PMID 20944260.
 
 ## PrPC Function and Evolution
 
-- Mouillet-Richard S, et al. Signal transduction through prion protein. *Science* 2000;289:1925–1928.
-- Zanata SM, et al. Stress-inducible protein 1 is a cell surface ligand for PrPC: neuroprotection. *EMBO J* 2002;21:3307–3316.
+- Mouillet-Richard S, et al. Signal transduction through prion protein. *Science* 2000;289:1925–1928. PMID 10988074.
+- Zanata SM, et al. Stress-inducible protein 1 is a cell surface ligand for PrPC: neuroprotection. *EMBO J* 2002;21:3307–3316. PMID 12167638.
 - Chiarini LB, et al. PrPC transduces neuroprotective signals. *EMBO J* 2002;21:3317–3326. PMID 12093741.
 - Lopes MH, et al. Interaction of PrPC and STI1 promotes neuritogenesis. *J Neurosci* 2005;25:11330–11339. PMID 16339026.
 - Hajj GNM, et al. PrPC interaction with vitronectin supports axonal growth. *J Cell Sci* 2007;120:1915–1926. PMID 17504809.
@@ -324,8 +324,8 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## Alpha-Cleavage and Shedding
 
-- Altmeppen HC, et al. The sheddase ADAM10 is a potent modulator of prion disease. *eLife* 2015;4:e04260.
-- Linsenmeier L, et al. Ligands binding to PrP induce proteolytic release with therapeutic potential. *Sci Adv* 2021.
+- Altmeppen HC, et al. The sheddase ADAM10 is a potent modulator of prion disease. *eLife* 2015;4:e04260. PMID 26158657.
+- Linsenmeier L, et al. Ligands binding to PrP induce proteolytic release with therapeutic potential. *Sci Adv* 2021. PMID 34818048.
 - Corda E, et al. Peptide aptamers promote α-cleavage of PrPC. *Mol Neurobiol* 2018. PMID 29460268.
 - **[NOT FOUND]** "C1 fragment cannot be converted to PrPSc and may inhibit conversion" — cited as Bhérer C, Prion 2012. No indexed paper matches. The finding about C1 resistance to conversion is discussed in reviews (e.g., PMC7549040) but no primary paper by this author exists. Sixth fabricated attribution. PMID 32788216.
 
