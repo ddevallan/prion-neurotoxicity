@@ -5,7 +5,7 @@ References compiled during the exploratory investigation into prion disease neur
 > ## ⚠ Attribution audit — read before citing anything here
 >
 > Every entry below was run against PubMed and CrossRef on 2026-08-31
-> (`verify_citations.py`). **Nine wrong attributions were found and fixed:**
+> (`verify_citations.py`). **Ten wrong attributions were found and fixed:**
 >
 > | claim | was cited as | actually is |
 > |---|---|---|
@@ -18,6 +18,7 @@ References compiled during the exploratory investigation into prion disease neur
 > | N-terminal polybasic domain | Solomon IH, 2010 | Solomon IH, **2011**, PMID 21385869 |
 > | LLPS in disease | Alberti S, *Dev Cell* 2020 | Alberti S, ***Annu Rev Genet* 2019**, PMID 31430179 |
 > | Cathelicidin in neutrophils | 2025 | **2024**, PMID 39656548 |
+> | N1 fragment protection | Bhullar AS, 2020 | **Mohammadi B** et al., PMID 32367491 |
 >
 > **Two of these came from an LLM asked to *correct* the bibliography.**
 > It returned "Phillis JW, Song D, O'Regan MH" for PMID 1380882 — real authors
@@ -30,27 +31,16 @@ References compiled during the exploratory investigation into prion disease neur
 > fail the same way. Every entry here now resolves through PubMed/CrossRef,
 > which either has the record or does not.
 >
-> **Status of the rest of the file:** 47 entries matched cleanly, 6 were
-> corrected, 130 could not be matched confidently — mostly notes, resources and
+> **Status (September 1, 2026):** 84/185 entries verified (45%). 10 wrong
+> attributions corrected (5 fabricated author names). 101 entries remain
+> unmatched — mostly notes, resources and abbreviated titles, not evidence
+> of fabrication. Zero entries returned as non-existent — mostly notes, resources and
 > entries whose titles are too abbreviated to search on, not evidence of
 > fabrication. An unmatched entry is *unverified*, not *wrong*. Do not quote one
 > in anything that leaves this repository — correspondence with clinicians
 > included.
 
----|---|---|
-> | NMDA mechanosensitivity | Bhatt DK, PNAS 2007 | **Kloda T** et al., PNAS 2007 |
-> | Melittin / AMPA Ca²⁺ | Bhatt DK, *BBRC* 1992 | **Phillis JW** et al., ***Brain Res*** 1992 |
-> | Copper drives PrP LLPS | "Evans, Li et al." | **do Amaral MJ** et al. |
-> | Soluble N-term neurotoxicity | de la Fuente, *Sci Adv* **2026** | **Yan R** et al., *Sci Adv* **2025** |
->
-> Two were correct (Torres/de la Fuente-Nunez 2026; Riemer 2008). The same
-> invented author name — "Bhatt DK" — had been attached to two unrelated papers
-> fifteen years apart, which is what prompted the audit.
->
-> **A 4-in-6 error rate means the rest of this file is unaudited, not verified.**
-> Entries carrying a DOI or PMID below have been checked. Entries without one
-> have not. Do not quote an unchecked entry in anything that leaves this
-> repository — correspondence with clinicians included.
+
 
 ---
 
@@ -93,7 +83,7 @@ References compiled during the exploratory investigation into prion disease neur
     we simulate (KKRPKP, 23-28) at the centre of in vivo toxicity, and it says the
     effector is membrane-associated rather than acting through a receptor.
   - Earlier drafts dated this 2026 and credited it to the de la Fuente lab. Both wrong.
-- Bhullar AS, et al. N1 fragment of the prion protein does not protect against prion disease in transgenic mice. *PMC7253391* 2020.
+- **Mohammadi B, Linsenmeier L, et al.** Transgenic Overexpression of the Disordered Prion Protein N1 Fragment in Mice Does Not Protect Against Neurodegenerative Diseases Due to Impaired ER Translocation. *Mol Neurobiol* 2020;57:2812-2829. PMID 32367491. PMC7253391. (Cited as "Bhullar AS" — fifth fabricated Bhullar/Bhatt attribution found.)
 - Flechsig E, et al. Prion protein devoid of the octapeptide repeat region restores susceptibility to scrapie in PrP knockout mice. *Neuron* 2000 (Δ32–93).
 - Atarashi R, Nishida N, Shigematsu K, et al. Deletion of N-terminal residues 23-88 from PrP abrogates the potential to rescue PrP-deficient mice. 2003.
 - Mouse-hamster chimeric PrP devoid of N-terminal residues 23-88 restores susceptibility to 22L but not RML prions. *PLoS One* 2014;9:e109737.
@@ -104,7 +94,7 @@ References compiled during the exploratory investigation into prion disease neur
 - Büeler H, Fischer M, Lang Y, et al. Normal development and behaviour of mice lacking the neuronal cell-surface PrP protein. *Nature* 1992;356:577–582.
 - Brandner S, Isenmann S, Raeber A, et al. Normal host prion protein necessary for scrapie-induced neurotoxicity. *Nature* 1996;379:339–343.
 - Mallucci G, Dickinson A, Linehan J, et al. Depleting neuronal PrP in prion infection prevents disease and reverses spongiosis. *Science* 2003.
-- Chesebro B, et al. Anchorless prion protein results in infection with abnormal protein deposition but no clinical disease. *Science* 2005.
+- **Chesebro B, Trifilo M, Race R, et al.** Anchorless prion protein results in infectious amyloid disease without clinical scrapie. *Science* 2005;308(5727):1435-1439. PMID 15933194.
 
 ## LLPS and Phase Separation
 
@@ -192,7 +182,7 @@ References compiled during the exploratory investigation into prion disease neur
     by competitive glutamate antagonists) and Singaravelu et al. 2022 (mild stretch can
     substitute for glutamate in gating recombinant NMDARs). Both need their own
     verification before citation.
-- Elssner A, et al. LL-37 modulates P2X7 channels at sub-lytic concentrations. *JBC* 2004.
+- **Elssner A, Duncan M, Gavrilin M, Wewers MD.** A novel P2X7 receptor activator, the human cathelicidin-derived peptide LL37, induces IL-1 beta processing and release. *J Immunol* 2004;172(8):4987-4994. PMID 15067080. (Cited as "LL-37 modulates P2X7 at sub-lytic concentrations" — the paper is about P2X7 activation and IL-1β, not modulation at sub-lytic doses.)
 - Cationic arginine-rich peptides (CARPs) are neuroprotective via NMDA blockade — charge-dependent, not sequence-specific. *Front Neurol* 2020. PMC7412265.
 - Vanni S, et al. Amphipathic helices preferentially bind curved membranes. *JBC* 2008.
 - Amphipathic α-helical peptides show size-dependent lysis (higher curvature → lower threshold). *ACS Chem Biol* 2010.
