@@ -114,8 +114,8 @@ References compiled during the exploratory investigation into prion disease neur
   - Cited in earlier drafts as "Evans, Li et al." — that attribution was fabricated.
 - **Alberti S, Dormann D.** Liquid-liquid phase separation in disease. ***Annu Rev Genet* 2019**;53:171-194. PMID 31430179.
 - Shin Y, Brangwynne CP. Liquid phase condensation in cell physiology and disease. *Science* 2017. PMID 28935776.
-- Lin et al. GPI-PrP liberated from lipid vesicles misfolds into amyloid fibrils; membrane-bound GPI-PrP is stable. *IJMS* 2013. PMC3794761. PMID 24000003.
-- Ziaunys et al. LLPS of α-synuclein increases structural variability of fibrils. *FEBS J* 2024. PMID 39440669.
+- Lin et al. GPI-PrP liberated from lipid vesicles misfolds into amyloid fibrils; membrane-bound GPI-PrP is stable. *IJMS* 2013. PMC3794761.
+- Ziaunys et al. LLPS of α-synuclein increases structural variability of fibrils. *FEBS J* 2024.
 - Phe-Gly motifs drive fibrillization of TDP-43's prion-like domain condensates. PMC8109789. PMID 33909608.
 - LLPS-driven Aβ fibrilization by Sudhakar et al. *ACS Chem Neurosci* 2023;14:3655-3664.
 - Molecular mechanisms of phase separation and amyloidosis of FUS and TDP-43. *Aging Dis* 2024. PMC11346406. PMID 39358890.
@@ -188,7 +188,7 @@ References compiled during the exploratory investigation into prion disease neur
 - **Elssner A, Duncan M, Gavrilin M, Wewers MD.** A novel P2X7 receptor activator, the human cathelicidin-derived peptide LL37, induces IL-1 beta processing and release. *J Immunol* 2004;172(8):4987-4994. PMID 15067080. (Cited as "LL-37 modulates P2X7 at sub-lytic concentrations" — the paper is about P2X7 activation and IL-1β, not modulation at sub-lytic doses.)
 - Cationic arginine-rich peptides (CARPs) are neuroprotective via NMDA blockade — charge-dependent, not sequence-specific. *Front Neurol* 2020. PMC7412265. PMID 32158425.
 - Vanni S, et al. Amphipathic helices preferentially bind curved membranes. *JBC* 2008.
-- Amphipathic α-helical peptides show size-dependent lysis (higher curvature → lower threshold). *ACS Chem Biol* 2010. PMID 19928811.
+- Amphipathic α-helical peptides show size-dependent lysis (higher curvature → lower threshold). *ACS Chem Biol* 2010.
 - Curvature and lipid packing defects. *J Phys Chem Lett* 2024. PMC10788957. PMID 38153203.
 - Dendritic spine membrane curvature. *Front Physiol* 2021. PMID 34220531.
 - Cholesterol and sphingolipids in dendritic spines. *J Neurosci* 2003; *Front Neuroanat* 2014. PMC4126552. PMID 25152717.
