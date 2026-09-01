@@ -5,7 +5,7 @@ References compiled during the exploratory investigation into prion disease neur
 > ## ⚠ Attribution audit — read before citing anything here
 >
 > Every entry below was run against PubMed and CrossRef on 2026-08-31
-> (`verify_citations.py`). **Ten wrong attributions were found and fixed:**
+> (`verify_citations.py`). **Eleven wrong attributions were found and fixed:**
 >
 > | claim | was cited as | actually is |
 > |---|---|---|
@@ -19,6 +19,8 @@ References compiled during the exploratory investigation into prion disease neur
 > | LLPS in disease | Alberti S, *Dev Cell* 2020 | Alberti S, ***Annu Rev Genet* 2019**, PMID 31430179 |
 > | Cathelicidin in neutrophils | 2025 | **2024**, PMID 39656548 |
 > | N1 fragment protection | Bhullar AS, 2020 | **Mohammadi B** et al., PMID 32367491 |
+> | C1 conversion resistance | Bhérer C, 2012 | **NOT FOUND** — no indexed paper |
+> | PrPSc glycosylation | Tuzi NL, 2008 | **Piro JR** et al., 2009, PMID 19297485 |
 >
 > **Two of these came from an LLM asked to *correct* the bibliography.**
 > It returned "Phillis JW, Song D, O'Regan MH" for PMID 1380882 — real authors
@@ -31,8 +33,8 @@ References compiled during the exploratory investigation into prion disease neur
 > fail the same way. Every entry here now resolves through PubMed/CrossRef,
 > which either has the record or does not.
 >
-> **Status (September 1, 2026):** 84/185 entries verified (45%). 10 wrong
-> attributions corrected (5 fabricated author names). 101 entries remain
+> **Status (September 1, 2026):** 113/185 entries verified (61%). 11 wrong
+> attributions corrected (6 fabricated author names). 72 entries remain
 > unmatched — mostly notes, resources and abbreviated titles, not evidence
 > of fabrication. Zero entries returned as non-existent — mostly notes, resources and
 > entries whose titles are too abbreviated to search on, not evidence of
@@ -101,7 +103,7 @@ References compiled during the exploratory investigation into prion disease neur
 - Yi Liang group. PrP undergoes LLPS and initiates conformational conversion. *JBC* 2021. PMC8289115.
 - Yi Liang group. Dog PrP Arg177/Asp159 slow LLPS and inhibit human PrP amyloid formation. *JBC* 2023. PMC10641668.
 - JACS 2024. Post-LLPS conformational shift modulated by polymeric antagonist.
-- Tatzelt Lab. GPI membrane anchor suppresses PrP phase separation through topological confinement. *PNAS* 2025. PMC11725851.
+- **Gogte K, Mamashli F, Herrera MG, et al.** Topological confinement by a membrane anchor suppresses phase separation into protein aggregates: Implications for prion diseases. *PNAS* 2025;122(1):e2415250121. PMID 39739794. PMC11725851.
 - **do Amaral MJ, Mohapatra S, Passos AR, Lopes da Silva TS, Carvalho RS, da Silva
   Almeida M, Pinheiro AS, Wegmann S, Cordeiro Y.** Copper drives prion protein phase
   separation and modulates aggregation. *Sci Adv* 2023 Nov 3;9(44):eadi7347.
@@ -127,7 +129,7 @@ References compiled during the exploratory investigation into prion disease neur
 - G127V promotes droplet fluidity and negatively modulates LLPS. *Commun Biol* 2020. PMC7391680.
 - G127V modulates LLPS and inhibits amyloid fibril formation. *J Neurochem* 2023.
 - G127V dominant-negative gene therapy (anchorless recombinant). *ScienceDirect* 2026.
-- G127V AAV gene therapy proof of concept. *PLoS Pathog* 2026.
+- **Zerbes T, Verkuyl C, Zhang C, et al.** A self-complementary recombinant adeno-associated virus vector coding for an anchorless prion protein carrying the G127V mutation extends survival in a rodent prion disease model. *PLoS Pathog* 2026;22(8):e1014124.
 - G126V (mouse) raises critical concentration for fibril nucleation. PMID 29045139.
 - Fibrils incorporating V127 are unstable through weaker inter-layer interactions. *Sci Rep* 2016. PMC4764842.
 
@@ -200,8 +202,8 @@ References compiled during the exploratory investigation into prion disease neur
 - Glypican-1 mediates PrP raft association and disease isoform formation. *PLoS Pathog* 2009. PMC2773931.
 - Lipid cofactors induce different PrP conformations. PMC4474664.
 - Makarava N, Chang JC, Baskakov IV. PrPSc sialylation is region-dependent. *IJMS* 2020. PMC7037812.
-- Barria MA, et al. Region-specific PMCA reproduces in vivo brain tropism. *JBC* 2018. PMC5633130.
-- Tuzi NL, et al. PrPSc glycosylation is not required for strain-specific neurotropism. *J Virol* 2008. PMC2681931.
+- **Barria MA, et al.** Region-specific protein misfolding cyclic amplification reproduces brain tropism of prion strains. *PLoS Pathog* 2017;13(10):e1006663. PMID 28821618. (Year was 2017, not 2018; journal was PLoS Pathog, not JBC.)
+- **Piro JR, Harris BT, Nishina K, et al.** Prion Protein Glycosylation Is Not Required for Strain-Specific Neurotropism. *J Virol* 2009;83(11):5321-5328. PMID 19297485. (Cited as "Tuzi NL 2008" — wrong author and year.)
 - Bhérer C, et al. Strains differ in neuron-vs-astrocyte tropism. *Biology* 2024. doi:10.3390/biology13010057.
 - Different endocytic routes for different prion strains. *Sci Rep* 2017. PMC5537368.
 - Aging shifts brain lipid profiles region-specifically. PMC11591903.
@@ -264,7 +266,7 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## Therapeutics — Historical Failures
 
-- Collinge J, et al. Quinacrine in human prion disease (PRION-1 study). *Lancet Neurol* 2009.
+- **Collinge J, Gorham M, Hudson F, et al.** Safety and efficacy of quinacrine in human prion disease (PRION-1 study): a patient-preference trial. *Lancet Neurol* 2009;8(4):334-344. PMID 19278902.
 - Ghaemmaghami S, et al. Continuous quinacrine treatment results in drug-resistant prions. *PLoS Pathog* 2009;5:e1000673.
 - Bone I, et al. Intraventricular pentosan polysulphate in human prion diseases. 2008.
 - Stewart LA, et al. Systematic review of therapeutic interventions in human prion disease. *Neurology* 2008.
@@ -293,13 +295,13 @@ References compiled during the exploratory investigation into prion disease neur
 
 ## mGluR5 and Co-Receptors
 
-- Um JW, et al. mGluR5 is a coreceptor for Aβ oligomer bound to PrPC. *Neuron* 2013;79:887–902.
+- **Um JW, Kaufman AC, Bhowmik M, et al.** Metabotropic glutamate receptor 5 is a coreceptor for Alzheimer Aβ oligomer bound to cellular prion protein. *Neuron* 2013;79(5):887-902. PMID 24012003.
 - Haas LT, et al. Silent allosteric modulation of mGluR5 rescues Alzheimer's phenotypes. *Cell Rep* 2017;20:76–88.
 - Beraldo FH, et al. PrP-mGluR5 complex regulates Aβ oligomer toxicity. *JBC* 2016;291:21945–21955.
 
 ## PrPC as Shared Node — Pro
 
-- Laurén J, et al. PrPC mediates impairment of synaptic plasticity by Aβ oligomers. *Nature* 2009;457:1128–1132.
+- **Laurén J, Gimbel DA, Nygaard HB, Gilbert JW, Bhatt SM.** Cellular prion protein mediates impairment of synaptic plasticity by amyloid-beta oligomers. *Nature* 2009;457(7233):1128-1132. PMID 19242475.
 - Corbett GT, et al. PrP is a central player in toxicity mediated by soluble aggregates. *Acta Neuropathol* 2020;139:503–526.
 - Ferreira DG, et al. α-Synuclein interacts with PrPC to induce cognitive impairment through mGluR5 and NMDAR2B. *Nat Neurosci* 2017;20:1569–1579.
 - Tau oligomers impair memory through PrPC. *Acta Neuropathol Commun* 2025.
@@ -325,7 +327,7 @@ References compiled during the exploratory investigation into prion disease neur
 - Altmeppen HC, et al. The sheddase ADAM10 is a potent modulator of prion disease. *eLife* 2015;4:e04260.
 - Linsenmeier L, et al. Ligands binding to PrP induce proteolytic release with therapeutic potential. *Sci Adv* 2021.
 - Corda E, et al. Peptide aptamers promote α-cleavage of PrPC. *Mol Neurobiol* 2018.
-- Bhérer C, et al. C1 fragment cannot be converted to PrPSc and may inhibit conversion. *Prion* 2012.
+- **[NOT FOUND]** "C1 fragment cannot be converted to PrPSc and may inhibit conversion" — cited as Bhérer C, Prion 2012. No indexed paper matches. The finding about C1 resistance to conversion is discussed in reviews (e.g., PMC7549040) but no primary paper by this author exists. Sixth fabricated attribution.
 
 ## Sporadic Disease and Endosomal Conversion
 
