@@ -165,7 +165,7 @@ References compiled during the exploratory investigation into prion disease neur
 - LL-37 causes AD phenotypes in mouse and monkey. *Mol Psychiatry* 2022.
 - LL-37 in neuroinflammation: microglia TNF-α/IL-6 release. *Biochem Pharmacol* 2015.
 - CRAMP (mouse cathelicidin) induced in astrocytes/microglia during neuroinflammation. *JCI* 2025. PMC11785927.
-- Cathelicidin in neutrophils and neurons antagonistically modulates neuroinflammation. *JCI* 2025.
+- **Verma SC, Enée E, Manasse K, et al.** Cathelicidin in neutrophils and neurons antagonistically modulates neuroinflammation. *J Clin Invest* **2024**. PMID 39656548.
 - AMPs expressed in CNS and upregulated in neurological disorders. *Discov Immunol* 2022.
 
 ## Membrane Biophysics and Curvature

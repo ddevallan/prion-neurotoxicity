@@ -121,7 +121,7 @@
           "volume": "19",
           "pages": "607-613",
           "doi": "doi: 10.1038/s41589-022-01229-7",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Nat Chem Biol. 2023 May;19(5):607-613. doi: 10.1038/s41589-022-01229-7. Epub \n2023 Jan 16.\n\nA structural basis for prion strain diversity.\n\nManka SW(1), Wenborn A(1), Betts J(1), Joiner S(1), Saibil HR(2), Collinge J(3), \nWadsworth JDF(4).\n\nAuthor information:\n(1)MRC Prion Unit at UCL, Institute of Prion Diseases, University College \nLondon, London, UK.\n(2)Department of Biological Sciences, Institute of Structural and Molecular \nBiology, Birkbeck College, University of London, London, UK. h.saibil@bbk.ac.uk.\n(3)MRC Prion Unit at UCL, Institute of Prion Diseases, University College \nLondon, London, UK. jc@prion.ucl.ac.uk.\n(4)MRC Prion Unit at UCL, Institute of Prion Diseases, University College \nLondon, London, UK. j.wadsworth@prion.ucl.ac.uk.\n\nRecent cryogenic electron microscopy (cryo-EM) studies of infectious, ex vivo, \nprion fibrils from hamster 263K and mouse RML prion strains revealed a similar, \nparallel in-register intermolecular \u03b2-sheet (PIRIBS) amyloid architecture. Rungs \nof the fibrils are composed of individual prion protein (PrP) monomers that fold \nto create distinct N-terminal and C-terminal lobes. However, disparity in the \nhamster/mouse PrP sequence precludes understanding of how divergent prion \nstrains emerge from an identical PrP substrate. In this study, we determined the \nnear-atomic resolution cryo-EM structure of infectious, ex vivo mouse prion \nfibrils from the ME7 prion strain and compared this with the RML fibril \nstructure. This structural comparison of two biologically distinct mouse-adapted \nprion strains suggests defined folding subdomains of PrP rungs and the way in \nwhich they are interrelated, providing a structural definition of intra-species \nprion strain-specific conformations.\n\n\u00a9 2023. The Author(s).\n\nDOI: 10.1038/s41589-022-01229-7\nPMCID: PMC10154210\nPMID: 36646960 [Indexed for MEDLINE]\n\nConflict of interest statement: J.C. is a Director and J.C. and J.D.F.W. are \nshareholders of D-Gen Ltd., an academic spin-out company working in the field of \nprion disease diagnosis, decontamination and therapeutics. D-Gen supplied the \nICSM35 and ICSM18 antibodies used for western blot and ELISA performed in this \nstudy. The other authors declare no potential conflicts of interest."
         },
         "mismatch": [],
         "similarity": 1.0
@@ -223,6 +223,36 @@
     },
     {
       "entry": {
+        "author": "Kushnirov VV",
+        "title": "Proteinase K resistant cores of prions and amyloids",
+        "year": "2020",
+        "has_id": true,
+        "raw": "Kushnirov VV, Dergalev AA, Alexandrov AI. Proteinase K resistant cores of prions and amyloids. *Prion* 2020;14(1):11-19. PMID 3187"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "31876447",
+          "title": "Proteinase K resistant cores of prions and amyloids",
+          "authors": [
+            "Kushnirov VV",
+            "Dergalev AA",
+            "Alexandrov AI"
+          ],
+          "journal": "Prion",
+          "year": "2020",
+          "volume": "14",
+          "pages": "11-19",
+          "doi": "doi: 10.1080/19336896.2019.1704612",
+          "abstract": "1. Prion. 2020 Dec;14(1):11-19. doi: 10.1080/19336896.2019.1704612.\n\nProteinase K resistant cores of prions and amyloids.\n\nKushnirov VV(1), Dergalev AA(1), Alexandrov AI(1).\n\nAuthor information:\n(1)Research Center of Biotechnology of Russian Academy of Sciences, A.N. Bach \nInstitute of Biochemistry, Moscow, Russia.\n\nAmyloids and their infectious subset, prions, represent fibrillary aggregates \nwith regular structure. They are formed by proteins that are soluble in their \nnormal state. In amyloid form, all or part of the polypeptide sequence of the \nprotein is resistant to treatment with proteinase K (PK). Amyloids can have \nstructural variants, which can be distinguished by the patterns of their \ndigestion by PK. In this review, we describe and compare studies of the \nresistant cores of various amyloids from different organisms. These data provide \ninsight into the fine structure of amyloids and their variants as well as raise \ninteresting questions, such as those concerning the differences between amyloids \nobtained ex vivo and in vitro, as well as the manner in which folding of one \nregion of the amyloid can affect other regions.\n\nDOI: 10.1080/19336896.2019.1704612\nPMCID: PMC6959286\nPMID: 31876447 [Indexed for MEDLINE]"
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
         "author": "Sandberg MK",
         "title": "Prion propagation and toxicity in vivo occur in two distinct mechanistic phases",
         "year": "2011",
@@ -280,7 +310,7 @@
           "volume": "5",
           "pages": "4347",
           "doi": "doi: 10.1038/ncomms5347",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Nat Commun. 2014 Jul 9;5:4347. doi: 10.1038/ncomms5347.\n\nPrion neuropathology follows the accumulation of alternate prion protein \nisoforms after infective titre has peaked.\n\nSandberg MK(1), Al-Doujaily H(1), Sharps B(1), De Oliveira MW(1), Schmidt C(1), \nRichard-Londt A(1), Lyall S(1), Linehan JM(1), Brandner S(1), Wadsworth JD(1), \nClarke AR(1), Collinge J(1).\n\nAuthor information:\n(1)MRC Prion Unit and Department of Neurodegenerative Disease, UCL Institute of \nNeurology, Queen Square, London WC1N 3BG, UK.\n\nPrions are lethal infectious agents thought to consist of multi-chain forms \n(PrP(Sc)) of misfolded cellular prion protein (PrP(C)). Prion propagation \nproceeds in two distinct mechanistic phases: an exponential phase 1, which \nrapidly reaches a fixed level of infectivity irrespective of PrP(C) expression \nlevel, and a plateau (phase 2), which continues until clinical onset with \nduration inversely proportional to PrP(C) expression level. We hypothesized that \nneurotoxicity relates to distinct neurotoxic species produced following a \npathway switch when prion levels saturate. Here we show a linear increase of \nproteinase K-sensitive PrP isoforms distinct from classical PrP(Sc) at a rate \nproportional to PrP(C) concentration, commencing at the phase transition and \nrising until clinical onset. The unaltered level of total PrP during phase 1, \nwhen prion infectivity increases a million-fold, indicates that prions comprise \na small minority of total PrP. This is consistent with PrP(C) concentration not \nbeing rate limiting to exponential prion propagation and neurotoxicity relating \nto critical concentrations of alternate PrP isoforms whose production is PrP(C) \nconcentration dependent.\n\nDOI: 10.1038/ncomms5347\nPMCID: PMC4104459\nPMID: 25005024 [Indexed for MEDLINE]\n\nConflict of interest statement: J.C. is a Director and J.C., A.R.C. and J.D.F.W. \nare shareholders of D-Gen Limited, which supplies two antibodies used in the \nstudy. All other authors declare no competing financial interest."
         },
         "mismatch": [],
         "similarity": 1.0
@@ -379,7 +409,7 @@
           "volume": "6",
           "pages": "",
           "doi": "pii: e23473. doi: 10.7554/eLife.23473",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Elife. 2017 May 20;6:e23473. doi: 10.7554/eLife.23473.\n\nThe N-terminus of the prion protein is a toxic effector regulated by the \nC-terminus.\n\nWu B(1), McDonald AJ(1), Markham K(2), Rich CB(1), McHugh KP(3), Tatzelt \nJ(4)(5), Colby DW(3), Millhauser GL(2), Harris DA(1).\n\nAuthor information:\n(1)Department of Biochemistry, Boston University School of Medicine, Boston, \nUnited States.\n(2)Department of Chemistry and Biochemistry, University of California, Santa \nCruz, United States.\n(3)Department of Chemical and Biomolecular Engineering, University of Delaware, \nNewark, United States.\n(4)Department of Biochemistry of Neurodegenerative Diseases, Institute of \nBiochemistry and Pathobiochemistry, Ruhr University Bochum, Bochum, Germany.\n(5)Neurobiochemistry, Adolf Butenandt Institute, Ludwig Maximilians University, \nMunich, Germany.\n\nPrPC, the cellular isoform of the prion protein, serves to transduce the \nneurotoxic effects of PrPSc, the infectious isoform, but how this occurs is \nmysterious. Here, using a combination of electrophysiological, cellular, and \nbiophysical techniques, we show that the flexible, N-terminal domain of PrPC \nfunctions as a powerful toxicity-transducing effector whose activity is tightly \nregulated in cis by the globular C-terminal domain. Ligands binding to the \nN-terminal domain abolish the spontaneous ionic currents associated with \nneurotoxic mutants of PrP, and the isolated N-terminal domain induces currents \nwhen expressed in the absence of the C-terminal domain. Anti-PrP antibodies \ntargeting epitopes in the C-terminal domain induce currents, and cause \ndegeneration of dendrites on murine hippocampal neurons, effects that entirely \ndependent on the effector function of the N-terminus. NMR experiments \ndemonstrate intramolecular docking between N- and C-terminal domains of PrPC, \nrevealing a novel auto-inhibitory mechanism that regulates the functional \nactivity of PrPC.\n\nDOI: 10.7554/eLife.23473\nPMCID: PMC5469617\nPMID: 28527237 [Indexed for MEDLINE]\n\nConflict of interest statement: The authors declare that no competing interests \nexist."
         },
         "mismatch": [],
         "similarity": 1.0
@@ -409,10 +439,76 @@
           "volume": "11",
           "pages": "388-397",
           "doi": "doi: 10.1080/19336896.2017.1384894",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Prion. 2017 Nov 2;11(6):388-397. doi: 10.1080/19336896.2017.1384894. Epub 2017\n Nov 2.\n\nAn inter-domain regulatory mechanism controls toxic activities of PrP(C).\n\nMcDonald AJ(1), Wu B(1), Harris DA(1).\n\nAuthor information:\n(1)a Department of Biochemistry , Boston University School of Medicine , Boston \n, MA , USA.\n\nComment on\n    Extra View to: B Wu, AJ McDonald, K Markham, CB Rich, KP McHugh, J Tatzelt, \nDW Colby, GL Millhauser, DA Harris.. The N-terminus of the prion protein is a \ntoxic effector regulated by the C-terminus. Elife. 2017;6:e23473. \ndoi:10.7554/eLife.23473. PMID:\n\nThe normal function of PrPC, the cellular prion protein, has remained mysterious \nsince its first description over 30\u00a0years ago. Amazingly, although complete \ndeletion of the gene encoding PrPC has little phenotypic consequence, expression \nin transgenic mice of PrP molecules carrying certain internal deletions produces \ndramatic neurodegenerative phenotypes. In our recent paper, 1 we have \ndemonstrated that the flexible, N-terminal domain of PrPC possesses toxic \neffector functions, which are regulated by a docking interaction with the \nstructured, C-terminal domain. Disruption of this inter-domain interaction, for \nexample by deletions of the hinge region or by binding of antibodies to the \nC-terminal domain, results in abnormal ionic currents and degeneration of \ndendritic spines in cultured neuronal cells. This mechanism may contribute to \nthe neurotoxicity of PrPSc and possibly other protein aggregates, and could play \na role in the physiological activity of PrPC. These results also provide a \nwarning about the potential toxic side effects of PrP-directed antibody \ntherapies for prion and Alzheimer's diseases.\n\nDOI: 10.1080/19336896.2017.1384894\nPMCID: PMC5786360\nPMID: 28960140 [Indexed for MEDLINE]"
         },
         "mismatch": [],
         "similarity": 0.75
+      }
+    },
+    {
+      "entry": {
+        "author": "Dametto P",
+        "title": "Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP",
+        "year": "2015",
+        "has_id": true,
+        "raw": "Dametto P, Lakkaraju AK, Bridel C, et al. Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered f"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "25658480",
+          "title": "Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP",
+          "authors": [
+            "Dametto P",
+            "Lakkaraju AK",
+            "Bridel C",
+            "Villiger L",
+            "O'Connor T",
+            "Herrmann US"
+          ],
+          "journal": "PloS one",
+          "year": "2015",
+          "volume": "10",
+          "pages": "e0117412",
+          "doi": "doi: 10.1371/journal.pone.0117412",
+          "abstract": "1. PLoS One. 2015 Feb 6;10(2):e0117412. doi: 10.1371/journal.pone.0117412. \neCollection 2015.\n\nNeurodegeneration and unfolded-protein response in mice expressing a \nmembrane-tethered flexible tail of PrP.\n\nDametto P(1), Lakkaraju AK(1), Bridel C(1), Villiger L(1), O'Connor T(1), \nHerrmann US(1), Pelczar P(2), R\u00fclicke T(3), McHugh D(1), Adili A(1), Aguzzi \nA(1).\n\nAuthor information:\n(1)Institute of Neuropathology, University Hospital Zurich, Zurich, Switzerland.\n(2)Institute of Laboratory Animal Science, University of Z\u00fcrich, Zurich, \nSwitzerland.\n(3)Institute of Laboratory Animal Science, University of Veterinary Medicine \nVienna, Vienna, Austria.\n\nThe cellular prion protein (PrPC) consists of a flexible N-terminal tail (FT, aa \n23-128) hinged to a membrane-anchored globular domain (GD, aa 129-231). Ligation \nof the GD with antibodies induces rapid neurodegeneration, which is prevented by \ndeletion or functional inactivation of the FT. Therefore, the FT is an \nallosteric effector of neurotoxicity. To explore its mechanism of action, we \ngenerated transgenic mice expressing the FT fused to a GPI anchor, but lacking \nthe GD (PrP\u0394141-225, or \"FTgpi\"). Here we report that FTgpi mice develop a \nprogressive, inexorably lethal neurodegeneration morphologically and \nbiochemically similar to that triggered by anti-GD antibodies. FTgpi was mostly \nretained in the endoplasmic reticulum, where it triggered a conspicuous unfolded \nprotein response specifically activating the PERK pathway leading to \nphosphorylation of eIF2\u03b1 and upregulation of CHOP ultimately leading to \nneurodegeration similar to what was observed in prion infection.\n\nDOI: 10.1371/journal.pone.0117412\nPMCID: PMC4319788\nPMID: 25658480 [Indexed for MEDLINE]\n\nConflict of interest statement: Competing Interests: The authors have declared \nthat no competing interests exist."
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Solomon IH",
+        "title": "An N-terminal polybasic domain and cell surface localization are required for mutant prion protein toxicity",
+        "year": "2011",
+        "has_id": true,
+        "raw": "Solomon IH, Khatri N, Biasini E, et al. An N-terminal polybasic domain and cell surface localization are required for mutant prion"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "21385869",
+          "title": "An N-terminal polybasic domain and cell surface localization are required for mutant prion protein toxicity",
+          "authors": [
+            "Solomon IH",
+            "Khatri N",
+            "Biasini E",
+            "Massignan T",
+            "Huettner JE",
+            "Harris DA"
+          ],
+          "journal": "The Journal of biological chemistry",
+          "year": "2011",
+          "volume": "286",
+          "pages": "14724-36",
+          "doi": "doi: 10.1074/jbc.M110.214973",
+          "abstract": "1. J Biol Chem. 2011 Apr 22;286(16):14724-36. doi: 10.1074/jbc.M110.214973. Epub \n2011 Mar 8.\n\nAn N-terminal polybasic domain and cell surface localization are required for \nmutant prion protein toxicity.\n\nSolomon IH(1), Khatri N, Biasini E, Massignan T, Huettner JE, Harris DA.\n\nAuthor information:\n(1)Department of Biochemistry, Boston University School of Medicine, Boston, \nMassachusetts 02118, USA.\n\nThere is evidence that alterations in the normal physiological activity of \nPrP(C) contribute to prion-induced neurotoxicity. This mechanism has been \ndifficult to investigate, however, because the normal function of PrP(C) has \nremained obscure, and there are no assays available to measure it. We recently \nreported that cells expressing PrP deleted for residues 105-125 exhibit \nspontaneous ionic currents and hypersensitivity to certain classes of cationic \ndrugs. Here, we utilize cell culture assays based on these two phenomena to test \nhow changes in PrP sequence and/or cellular localization affect the functional \nactivity of the protein. We report that the toxic activity of \u0394105-125 PrP \nrequires localization to the plasma membrane and depends on the presence of a \npolybasic amino acid segment at the N terminus of PrP. Several different \ndeletions spanning the central region as well as three disease-associated point \nmutations also confer toxic activity on PrP. The sequence domains identified in \nour study are also critical for PrP(Sc) formation, suggesting that common \nstructural features may govern both the functional activity of PrP(C) and its \nconversion to PrP(Sc).\n\nDOI: 10.1074/jbc.M110.214973\nPMCID: PMC3077669\nPMID: 21385869 [Indexed for MEDLINE]"
+        },
+        "mismatch": [],
+        "similarity": 1.0
       }
     },
     {
@@ -475,7 +571,7 @@
           "volume": "27",
           "pages": "399-408",
           "doi": "",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Neuron. 2000 Aug;27(2):399-408. doi: 10.1016/s0896-6273(00)00046-5.\n\nPrion protein devoid of the octapeptide repeat region restores susceptibility to \nscrapie in PrP knockout mice.\n\nFlechsig E(1), Shmerling D, Hegyi I, Raeber AJ, Fischer M, Cozzio A, von Mering \nC, Aguzzi A, Weissmann C.\n\nAuthor information:\n(1)Institut f\u00fcr Molekularbiologie, Abteilung I, Universit\u00e4t Z\u00fcrich, Switzerland.\n\nMice devoid of PrP are resistant to scrapie and fail to replicate the agent. \nIntroduction of transgenes expressing PrP into such mice restores susceptibility \nto scrapie. We find that truncated PrP devoid of the five copper binding \noctarepeats still sustains scrapie infection; however, incubation times are \nlonger and prion titers and protease-resistant PrP are about 30-fold lower than \nin wild-type mice. Surprisingly, brains of terminally ill animals show no \nhistopathology typical for scrapie. However, in the spinal cord, infectivity, \ngliosis, and motor neuron loss are as in scrapie-infected wild-type controls. \nThus, while the region comprising the octarepeats is not essential for mediating \npathogenesis and prion replication, it modulates the extent of these events and \nof disease presentation.\n\nDOI: 10.1016/s0896-6273(00)00046-5\nPMID: 10985358 [Indexed for MEDLINE]"
         },
         "mismatch": [],
         "similarity": 1.0
@@ -508,7 +604,7 @@
           "volume": "278",
           "pages": "28944-9",
           "doi": "",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. J Biol Chem. 2003 Aug 1;278(31):28944-9. doi: 10.1074/jbc.M303655200. Epub\n2003  May 19.\n\nDeletion of N-terminal residues 23-88 from prion protein (PrP) abrogates the \npotential to rescue PrP-deficient mice from PrP-like protein/doppel-induced \nNeurodegeneration.\n\nAtarashi R(1), Nishida N, Shigematsu K, Goto S, Kondo T, Sakaguchi S, Katamine \nS.\n\nAuthor information:\n(1)Department of Molecular Microbiology and Immunology, Institute of Atomic Bomb \nDisease, Nagasaki University Graduate School of Biomedical Sciences, 1-12-4 \nSakamoto, Nagasaki 852-8523, Japan.\n\nAccumulating evidence has suggested that prion protein (PrP) is neuroprotective \nand that a PrP-like protein/Doppel (PrPLP/Dpl) is neurotoxic. A line of \nPrP-deficient mice, Ngsk Prnp0/0, ectopically expressing PrPLP/Dpl in neurons, \nexhibits late-onset ataxia because of Purkinje cell death that is prevented by a \ntransgene encoding wild-type mouse PrP. To elucidate the mechanisms of \nneurodegeneration in these mice, we introduced five types of PrP transgene, \nnamely one heterologous hamster, two mouse/hamster chimeric genes, and two \nmutants, each of which encoded PrP lacking residues 23-88 (MHM2.del23-88) or \nwith E199K substitution (Mo.E199K), into Ngsk Prnp0/0 mice. Only MHM2.del23-88 \nfailed to rescue the mice from the Purkinje cell death. The transgenic mice, \nMHM2.del23-88/Ngsk Prnp0/0, expressed several times more PrP than did wild-type \n(Prnp+/+) mice and PrPLP/Dpl at an equivalent level to Ngsk Prnp0/0 mice. Little \ndifference was observed in the pathology and onset of ataxia between Ngsk \nPrnp0/0 and MHM2.del23-88/Ngsk Prnp0/0. No detergent-insoluble PrPLP/Dpl was \ndetectable in the central nervous system of Ngsk Prnp0/0 mice even after the \nonset of ataxia. Our findings provide evidence that the N-terminal residues \n23-88 of PrP containing the unique octapeptide-repeat region is crucial for \npreventing Purkinje cell death in Prnp0/0 mice expressing PrPLP/Dpl in the \nneuron.\n\nDOI: 10.1074/jbc.M303655200\nPMID: 12759361 [Indexed for MEDLINE]"
         },
         "mismatch": [],
         "similarity": 0.7272727272727273
@@ -632,7 +728,7 @@
           "volume": "379",
           "pages": "339-43",
           "doi": "",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Nature. 1996 Jan 25;379(6563):339-43. doi: 10.1038/379339a0.\n\nNormal host prion protein necessary for scrapie-induced neurotoxicity.\n\nBrandner S(1), Isenmann S, Raeber A, Fischer M, Sailer A, Kobayashi Y, Marino S, \nWeissmann C, Aguzzi A.\n\nAuthor information:\n(1)Department of Pathology, University Hospital, Z\u00fcrich, Switzerland.\n\nAccumulation of the prion protein PrPSc, a pathological and protease-resistant \nisoform of the normal host protein PrPC, is a feature of prion disease such as \nscrapie. It is still unknown whether scrapie pathology comes about by \nneurotoxicity of PrPSc, acute depletion of PrPC, or some other mechanism. Here \nwe investigate this question by grafting neural tissue overexpressing PrPC into \nthe brain of PrP-deficient mice which are scrapie-resistant and do not propagate \ninfectivity. After intracerebral inoculation with scrapie prions, the grafts \naccumulated high levels of PrPSc and infectivity and developed the severe \nhistopathological changes characteristic of scrapie. Moreover, substantial \namounts of graft-derived PrPSc migrated into the host brain. Even 16 months \nafter inoculation no pathological changes were seen in PrP-deficient tissue, not \neven in the immediate vicinity of the grafts. Therefore, in addition to being \nresistant to scrapie infection, brain tissue devoid of PrPC is not damaged by \nexogenous PrPSc.\n\nDOI: 10.1038/379339a0\nPMID: 8552188 [Indexed for MEDLINE]"
         },
         "mismatch": [],
         "similarity": 1.0
@@ -698,7 +794,36 @@
           "volume": "9",
           "pages": "eadi7347",
           "doi": "doi: 10.1126/sciadv.adi7347",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Sci Adv. 2023 Nov 3;9(44):eadi7347. doi: 10.1126/sciadv.adi7347. Epub 2023 Nov\n 3.\n\nCopper drives prion protein phase separation and modulates aggregation.\n\ndo Amaral MJ(1)(2), Mohapatra S(2), Passos AR(3), Lopes da Silva TS(1), Carvalho \nRS(1), da Silva Almeida M(4), Pinheiro AS(5), Wegmann S(2), Cordeiro Y(1).\n\nAuthor information:\n(1)Faculdade de Farm\u00e1cia, Universidade Federal do Rio de Janeiro, Rio de \nJaneiro, Brazil.\n(2)German Center for Neurodegenerative Diseases (DZNE), Berlin, Germany.\n(3)Brazilian Synchrotron Light Laboratory (LNLS), Brazilian Center for Research \nin Energy and Materials (CNPEM), Campinas, SP, Brazil.\n(4)Plataforma Avan\u00e7ada de Biomol\u00e9culas, Centro Nacional de Biologia Estrutural e \nBioimagem, Instituto de Bioqu\u00edmica M\u00e9dica Leopoldo de Meis, Universidade Federal \ndo Rio de Janeiro, Rio de Janeiro, Brazil.\n(5)Departamento de Bioqu\u00edmica, Instituto de Qu\u00edmica, Universidade Federal do Rio \nde Janeiro, Rio de Janeiro, Brazil.\n\nPrion diseases are characterized by prion protein (PrP) transmissible \naggregation and neurodegeneration, which has been linked to oxidative stress. \nThe physiological function of PrP seems related to sequestering of redox-active \nCu2+, and Cu2+ dyshomeostasis is observed in prion disease brain. It is unclear \nwhether Cu2+ contributes to PrP aggregation, recently shown to be mediated by \nPrP condensation. This study indicates that Cu2+ promotes PrP condensation in \nlive cells at the cell surface and in vitro through copartitioning. Molecularly, \nCu2+ inhibited PrP \u03b2-structure and hydrophobic residues exposure. Oxidation, \ninduced by H2O2, triggered liquid-to-solid transition of PrP:Cu2+ condensates \nand promoted amyloid-like PrP aggregation. In cells, overexpression of PrPC \ninitially protected against Cu2+ cytotoxicity but led to PrPC aggregation upon \nextended copper exposure. Our data suggest that PrP condensates function as a \nbuffer for copper that prevents copper toxicity but can transition into PrP \naggregation at prolonged oxidative stress.\n\nDOI: 10.1126/sciadv.adi7347\nPMCID: PMC10624353\nPMID: 37922348 [Indexed for MEDLINE]"
+        },
+        "mismatch": [],
+        "similarity": 1.0
+      }
+    },
+    {
+      "entry": {
+        "author": "Alberti S",
+        "title": "Liquid-liquid phase separation in disease",
+        "year": "2019",
+        "has_id": true,
+        "raw": "Alberti S, Dormann D. Liquid-liquid phase separation in disease. *Annu Rev Genet* 2019;53:171-194. PMID 31430179."
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "31430179",
+          "title": "Liquid-Liquid Phase Separation in Disease",
+          "authors": [
+            "Alberti S",
+            "Dormann D"
+          ],
+          "journal": "Annual review of genetics",
+          "year": "2019",
+          "volume": "53",
+          "pages": "171-194",
+          "doi": "doi: 10.1146/annurev-genet-112618-043527",
+          "abstract": "1. Annu Rev Genet. 2019 Dec 3;53:171-194. doi:\n10.1146/annurev-genet-112618-043527.  Epub 2019 Aug 20.\n\nLiquid-Liquid Phase Separation in Disease.\n\nAlberti S(1)(2), Dormann D(3)(4).\n\nAuthor information:\n(1)Biotechnology Center (BIOTEC), Center for Molecular and Cellular \nBioengineering (CMCB), Technische Universit\u00e4t Dresden, 01307 Dresden, Germany; \nemail: Simon.Alberti@tu-dresden.de.\n(2)Max Planck Institute of Molecular Cell Biology and Genetics, 01307 Dresden, \nGermany.\n(3)BioMedical Center (BMC), Ludwig-Maximilians-University Munich, 82152 \nPlanegg-Martinsried, Germany; email: dorothee.dormann@med.uni-muenchen.de.\n(4)Munich Cluster for Systems Neurology (SyNergy), Ludwig-Maximilians-University \nMunich, 81377 Munich, Germany.\n\nWe have made rapid progress in recent years in identifying the genetic causes of \nmany human diseases. However, despite this recent progress, our mechanistic \nunderstanding of these diseases is often incomplete. This is a problem because \nit limits our ability to develop effective disease treatments. To overcome this \nlimitation, we need new concepts to describe and comprehend the complex \nmechanisms underlying human diseases. Condensate formation by phase separation \nemerges as a new principle to explain the organization of living cells. In this \nreview, we present emerging evidence that aberrant forms of condensates are \nassociated with many human diseases, including cancer, neurodegeneration, and \ninfectious diseases. We examine disease mechanisms driven by aberrant \ncondensates, and we point out opportunities for therapeutic interventions. We \nconclude that phase separation provides a useful new framework to understand and \nfight some of the most severe human diseases.\n\nDOI: 10.1146/annurev-genet-112618-043527\nPMID: 31430179 [Indexed for MEDLINE]"
         },
         "mismatch": [],
         "similarity": 1.0
@@ -821,7 +946,7 @@
           "volume": "522",
           "pages": "478-81",
           "doi": "doi: 10.1038/nature14510",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Nature. 2015 Jun 25;522(7557):478-81. doi: 10.1038/nature14510. Epub 2015 Jun \n10.\n\nA naturally occurring variant of the human prion protein completely prevents \nprion disease.\n\nAsante EA(1), Smidak M(1), Grimshaw A(1), Houghton R(1), Tomlinson A(1), Jeelani \nA(1), Jakubcova T(1), Hamdan S(1), Richard-Londt A(1), Linehan JM(1), Brandner \nS(1), Alpers M(2), Whitfield J(2), Mead S(1), Wadsworth JD(1), Collinge J(1).\n\nAuthor information:\n(1)MRC Prion Unit, Department of Neurodegenerative Disease, UCL Institute of \nNeurology, London WC1N 3BG, UK.\n(2)1] MRC Prion Unit, Department of Neurodegenerative Disease, UCL Institute of \nNeurology, London WC1N 3BG, UK [2] Papua New Guinea Institute of Medical \nResearch, Goroka, Eastern Highlands Province, Papua New Guinea.\n\nComment in\n    Nature. 2015 Jun 25;522(7557):423-4. doi: 10.1038/nature14534.\n    BMJ. 2015 Jun 12;350:h3186. doi: 10.1136/bmj.h3186.\n\nMammalian prions, transmissible agents causing lethal neurodegenerative \ndiseases, are composed of assemblies of misfolded cellular prion protein (PrP). \nA novel PrP variant, G127V, was under positive evolutionary selection during the \nepidemic of kuru--an acquired prion disease epidemic of the Fore population in \nPapua New Guinea--and appeared to provide strong protection against disease in \nthe heterozygous state. Here we have investigated the protective role of this \nvariant and its interaction with the common, worldwide M129V PrP polymorphism. \nV127 was seen exclusively on a M129 PRNP allele. We demonstrate that transgenic \nmice expressing both variant and wild-type human PrP are completely resistant to \nboth kuru and classical Creutzfeldt-Jakob disease (CJD) prions (which are \nclosely similar) but can be infected with variant CJD prions, a human prion \nstrain resulting from exposure to bovine spongiform encephalopathy prions to \nwhich the Fore were not exposed. Notably, mice expressing only PrP V127 were \ncompletely resistant to all prion strains, demonstrating a different molecular \nmechanism to M129V, which provides its relative protection against classical CJD \nand kuru in the heterozygous state. Indeed, this single amino acid substitution \n(G\u2192V) at a residue invariant in vertebrate evolution is as protective as \ndeletion of the protein. Further study in transgenic mice expressing different \nratios of variant and wild-type PrP indicates that not only is PrP V127 \ncompletely refractory to prion conversion but acts as a potent dose-dependent \ninhibitor of wild-type prion propagation.\n\nDOI: 10.1038/nature14510\nPMCID: PMC4486072\nPMID: 26061765 [Indexed for MEDLINE]"
         },
         "mismatch": [],
         "similarity": 1.0
@@ -884,7 +1009,7 @@
           "volume": "11",
           "pages": "2119-2125",
           "doi": "doi: 10.1038/s41564-026-02408-1",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
+          "abstract": "1. Nat Microbiol. 2026 Aug;11(8):2119-2125. doi: 10.1038/s41564-026-02408-1. Epub\n 2026 Jun 19.\n\nDeep learning reveals antimicrobial peptides within prions.\n\nTorres MDT(#)(1)(2)(3)(4), Wan F(#)(1)(2)(3)(4), de la Fuente-Nunez \nC(5)(6)(7)(8).\n\nAuthor information:\n(1)Machine Biology Group, Departments of Psychiatry and Microbiology, Institute \nfor Biomedical Informatics, Institute for Translational Medicine and \nTherapeutics, Perelman School of Medicine, University of Pennsylvania, \nPhiladelphia, PA, USA.\n(2)Departments of Bioengineering and Chemical and Biomolecular Engineering, \nSchool of Engineering and Applied Science, University of Pennsylvania, \nPhiladelphia, PA, USA.\n(3)Department of Chemistry, School of Arts and Sciences, University of \nPennsylvania, Philadelphia, PA, USA.\n(4)Penn Institute for Computational Science, University of Pennsylvania, \nPhiladelphia, PA, USA.\n(5)Machine Biology Group, Departments of Psychiatry and Microbiology, Institute \nfor Biomedical Informatics, Institute for Translational Medicine and \nTherapeutics, Perelman School of Medicine, University of Pennsylvania, \nPhiladelphia, PA, USA. cfuente@upenn.edu.\n(6)Departments of Bioengineering and Chemical and Biomolecular Engineering, \nSchool of Engineering and Applied Science, University of Pennsylvania, \nPhiladelphia, PA, USA. cfuente@upenn.edu.\n(7)Department of Chemistry, School of Arts and Sciences, University of \nPennsylvania, Philadelphia, PA, USA. cfuente@upenn.edu.\n(8)Penn Institute for Computational Science, University of Pennsylvania, \nPhiladelphia, PA, USA. cfuente@upenn.edu.\n(#)Contributed equally\n\nPrion and prion-like proteins are classically associated with protein \nmisfolding, but amyloidogenic sequences can also participate in host defence. \nHere, using deep learning, we screened 19.3 million fragments from 2,897 curated \nprion-related proteins and identified 1,179 candidate antimicrobial peptides, \nwhich we term prionins. Among 75 synthesized prionins, 59 inhibited bacterial \npathogens, 53 perturbed membranes and 2 reduced Acinetobacter baumannii \ninfection burden in mice.\n\n\u00a9 2026. The Author(s).\n\nDOI: 10.1038/s41564-026-02408-1\nPMCID: PMC13423867\nPMID: 42321536 [Indexed for MEDLINE]\n\nConflict of interest statement: Competing interests: C.d.l.F.-N. is a co-founder \nof and scientific advisor to Peptaris, Inc.; provides consulting services to \nInvaio Sciences; and serves on the Scientific Advisory Boards of Intera Bio, \nNowture S.L., Peptidus, European Biotech Venture Builder, the Peptide Drug \nHunting Consortium (PDHC), ePhective Therapeutics, Inc., and Phare Bio. M.D.T.T. \nis a co-founder and scientific advisor to Peptaris, Inc. The other author \ndeclares no competing interests."
         },
         "mismatch": [],
         "similarity": 1.0
@@ -892,11 +1017,44 @@
     },
     {
       "entry": {
-        "author": "Kloda T",
+        "author": "Aronica E",
+        "title": "Melittin enhances excitatory amino acid release and AMPA-stimulated \u2074\u2075Ca\u00b2\u207a influx in cultured neurons",
+        "year": "1992",
+        "has_id": true,
+        "raw": "Aronica E, Casabona G, Genazzani AA, Catania MV, Contestabile A, Virgili M, Nicoletti F. Melittin enhances excitatory amino acid r"
+      },
+      "result": {
+        "status": "OK",
+        "source": "pubmed",
+        "best": {
+          "pmid": "1380882",
+          "title": "Melittin enhances excitatory amino acid release and AMPA-stimulated 45Ca2+ influx in cultured neurons",
+          "authors": [
+            "Aronica E",
+            "Casabona G",
+            "Genazzani AA",
+            "Catania MV",
+            "Contestabile A",
+            "Virgili M"
+          ],
+          "journal": "Brain research",
+          "year": "1992",
+          "volume": "586",
+          "pages": "72-7",
+          "doi": "",
+          "abstract": "1. Brain Res. 1992 Jul 17;586(1):72-7. doi: 10.1016/0006-8993(92)91373-m.\n\nMelittin enhances excitatory amino acid release and AMPA-stimulated 45Ca2+ \ninflux in cultured neurons.\n\nAronica E(1), Casabona G, Genazzani AA, Catania MV, Contestabile A, Virgili M, \nNicoletti F.\n\nAuthor information:\n(1)Institute of Pharmacology, University of Catania, School of Medicine, Italy.\n\nMelittin, a potent activator of phospholipase A2, enhanced both spontaneous and \ndepolarization-induced release of D-[3H]aspartate in primary cultures of \ncerebellar granule cells. The action of melittin was concentration-dependent \n(EC50 value = 300 ng/ml) and did not require the presence of extracellular Ca2+. \nMelittin also stimulated the release of glutamate and aspartate, in addition to \nother endogenous amino acids (taurine, alanine and gamma-aminobutyric acid). \nThese effects were accompanied by an enhanced influx of 45Ca2+, which was in \npart mediated by the activation of excitatory amino acid receptors by endogenous \nagonists. Low concentrations of melittin (50 ng/ml) potentiated the efficacy of \nAMPA in stimulating 45Ca2+ influx without affecting stimulation by kainate or by \nglutamate added in the absence of extracellular Mg2+ (a condition that favors \nthe activation of NMDA receptors). These results indicate that activation of \nphospholipase A2 evokes both an enhanced glutamate release and an increased \nsensitivity of AMPA receptors, two events that may support synaptic facilitation \nand LTP formation.\n\nDOI: 10.1016/0006-8993(92)91373-m\nPMID: 1380882 [Indexed for MEDLINE]"
+        },
+        "mismatch": [],
+        "similarity": 0.8666666666666667
+      }
+    },
+    {
+      "entry": {
+        "author": "Kloda A",
         "title": "Liposome reconstitution and modulation of recombinant N-methyl-D-aspartate receptor channels by membrane stretch",
         "year": "2007",
         "has_id": true,
-        "raw": "Kloda T, Maneshi M, Sachs F, Hua L, Auerbach A, et al. Liposome reconstitution and modulation of recombinant N-methyl-D-aspartate "
+        "raw": "Kloda A, Maneshi M, Sachs F, Hua L, Auerbach A, et al. Liposome reconstitution and modulation of recombinant N-methyl-D-aspartate "
       },
       "result": {
         "status": "OK",
@@ -1508,140 +1666,6 @@
   "MISMATCH": [
     {
       "entry": {
-        "author": "Kovacs GG",
-        "title": "Proteinase K resistant cores of prions and amyloids",
-        "year": "2019",
-        "has_id": false,
-        "raw": "Kovacs GG, et al. Proteinase K resistant cores of prions and amyloids. *Prion* 2019."
-      },
-      "result": {
-        "status": "MISMATCH",
-        "source": "pubmed",
-        "best": {
-          "pmid": "31876447",
-          "title": "Proteinase K resistant cores of prions and amyloids",
-          "authors": [
-            "Kushnirov VV",
-            "Dergalev AA",
-            "Alexandrov AI"
-          ],
-          "journal": "Prion",
-          "year": "2020",
-          "volume": "14",
-          "pages": "11-19",
-          "doi": "doi: 10.1080/19336896.2019.1704612",
-          "abstract": "1. Prion. 2020 Dec;14(1):11-19. doi: 10.1080/19336896.2019.1704612.\n\nProteinase K resistant cores of prions and amyloids.\n\nKushnirov VV(1), Dergalev AA(1), Alexandrov AI(1).\n\nAuthor information:\n(1)Research Center of Biotechnology of Russian Academy of Sciences, A.N. Bach \nInstitute of Biochemistry, Moscow, Russia.\n\nAmyloids and their infectious subset, prions, represent fibrillary aggregates \nwith regular structure. They are formed by proteins that are soluble in their \nnormal state. In amyloid form, all or part of the polypeptide sequence of the \nprotein is resistant to treatment with proteinase K (PK). Amyloids can have \nstructural variants, which can be distinguished by the patterns of their \ndigestion by PK. In this review, we describe and compare studies of the \nresistant cores of various amyloids from different organisms. These data provide \ninsight into the fine structure of amyloids and their variants as well as raise \ninteresting questions, such as those concerning the differences between amyloids \nobtained ex vivo and in vitro, as well as the manner in which folding of one \nregion of the amyloid can affect other regions.\n\nDOI: 10.1080/19336896.2019.1704612\nPMCID: PMC6959286\nPMID: 31876447 [Indexed for MEDLINE]"
-        },
-        "mismatch": [
-          "author 'Kovacs GG' not in ['Kushnirov VV', 'Dergalev AA', 'Alexandrov AI']",
-          "year 2019 vs 2020"
-        ],
-        "similarity": 1.0
-      }
-    },
-    {
-      "entry": {
-        "author": "Aguzzi A",
-        "title": "Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP",
-        "year": "2015",
-        "has_id": false,
-        "raw": "Aguzzi A, et al. Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP. *PLo"
-      },
-      "result": {
-        "status": "MISMATCH",
-        "source": "pubmed",
-        "best": {
-          "pmid": "25658480",
-          "title": "Neurodegeneration and unfolded-protein response in mice expressing a membrane-tethered flexible tail of PrP",
-          "authors": [
-            "Dametto P",
-            "Lakkaraju AK",
-            "Bridel C",
-            "Villiger L",
-            "O'Connor T",
-            "Herrmann US"
-          ],
-          "journal": "PloS one",
-          "year": "2015",
-          "volume": "10",
-          "pages": "e0117412",
-          "doi": "doi: 10.1371/journal.pone.0117412",
-          "abstract": "(abstract unavailable: HTTP Error 429: Too Many Requests)"
-        },
-        "mismatch": [
-          "author 'Aguzzi A' not in ['Dametto P', 'Lakkaraju AK', 'Bridel C']"
-        ],
-        "similarity": 1.0
-      }
-    },
-    {
-      "entry": {
-        "author": "Solomon IH",
-        "title": "An N-terminal polybasic domain and cell surface localization are required for mutant prion protein toxicity",
-        "year": "2010",
-        "has_id": false,
-        "raw": "Solomon IH, Huettner JE, Harris DA. An N-terminal polybasic domain and cell surface localization are required for mutant prion pro"
-      },
-      "result": {
-        "status": "MISMATCH",
-        "source": "pubmed",
-        "best": {
-          "pmid": "21385869",
-          "title": "An N-terminal polybasic domain and cell surface localization are required for mutant prion protein toxicity",
-          "authors": [
-            "Solomon IH",
-            "Khatri N",
-            "Biasini E",
-            "Massignan T",
-            "Huettner JE",
-            "Harris DA"
-          ],
-          "journal": "The Journal of biological chemistry",
-          "year": "2011",
-          "volume": "286",
-          "pages": "14724-36",
-          "doi": "doi: 10.1074/jbc.M110.214973",
-          "abstract": "1. J Biol Chem. 2011 Apr 22;286(16):14724-36. doi: 10.1074/jbc.M110.214973. Epub \n2011 Mar 8.\n\nAn N-terminal polybasic domain and cell surface localization are required for \nmutant prion protein toxicity.\n\nSolomon IH(1), Khatri N, Biasini E, Massignan T, Huettner JE, Harris DA.\n\nAuthor information:\n(1)Department of Biochemistry, Boston University School of Medicine, Boston, \nMassachusetts 02118, USA.\n\nThere is evidence that alterations in the normal physiological activity of \nPrP(C) contribute to prion-induced neurotoxicity. This mechanism has been \ndifficult to investigate, however, because the normal function of PrP(C) has \nremained obscure, and there are no assays available to measure it. We recently \nreported that cells expressing PrP deleted for residues 105-125 exhibit \nspontaneous ionic currents and hypersensitivity to certain classes of cationic \ndrugs. Here, we utilize cell culture assays based on these two phenomena to test \nhow changes in PrP sequence and/or cellular localization affect the functional \nactivity of the protein. We report that the toxic activity of \u0394105-125 PrP \nrequires localization to the plasma membrane and depends on the presence of a \npolybasic amino acid segment at the N terminus of PrP. Several different \ndeletions spanning the central region as well as three disease-associated point \nmutations also confer toxic activity on PrP. The sequence domains identified in \nour study are also critical for PrP(Sc) formation, suggesting that common \nstructural features may govern both the functional activity of PrP(C) and its \nconversion to PrP(Sc).\n\nDOI: 10.1074/jbc.M110.214973\nPMCID: PMC3077669\nPMID: 21385869 [Indexed for MEDLINE]"
-        },
-        "mismatch": [
-          "year 2010 vs 2011"
-        ],
-        "similarity": 1.0
-      }
-    },
-    {
-      "entry": {
-        "author": "Alberti S",
-        "title": "Liquid-liquid phase separation in disease",
-        "year": "2020",
-        "has_id": false,
-        "raw": "Alberti S, Dormann D. Liquid-liquid phase separation in disease. *Dev Cell* 2020."
-      },
-      "result": {
-        "status": "MISMATCH",
-        "source": "pubmed",
-        "best": {
-          "pmid": "31430179",
-          "title": "Liquid-Liquid Phase Separation in Disease",
-          "authors": [
-            "Alberti S",
-            "Dormann D"
-          ],
-          "journal": "Annual review of genetics",
-          "year": "2019",
-          "volume": "53",
-          "pages": "171-194",
-          "doi": "doi: 10.1146/annurev-genet-112618-043527",
-          "abstract": "1. Annu Rev Genet. 2019 Dec 3;53:171-194. doi:\n10.1146/annurev-genet-112618-043527.  Epub 2019 Aug 20.\n\nLiquid-Liquid Phase Separation in Disease.\n\nAlberti S(1)(2), Dormann D(3)(4).\n\nAuthor information:\n(1)Biotechnology Center (BIOTEC), Center for Molecular and Cellular \nBioengineering (CMCB), Technische Universit\u00e4t Dresden, 01307 Dresden, Germany; \nemail: Simon.Alberti@tu-dresden.de.\n(2)Max Planck Institute of Molecular Cell Biology and Genetics, 01307 Dresden, \nGermany.\n(3)BioMedical Center (BMC), Ludwig-Maximilians-University Munich, 82152 \nPlanegg-Martinsried, Germany; email: dorothee.dormann@med.uni-muenchen.de.\n(4)Munich Cluster for Systems Neurology (SyNergy), Ludwig-Maximilians-University \nMunich, 81377 Munich, Germany.\n\nWe have made rapid progress in recent years in identifying the genetic causes of \nmany human diseases. However, despite this recent progress, our mechanistic \nunderstanding of these diseases is often incomplete. This is a problem because \nit limits our ability to develop effective disease treatments. To overcome this \nlimitation, we need new concepts to describe and comprehend the complex \nmechanisms underlying human diseases. Condensate formation by phase separation \nemerges as a new principle to explain the organization of living cells. In this \nreview, we present emerging evidence that aberrant forms of condensates are \nassociated with many human diseases, including cancer, neurodegeneration, and \ninfectious diseases. We examine disease mechanisms driven by aberrant \ncondensates, and we point out opportunities for therapeutic interventions. We \nconclude that phase separation provides a useful new framework to understand and \nfight some of the most severe human diseases.\n\nDOI: 10.1146/annurev-genet-112618-043527\nPMID: 31430179 [Indexed for MEDLINE]"
-        },
-        "mismatch": [
-          "year 2020 vs 2019"
-        ],
-        "similarity": 1.0
-      }
-    },
-    {
-      "entry": {
         "author": null,
         "title": "Cathelicidin in neutrophils and neurons antagonistically modulates neuroinflammation",
         "year": "2025",
@@ -1673,41 +1697,6 @@
           "year 2025 vs 2024"
         ],
         "similarity": 0.7272727272727273
-      }
-    },
-    {
-      "entry": {
-        "author": "Phillis JW",
-        "title": "Melittin enhances excitatory amino acid release and AMPA-stimulated \u2074\u2075Ca\u00b2\u207a influx in cultured neurons",
-        "year": "1992",
-        "has_id": true,
-        "raw": "Phillis JW, Song D, O'Regan MH. Melittin enhances excitatory amino acid release and AMPA-stimulated \u2074\u2075Ca\u00b2\u207a influx in cultured neur"
-      },
-      "result": {
-        "status": "MISMATCH",
-        "source": "pubmed",
-        "best": {
-          "pmid": "1380882",
-          "title": "Melittin enhances excitatory amino acid release and AMPA-stimulated 45Ca2+ influx in cultured neurons",
-          "authors": [
-            "Aronica E",
-            "Casabona G",
-            "Genazzani AA",
-            "Catania MV",
-            "Contestabile A",
-            "Virgili M"
-          ],
-          "journal": "Brain research",
-          "year": "1992",
-          "volume": "586",
-          "pages": "72-7",
-          "doi": "",
-          "abstract": "1. Brain Res. 1992 Jul 17;586(1):72-7. doi: 10.1016/0006-8993(92)91373-m.\n\nMelittin enhances excitatory amino acid release and AMPA-stimulated 45Ca2+ \ninflux in cultured neurons.\n\nAronica E(1), Casabona G, Genazzani AA, Catania MV, Contestabile A, Virgili M, \nNicoletti F.\n\nAuthor information:\n(1)Institute of Pharmacology, University of Catania, School of Medicine, Italy.\n\nMelittin, a potent activator of phospholipase A2, enhanced both spontaneous and \ndepolarization-induced release of D-[3H]aspartate in primary cultures of \ncerebellar granule cells. The action of melittin was concentration-dependent \n(EC50 value = 300 ng/ml) and did not require the presence of extracellular Ca2+. \nMelittin also stimulated the release of glutamate and aspartate, in addition to \nother endogenous amino acids (taurine, alanine and gamma-aminobutyric acid). \nThese effects were accompanied by an enhanced influx of 45Ca2+, which was in \npart mediated by the activation of excitatory amino acid receptors by endogenous \nagonists. Low concentrations of melittin (50 ng/ml) potentiated the efficacy of \nAMPA in stimulating 45Ca2+ influx without affecting stimulation by kainate or by \nglutamate added in the absence of extracellular Mg2+ (a condition that favors \nthe activation of NMDA receptors). These results indicate that activation of \nphospholipase A2 evokes both an enhanced glutamate release and an increased \nsensitivity of AMPA receptors, two events that may support synaptic facilitation \nand LTP formation.\n\nDOI: 10.1016/0006-8993(92)91373-m\nPMID: 1380882 [Indexed for MEDLINE]"
-        },
-        "mismatch": [
-          "author 'Phillis JW' not in ['Aronica E', 'Casabona G', 'Genazzani AA']"
-        ],
-        "similarity": 0.8666666666666667
       }
     }
   ],
@@ -2744,23 +2733,22 @@
         "status": "NO CONFIDENT MATCH",
         "source": "pubmed",
         "best": {
-          "pmid": "42669530",
-          "title": "Persimmon-Derived Tannins Ameliorated Cholesterol Levels in Liver Tissues Induced by a High-Fat Diet and Concurrently Increased the Diversity of the Gut Microbiota of Rats",
+          "pmid": "42676034",
+          "title": "SIRT6 Mediates Sterol-Dependent Feedback Regulation of Cholesterol Biosynthetic Genes in Hepatocytes",
           "authors": [
-            "Mochida N",
-            "Kayano SI",
-            "Kitabatake M",
-            "Ito T",
-            "Ogura Y",
-            "Kikuzaki H"
+            "Kim Y",
+            "Cho YE",
+            "Lim H",
+            "Park Y",
+            "Hwang S"
           ],
-          "journal": "Journal of nutritional science and vitaminology",
+          "journal": "Biomolecules & therapeutics",
           "year": "2026",
-          "volume": "72",
-          "pages": "307-318",
-          "doi": "doi: 10.3177/jnsv.72.307"
+          "volume": "34",
+          "pages": "1136-1147",
+          "doi": "doi: 10.4062/biomolther.2026.046"
         },
-        "similarity": 0.0625,
+        "similarity": 0.1,
         "note": "search returned records but none matched the title closely"
       }
     },
@@ -4718,13 +4706,13 @@
         "status": "NO CONFIDENT MATCH",
         "source": "crossref",
         "best": {
-          "doi": "10.1007/springerreference_36489",
-          "title": "PrPC",
+          "doi": "10.3791/24616",
+          "title": "Analyzing Influenza Virus Internalization Using a Streptavidin Blocking Assay",
           "authors": [],
-          "journal": "SpringerReference",
-          "year": "None"
+          "journal": "Journal of Visualized Experiments",
+          "year": "2026"
         },
-        "similarity": 0.1111111111111111,
+        "similarity": 0.125,
         "note": "search returned records but none matched the title closely"
       }
     },
